@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vedic.js Online Compiler</title>
+        <meta name="description" content="Vedic.js Online Compiler">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>
+        <center>
+            <div class="hero">Vedic.js Online Compiler</div>
+        </center>
+        <main class="container">
+            <div class="editor">
+                <!-- Terminal Bar -->
+                <section class="bar">
+                    <p class="title">Editor:</p>
+                    <div class="buttons">
+                        <button class="button" onclick="compile();">Run</button>
+                    </div>
+                </section>
+                <!-- Editor Body -->
+                <section class="editorbody">
+                    <textarea id="editor">mana a = 1;
+mana b = 5;
+bolo(a+b);
+					</textarea>
+                </section>
+            </div>
+            <div class="terminal">
+                <!-- Terminal Bar -->
+                <section class="bar">
+                    <p class="title">Terminal:</p>
+                    <div class="buttons">
+                        <button class="button" onclick="hatao();">Clear</button>
+                    </div>
+                </section>
+                <!-- Terminal Body -->
+                <section class="terminalbody" id="output">
+                    <div class="terminalprompt">
+						<span class="greenarrow">&nbsp;></span>
+						<span class="cursor"></span>
+						<span class="log"></span>
+					</div>							
+                </section>
+            </div>
+        </main>
+        <script src="js/vedic.js"></script>
+        <script>
+            var Load = ()=>{
+                fetch("code.ved").then(res=>res.text()).then(body=>{
+                    try {
+                        var editor = document.getElementById('editor');
+                        editor.value = body;
+                    } catch {
+                        throw Error(body);
+                    }
+                }
+                ).catch(console.error);
+            }
+            Load();
+        </script>
+        <img src="https://komarev.com/ghpvc/?username=VedicJs&style=flat-square"/>
+    </body>
+</html>
+<body>

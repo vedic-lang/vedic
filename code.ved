@@ -1,0 +1,9 @@
+function add(a,b){
+   return a+b;
+}
+
+mana a = 1;
+mana b = 5;
+mana sum = add(a,b);
+
+bolo(`sum = ${sum}`);
