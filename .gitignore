@@ -2,10 +2,9 @@
 ##########
 # Ignore all directories called node_modules in current folder and any subfolders.
 node_modules/
-dist/
 .vscode/
 tests/
-docsnew/
+logs/
 # Packages #
 ############
 *.7z

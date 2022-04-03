@@ -1,62 +1,78 @@
-const yargsparser = require('yargs-parser');
-const pkgJSON = require('../../package.json');
 const chalk = require('chalk');
-module.exports = {
-  showWelcomeMsg: () => {
-    console.log(`
-    ${chalk.hex('#ff9933').inverse.bold(' Vedic.JS ')} ${chalk.hex('#FFF').bold('v'+pkgJSON.version)}
+const cli = require('./cli');
+const createLogs = require("./createLogs");
+const checkupdate = require("./checkupdate");
+const handleError = require("./handleError");
+const spinner = require('ora')({ text: '' });
+const Environment = require('../environment');
+const { Interpreter } = require('../interpreter');
+const checkNodeVersion = require("./checkNodeVersion");
+const fetchSource = require("./fetchSource");
 
-      ${chalk.hex('#FFF').bold('Use:')} ${chalk.green('vedic')} ${chalk.cyan('[path/to/script.ved]')} 
-      
-      ❯ To see help run command ${chalk.green('vedic')} ${chalk.yellow('--help')}
+//HANDLING ERROR
+process.on('unhandledRejection', err => {
+    handleError(`UNHANDLED ERROR`, err);
+});
 
-    `);
-  },
-  showVersion: () => {
-    console.log(chalk.hex('#FFFFFF').bold('v' + pkgJSON.version));
-  },
-  showHelp: () => {
-    console.log(`
-    ${chalk.hex('#ff9933').inverse.bold(' Vedic.JS ')} 
+// module.export = async () => {
 
-    ${chalk.hex('#FFF').bold(' Version :')} ${chalk.whiteBright(pkgJSON.version)}
+// Checking Required Node version:
+checkNodeVersion();
 
-    ${chalk.hex('#FFF').bold(' Description: ')}
-      ${chalk.whiteBright(pkgJSON.description)}
+// Checking Update for npm pkg 
+checkupdate();
 
-    ${chalk.hex('#FFF').bold(' Usage: ')}
-      ${chalk.green('vedic')} ${chalk.cyan('[path/to/script.ved]')} ${chalk.yellow('[--options]')}
-
-    ${chalk.hex('#FFF').bold(' Options: ')}
-      ${chalk.yellow('-d --debug')}    Run in Debug Mod
-      ${chalk.yellow('-l --log')}      Print logs
-      ${chalk.yellow('-v --version')}  Print version number
-      ${chalk.yellow('-h --help')}     Print Vedic CLI help
-
-    ${chalk.hex('#FFF').bold(' Examples: ')}    
-      ${chalk.green('vedic')} ${chalk.cyan('script.ved')}
-
-      ❯ You can also run command + option at once:
-      ${chalk.green('vedic')} ${chalk.cyan('script.ved')} ${chalk.yellow(`-d`)}  
-      `);
-  },
-  end: () => {
-    process.exit(0);
-  },
-  input: yargsparser(process.argv.slice(2), {
-    alias: {
-      help: ['h'],
-      version: ['v'],
-      debug: ['d'],
-      log: ['l']
-    },
-    boolean: ['help', 'version', 'log', 'debug'],
-    // string: [{ key: 'output' }],
-    default: {
-      help: false,
-      version: false,
-      log: false,
-      debug: false
-    }
-  })
+// VERSION
+if (cli.input.version) {
+    cli.showVersion();
+    cli.end();
 }
+
+// HELP
+if (cli.input.help) {
+    cli.showHelp();
+    cli.end();
+}
+
+    //'help', 'version', 'log', 'debug'
+if (!cli.input._[0]) {
+    cli.showWelcomeMsg();
+}
+    else {
+        let allowedFileTypes = ['v','ved','veda'];
+        if (!allowedFileTypes.includes(cli.input._[0].split('.')[2])){
+            console.log(
+                '\n' + chalk.hex('#f44336').inverse.bold(' ERROR: ')+'\n\n' + 
+                chalk.hex('#ff1867')('This file type not supported.')+'\n\n' +
+                chalk.bold('Supported file types: ') + chalk.yellow('.veda, .ved, .v')+'\n\n'
+            );
+            cli.end();
+        }        
+        const { d, l } = cli.input;
+
+        if (d) console.log(chalk.hex('#9966cc').inverse.bold(' Debug Mod '), '\n');
+
+        if (d) console.time('⌛ Total Runtime');
+
+        if (d) spinner.start({ text: 'Loading file...' });
+
+        let file = fetchSource({ file: cli.input._[0], d });
+
+        if (d) spinner.succeed('Data loaded!');
+
+        if (d) spinner.start({ text: 'Interpreter file...' });
+
+        let program = Interpreter(file.data, file.name);
+
+        if (d) spinner.succeed('Interpretered');
+
+        if (d) console.info('\n', chalk.bgHex('#1a7f37').bold(' Result '), '\n');
+
+        Environment.run(program.parser.finalcode);
+
+        console.log();
+        if (d) console.timeEnd('⌛ Total Runtime');
+
+        // logs
+        if (l) createLogs(file, program);
+    }
