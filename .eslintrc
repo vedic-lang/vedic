@@ -1,0 +1,38 @@
+{
+    "plugins": [
+        "prefer-arrow-functions"
+    ],
+    "extends": [
+        "standard"
+    ],
+    "env": {
+        "commonjs": true
+    },
+    "rules": {
+        "comma-dangle": ["error", "never"],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "indent": [
+            "error",
+            2
+        ],
+        "quotes": [
+            "error",
+            "single",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
+        "no-multi-spaces": [
+            "error",
+            {
+                "exceptions": {
+                    "ImportDeclaration": true
+                }
+            }
+        ]
+    }
+}

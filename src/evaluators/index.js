@@ -1,0 +1,56 @@
+const helpers = require('./helpers');
+const symboltable = require('../symboltable');
+const IBase = require('./helpers/ibase');
+
+class Mainevaluator {
+  constructor (environment, parser) {
+    this.environment = () => environment;
+    this.parser = () => parser;
+    this.initScopeStack();
+  }
+
+  initScopeStack () {
+    const _scopeStack = ['global'];
+    this.getCurrentScope = () => _scopeStack[_scopeStack.length - 1];
+    this.scopeStack = () => [..._scopeStack];
+    this.pushToScopeStack = (scope) => _scopeStack.push(scope);
+    this.popFromScopeStack = () => _scopeStack.pop();
+  }
+
+  getLeafValue (leaf) {
+    if (leaf.value != null) {
+      return leaf.value;
+    }
+
+    return null;
+  }
+
+  evaluateNode (node) {
+    const leafValue = this.getLeafValue(node);
+    if (leafValue == null) {
+      const evaluator = helpers[node.operation];
+      if (evaluator instanceof IBase) return evaluator.interpreteNode.call(this, node);
+      else this.throwError(`evaluator must be of type IBase: ${node.operation}`);
+    }
+
+    return leafValue;
+  }
+
+  throwError (msg) {
+    this.parser().throwError(msg);
+  }
+
+  interpreteProgram () {
+    this.parser().pushToBlockTypeStack(symboltable.PROGRAM);
+    while (this.parser().isNotEndOfFile()) {
+      this.evaluateNode(this.parser().parseAst());
+    }
+    this.parser().popBlockTypeStack();
+  }
+
+  interpreteImportedProgram (parser) {
+    new Mainevaluator(this.environment(), parser).interpreteProgram();
+  }
+}
+
+module.exports = Mainevaluator;

@@ -1,47 +1,55 @@
 {
-    "name": "vedicscript",
-    "version": "1.1.1",
-    "description": "Vedic.Js is World first Programming launguage in Hindi",
-    "license": "MIT",
-    "repository": "https://github.com/PtPrashantTripathi/Vedic.js",
-    "author": {
-        "name": "ptprashanttripathi",
-        "email": "ptprashanttripathi@outlook.com",
-        "url": "https://twitter.com/PtPrashant09"
-    },
-    "engines": {
-        "node": ">=12.x"
-    },
-    "keywords": [
-        "VedicScript",
-        "VedicJS"
-    ],
-    "main": "main.js",
-    "unpkg": "./dist/vedic.js",
-    "jsdelivr": "./dist/vedic.js",
-    "bin": {
-        "vsc": "main.js",
-        "vedic": "main.js"
-    },
-    "scripts": {
-        "test": "jest",
-        "build": "browserify src/interpreter --standalone vedic | uglifyjs -cm > dist/vedic.js"
-    },
-    "bugs": {
-        "url": "https://github.com/PtPrashantTripathi/Vedic.js/issues"
-    },
-    "homepage": "https://github.com/PtPrashantTripathi/Vedic.js#readme",
-    "npmurl": "https://github.com/PtPrashantTripathi/Vedic.js#readme",
-    "dependencies": {
-        "boxen": "^4.2.0",
-        "chalk": "^4.1.0",
-        "ora": "^4.1.1",
-        "update-check": "^1.5.4",
-        "yargs-parser": "^21.0.1"
-    },
-    "devDependencies": {
-        "browserify": "^17.0.0",
-        "jest": "^26.6.3",
-        "jest-each": "^26.6.2"
-    }
+  "name": "vedicscript",
+  "version": "1.2.0",
+  "description": "VedicScript is World first Programming launguage in Sanskrit",
+  "license": "MIT",
+  "repository": "https://github.com/vedicscript/vedicscript",
+  "author": {
+    "name": "ptprashanttripathi",
+    "email": "ptprashanttripathi@outlook.com",
+    "url": "https://twitter.com/PtPrashant09"
+  },
+  "engines": {
+    "node": ">=12.x"
+  },
+  "keywords": [
+    "VedicScript",
+    "VedicJS"
+  ],
+  "main": "main.js",
+  "unpkg": "./dist/vedicscript.js",
+  "jsdelivr": "./dist/vedicscript.js",
+  "bin": {
+    "vsc": "main.js",
+    "vedic": "main.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "browserify src/interpreter --standalone vedic | uglifyjs -cm > dist/vedicscript.js",
+    "lint": "node_modules/.bin/eslint ./src  --fix",
+    "patch-release": "npm version patch --force -m \"Patch release\" && npm publish",
+    "minor-release": "npm version minor --force -m \"Minor release\" && npm publish",
+    "major-release": "npm version major --force -m \"Major release\" && npm publish"
+  },
+  "bugs": {
+    "url": "https://github.com/vedicscript/vedicscript/issues"
+  },
+  "homepage": "https://github.com/vedicscript/vedicscript#readme",
+  "npmurl": "https://www.npmjs.com/package/vedicscript",
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
+    "update-check": "^1.5.4",
+    "yargs-parser": "^21.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "eslint": "^8.13.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prefer-arrow-functions": "^3.1.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "uglify-js": "^3.15.4"
+  }
 }

@@ -5,6 +5,8 @@ node_modules/
 .vscode/
 tests/
 logs/
+coverage/
+
 # Packages #
 ############
 *.7z

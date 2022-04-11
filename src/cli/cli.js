@@ -5,7 +5,7 @@ const chalk = require('chalk');
 module.exports = {
   showWelcomeMsg: () => {
     console.log(`
-    ${chalk.hex('#ff9933').inverse.bold(' Vedic.JS ')} ${chalk.hex('#FFF').bold('v'+pkgJSON.version)}
+    ${chalk.hex('#ff9933').inverse.bold(' VedicScript ')} ${chalk.hex('#FFF').bold('v' + pkgJSON.version)}
 
       ${chalk.hex('#FFF').bold('Use:')} ${chalk.green('vedic')} ${chalk.cyan('[path/to/script.ved]')} 
       
@@ -18,7 +18,7 @@ module.exports = {
   },
   showHelp: () => {
     console.log(`
-    ${chalk.hex('#ff9933').inverse.bold(' Vedic.JS ')} 
+    ${chalk.hex('#ff9933').inverse.bold(' VedicScript ')} 
 
     ${chalk.hex('#FFF').bold(' Version :')} ${chalk.whiteBright(pkgJSON.version)}
 
@@ -30,7 +30,6 @@ module.exports = {
 
     ${chalk.hex('#FFF').bold(' Options: ')}
       ${chalk.yellow('-d --debug')}    Run in Debug Mod
-      ${chalk.yellow('-l --log')}      Print logs
       ${chalk.yellow('-v --version')}  Print version number
       ${chalk.yellow('-h --help')}     Print Vedic CLI help
 
@@ -48,10 +47,9 @@ module.exports = {
     alias: {
       help: ['h'],
       version: ['v'],
-      debug: ['d'],
-      log: ['l']
+      debug: ['d']
     },
-    boolean: ['help', 'version', 'log', 'debug'],
+    boolean: ['help', 'version', 'debug'],
     // string: [{ key: 'output' }],
     default: {
       help: false,
@@ -60,4 +58,4 @@ module.exports = {
       debug: false
     }
   })
-}
+};
