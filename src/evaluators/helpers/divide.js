@@ -1,7 +1,7 @@
-const IBase = require('./ibase');
+
 const errorhandler = require('../../errorhandler');
 
-class Divide extends IBase {
+class Divide {
   interpreteNode (node) {
     const leftNodeValue = this.evaluateNode(node.left);
     const rightNodeValue = this.evaluateNode(node.right);

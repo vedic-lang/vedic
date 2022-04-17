@@ -1,5 +1,5 @@
-const IBase = require('./ibase');
-class Suchi extends IBase {
+
+class Suchi {
   interpreteNode (suchiNode) {
     const arr = [];
 

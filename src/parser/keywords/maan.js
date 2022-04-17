@@ -1,9 +1,9 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const variableNl = require('../nodeLiterals/variablenl');
 const errorhandler = require('../../errorhandler');
 
-class KWmaan extends BaseNode {
+class KWmaan {
   getNode (config) {
     config = config || { shouldExpectTerminator: true };
 

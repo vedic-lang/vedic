@@ -1,10 +1,10 @@
-const IBase = require('./ibase');
+
 const Parser = require('../../parser');
 const Lexer = require('../../lexer');
 const InputStream = require('../../inputstream');
 const fetchSource = require('../../fetchSource');
 
-class avahan extends IBase {
+class avahan {
   interpreteNode (node) {
     const fileName = this.evaluateNode(node.path);
     const file = fetchSource(fileName);

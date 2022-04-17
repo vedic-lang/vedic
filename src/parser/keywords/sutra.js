@@ -1,8 +1,8 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const errorhandler = require('../../errorhandler');
 
-class KWsutra extends BaseNode {
+class KWsutra {
   getNode () {
     if (KWsutra.isExpectedIseDeclaration(this)) {
       return KWsutra.getParsedsutraNode(this);

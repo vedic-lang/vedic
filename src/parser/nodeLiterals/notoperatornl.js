@@ -1,6 +1,5 @@
-const BaseNode = require('../basenode');
 
-class NotOperatorNl extends BaseNode {
+class NotOperatorNl {
   getNode () {
     return {
       operation: this.lexer().next().value,

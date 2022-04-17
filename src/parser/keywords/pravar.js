@@ -1,8 +1,8 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const errorhandler = require('../../errorhandler');
 
-class KWpravar extends BaseNode {
+class KWpravar {
   getNode () {
     if (KWpravar.isExpectedpravarStatement(this)) {
       return KWpravar.getParsedpravarNode(this);

@@ -1,8 +1,8 @@
-const IBase = require('./ibase');
+
 const contansts = require('../../symboltable');
 const errorhandler = require('../../errorhandler');
 
-class SuchiElement extends IBase {
+class SuchiElement {
   interpreteNode (node) {
     const maanNode = { name: node.name, operation: contansts.GET_maan };
     const suchiLiteral = this.evaluateNode(maanNode);

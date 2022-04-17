@@ -1,8 +1,8 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const variableNlTypes = require('./variablenltypes');
 
-class VariableNl extends BaseNode {
+class VariableNl {
   getNode () {
     const varNameToken = this.lexer().next();
 

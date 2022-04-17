@@ -10,7 +10,6 @@ process.on('unhandledRejection', err => {
   process.exit();
 });
 
-
 // VERSION
 if (cli.input.version) {
   cli.showVersion();

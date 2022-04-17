@@ -1,6 +1,5 @@
-const IBase = require('./ibase');
 
-class vad extends IBase {
+class vad {
   interpreteNode (node) {
     this.environment().vad(this.evaluateNode(node.body));
   }

@@ -1,6 +1,5 @@
-const IBase = require('./ibase');
 
-class phala extends IBase {
+class phala {
   interpreteNode (node) {
     return this.evaluateNode(node.body);
   }

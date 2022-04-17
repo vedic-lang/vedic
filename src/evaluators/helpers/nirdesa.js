@@ -1,6 +1,5 @@
-const IBase = require('./ibase');
 
-class nirdesa extends IBase {
+class nirdesa {
   interpreteNode (node) {
     const nirdesavalue = this.evaluateNode(node.nirdesavalue);
 

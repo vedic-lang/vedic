@@ -1,7 +1,7 @@
-const BaseNode = require('../basenode');
+
 const symboltable = require('../../symboltable');
 
-class BracketExpressionNl extends BaseNode {
+class BracketExpressionNl {
   getNode (config) {
     config = config || { isArithmeticExpression: true, isBracketExpected: true };
 

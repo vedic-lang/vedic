@@ -1,12 +1,8 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const bracketExpressionNl = require('../nodeLiterals/bracketnl');
 
-class KWyadi extends BaseNode {
-  constructor () {
-    super();
-  }
-
+class KWyadi {
   getNode () {
     this.skipKeyword(symboltable.KW.yadi);
 

@@ -1,7 +1,7 @@
-const IBase = require('./ibase');
+
 const symboltable = require('../../symboltable');
 
-class NotEq extends IBase {
+class NotEq {
   interpreteNode (node) {
     return this.evaluateNode(node.left) !== this.evaluateNode(node.right) ? symboltable.KW.satya : symboltable.KW.asatya;
   }

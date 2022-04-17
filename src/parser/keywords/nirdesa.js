@@ -1,12 +1,8 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const bracketExpressionNl = require('../nodeLiterals/bracketnl');
 
-class KWnirdesa extends BaseNode {
-  constructor () {
-    super();
-  }
-
+class KWnirdesa {
   getNode () {
     const node = {};
     node.operation = symboltable.KW.nirdesa;
@@ -52,7 +48,7 @@ class KWnirdesa extends BaseNode {
   }
 }
 
-class KWyada extends BaseNode {
+class KWyada {
   getNode () {
     const node = {};
     node.operation = symboltable.KW.yada;

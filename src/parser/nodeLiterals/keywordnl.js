@@ -1,13 +1,9 @@
 const symboltable = require('../../symboltable');
 const leafNl = require('./leafnl');
-const BaseNode = require('../basenode');
+
 const errorhandler = require('../../errorhandler');
 
-class KWNl extends BaseNode {
-  constructor () {
-    super();
-  }
-
+class KWNl {
   getNode () {
     if (KWNl.isBooleanKeywordNl(this)) {
       return leafNl.getNode.call(this);

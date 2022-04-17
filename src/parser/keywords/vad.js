@@ -1,7 +1,6 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
 
-class KWvad extends BaseNode {
+class KWvad {
   getNode () {
     this.skipKeyword(symboltable.KW.vad);
     const node = {};

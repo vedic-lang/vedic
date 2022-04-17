@@ -1,10 +1,10 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const leafnl = require('../nodeLiterals/leafnl');
 const path = require('path');
 const errorhandler = require('../../errorhandler');
 
-class KWavahan extends BaseNode {
+class KWavahan {
   getNode () {
     this.skipKeyword(symboltable.KW.avahan);
     const node = {};

@@ -1,7 +1,7 @@
-const IBase = require('./ibase');
+
 const symboltable = require('../../symboltable');
 
-class yadi extends IBase {
+class yadi {
   interpreteNode (node) {
     if (this.evaluateNode(node.condition) !== symboltable.KW.asatya) {
       return yadi.runBody(this, node.then);

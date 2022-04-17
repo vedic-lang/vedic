@@ -1,8 +1,8 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const errorhandler = require('../../errorhandler');
 
-class KWphala extends BaseNode {
+class KWphala {
   getNode () {
     if (KWphala.isExpectedphalaStatement(this)) {
       return KWphala.getParsedphalaNode(this);

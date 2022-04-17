@@ -63,7 +63,6 @@ class Parser {
     return this.lexer().peek() ? this.lexer().peek().value : null;
   }
 
-  // backtracking is used in handling operator precedence while parsing the expression
   parseExpression () {
     return this.parseAssign();
   }

@@ -1,9 +1,9 @@
-const IBase = require('./ibase');
+
 const cleaner = require('./cleaner');
 const errorhandler = require('../../errorhandler');
 const symboltable = require('../../symboltable');
 
-class Callsutra extends IBase {
+class Callsutra {
   interpreteNode (node) {
     const sutraNode = Callsutra.getsutraNode(this, node.name);
 

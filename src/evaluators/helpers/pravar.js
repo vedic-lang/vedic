@@ -1,7 +1,7 @@
-const IBase = require('./ibase');
+
 const symboltable = require('../../symboltable');
 
-class pravar extends IBase {
+class pravar {
   interpreteNode (node) {
     let pravar = this.environment().getmaan(this.getCurrentScope(), symboltable.KW.pravar);
 

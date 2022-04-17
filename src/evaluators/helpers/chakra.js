@@ -1,7 +1,7 @@
-const IBase = require('./ibase');
+
 const symboltable = require('../../symboltable');
 
-class chakra extends IBase {
+class chakra {
   interpreteNode (node) {
     this.evaluateNode(node.init);
 

@@ -1,9 +1,9 @@
-const IBase = require('./ibase');
+
 const symboltable = require('../../symboltable');
 const pravarHelper = require('./pravarhelper');
 const errorhandler = require('../../errorhandler');
 
-class maan extends IBase {
+class maan {
   interpreteNode (node) {
     if (node.left.operation === symboltable.SUCHI_ELEM) {
       maan.setSuchiElement(this, node);

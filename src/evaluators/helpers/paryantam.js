@@ -1,7 +1,7 @@
-const IBase = require('./ibase');
+
 const symboltable = require('../../symboltable');
 
-class paryantam extends IBase {
+class paryantam {
   interpreteNode (node) {
     while (this.evaluateNode(node.condition) !== symboltable.KW.asatya) {
       for (let i = 0; i < node.body.length; i++) {

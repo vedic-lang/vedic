@@ -1,6 +1,5 @@
 const helpers = require('./helpers');
 const symboltable = require('../symboltable');
-const IBase = require('./helpers/ibase');
 
 class Mainevaluator {
   constructor (environment, parser) {
@@ -29,8 +28,7 @@ class Mainevaluator {
     const leafValue = this.getLeafValue(node);
     if (leafValue == null) {
       const evaluator = helpers[node.operation];
-      if (evaluator instanceof IBase) return evaluator.interpreteNode.call(this, node);
-      else this.throwError(`evaluator must be of type IBase: ${node.operation}`);
+      return evaluator.interpreteNode.call(this, node);
     }
 
     return leafValue;

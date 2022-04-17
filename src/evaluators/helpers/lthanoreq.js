@@ -1,7 +1,7 @@
-const IBase = require('./ibase');
+
 const symboltable = require('../../symboltable');
 
-class LThanOrEq extends IBase {
+class LThanOrEq {
   interpreteNode (node) {
     return this.evaluateNode(node.left) <= this.evaluateNode(node.right) ? symboltable.KW.satya : symboltable.KW.asatya;
   }

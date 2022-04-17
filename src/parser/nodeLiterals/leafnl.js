@@ -1,6 +1,5 @@
-const BaseNode = require('../basenode');
 
-class LeafNl extends BaseNode {
+class LeafNl {
   getNode () {
     return {
       value: this.lexer().next().value,

@@ -1,7 +1,7 @@
-const BaseNode = require('../basenode');
+
 const symboltable = require('../../symboltable');
 
-class NegativeNl extends BaseNode {
+class NegativeNl {
   getNode () {
     this.skipOperator(symboltable.SYM.MINUS);
 

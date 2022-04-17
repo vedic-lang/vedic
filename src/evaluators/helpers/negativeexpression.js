@@ -1,7 +1,7 @@
-const IBase = require('./ibase');
+
 const errorhandler = require('../../errorhandler');
 
-class NegateExpression extends IBase {
+class NegateExpression {
   interpreteNode (node) {
     const expressionValue = this.evaluateNode(node.body);
     if (typeof expressionValue === 'number') return -parseFloat(expressionValue);

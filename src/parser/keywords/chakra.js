@@ -1,14 +1,10 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const keywordmaan = require('./maan');
 const errorhandler = require('../../errorhandler');
 const bracketExpressionNl = require('../nodeLiterals/bracketnl');
 
-class KWchakra extends BaseNode {
-  constructor () {
-    super();
-  }
-
+class KWchakra {
   getNode () {
     this.skipKeyword(symboltable.KW.chakra);
 

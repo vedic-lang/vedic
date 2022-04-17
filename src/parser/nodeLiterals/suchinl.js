@@ -1,7 +1,7 @@
-const BaseNode = require('../basenode');
+
 const symboltable = require('../../symboltable');
 
-class SuchiNl extends BaseNode {
+class SuchiNl {
   getNode (suchiNameToken) {
     return (!suchiNameToken)
       ? SuchiNl.getParsedSuchiLiteral(this)

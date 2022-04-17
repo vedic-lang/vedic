@@ -1,8 +1,8 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
+
 const errorhandler = require('../../errorhandler');
 
-class KWbhanga extends BaseNode {
+class KWbhanga {
   getNode () {
     if (KWbhanga.isExpectedbhangaStatement(this)) {
       return KWbhanga.getParsedbhangaNode(this);

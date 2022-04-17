@@ -9,7 +9,10 @@
         "commonjs": true
     },
     "rules": {
-        "comma-dangle": ["error", "never"],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
         "semi": [
             "error",
             "always"
@@ -33,6 +36,26 @@
                     "ImportDeclaration": true
                 }
             }
-        ]
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1
+            }
+        ],
+        "no-trailing-spaces": [
+            "error"
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "after-used",
+                "ignoreRestSiblings": false
+            }
+        ],
+        "no-var": [
+            "error"
+        ]      
     }
 }

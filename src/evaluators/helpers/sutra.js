@@ -1,7 +1,7 @@
-const IBase = require('./ibase');
+
 const errorhandler = require('../../errorhandler');
 
-class sutra extends IBase {
+class sutra {
   interpreteNode (node) {
     if (this.environment().getsutra(this.getCurrentScope(), node.name) !== undefined) { this.throwError(errorhandler.sutraAlreadyExist(node.name, this.getCurrentScope())); }
 

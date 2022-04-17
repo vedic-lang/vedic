@@ -1,11 +1,7 @@
 const symboltable = require('../../symboltable');
-const BaseNode = require('../basenode');
-const bracketExpressionNl = require('../nodeLiterals/bracketnl');
-class KWparyantam extends BaseNode {
-  constructor () {
-    super();
-  }
 
+const bracketExpressionNl = require('../nodeLiterals/bracketnl');
+class KWparyantam {
   getNode () {
     this.skipKeyword(symboltable.KW.paryantam);
 

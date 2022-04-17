@@ -1,7 +1,7 @@
-const BaseNode = require('../basenode');
+
 const symboltable = require('../../symboltable');
 
-class CallsutraNl extends BaseNode {
+class CallsutraNl {
   getNode (sutraNameToken) {
     sutraNameToken = sutraNameToken || {};
 
