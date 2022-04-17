@@ -1,3 +1,9 @@
+﻿/*
+ * ॥ श्री गणेशाय नमः ॥ 
+ * © Copyright 2022 @ptprashanttripathi 
+ * https://github.com/ptprashanttripathi
+ */
+
 class nirdesa {
   interpreteNode (node) {
     const nirdesavalue = this.evaluateNode(node.nirdesavalue);

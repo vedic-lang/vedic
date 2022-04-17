@@ -1,3 +1,9 @@
+﻿/*
+ * ॥ श्री गणेशाय नमः ॥ 
+ * © Copyright 2022 @ptprashanttripathi 
+ * https://github.com/ptprashanttripathi
+ */
+
 const yargsparser = require('yargs-parser');
 const pkgJSON = require('../../package.json');
 const chalk = require('chalk');

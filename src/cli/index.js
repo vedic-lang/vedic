@@ -1,3 +1,9 @@
+﻿/*
+ * ॥ श्री गणेशाय नमः ॥ 
+ * © Copyright 2022 @ptprashanttripathi 
+ * https://github.com/ptprashanttripathi
+ */
+
 const chalk = require('chalk');
 const cli = require('./cli');
 const Interpreter = require('../interpreter');
