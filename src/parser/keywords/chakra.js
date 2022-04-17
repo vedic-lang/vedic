@@ -12,10 +12,15 @@ class KWchakra {
     const node = {};
     node.operation = symboltable.KW.chakra;
     node.init = keywordmaan.getNode.call(this);
-    node.condition = bracketExpressionNl.getNode.call(this, { isArithmeticExpression: false, isBracketExpected: false });
+    node.condition = bracketExpressionNl.getNode.call(this, {
+      isArithmeticExpression: false,
+      isBracketExpected: false
+    });
 
     this.skipPunctuation(symboltable.SYM.STATEMENT_TERMINATOR);
-    node.increment = keywordmaan.getNode.call(this, { shouldExpectTerminator: false });
+    node.increment = keywordmaan.getNode.call(this, {
+      shouldExpectTerminator: false
+    });
 
     if (KWchakra.isInValidchakraIncrementStatement(node)) {
       this.throwError(errorhandler.chakraIncrementAndDecrementMsg());
@@ -30,10 +35,18 @@ class KWchakra {
   static isInValidchakraIncrementStatement (chakraNode) {
     const incrementNode = chakraNode.increment.right;
 
-    if ([symboltable.SYM.PLUS, symboltable.SYM.MINUS].includes(incrementNode.operation)) {
+    if (
+      [symboltable.SYM.PLUS, symboltable.SYM.MINUS].includes(
+        incrementNode.operation
+      )
+    ) {
       // make sure there is variable 'i' in atleast one child of the incrementNode
       // i.e maan i = i + 1 or maan i = 1 + i or maan i = i + i
-      if ([incrementNode.left.name, incrementNode.right.name].includes(chakraNode.init.left)) {
+      if (
+        [incrementNode.left.name, incrementNode.right.name].includes(
+          chakraNode.init.left
+        )
+      ) {
         return false;
       }
     }

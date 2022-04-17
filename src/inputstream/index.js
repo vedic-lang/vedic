@@ -13,7 +13,8 @@ class InputStream {
     const character = this.code.charAt(this.position++);
 
     if (character === symboltable.SYM.NEW_LINE) {
-      this.column = 0; this.line++;
+      this.column = 0;
+      this.line++;
     } else {
       this.column++;
     }
@@ -26,7 +27,9 @@ class InputStream {
   }
 
   throwError (msg) {
-    throw new Error(`${msg} \n\tat ${this.file.path}:${this.line}:${this.column}`);
+    throw new Error(
+      `${msg} \n\tat ${this.file.path}:${this.line}:${this.column}`
+    );
   }
 
   isEndOfFile () {

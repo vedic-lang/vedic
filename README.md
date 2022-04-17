@@ -10,9 +10,9 @@
 <a href="https://github.com/vedicscript/vedicscript/commits/"><img src="https://img.shields.io/github/last-commit/vedicscript/vedicscript?style=flat-square" alt="Last Commit"></a> 
 </p>
 <p align="center">
-	<a href="https://ptprashanttripathi.github.io">View Demo</a>·
-	<a href="https://github.com/vedicscript/vedicscript/issues/new/choose">Report Bug</a>·
-	<a href="https://github.com/vedicscript/vedicscript/issues/new/choose">Request Feature</a>
+	<a href="https://vedicscript.github.io/download">Download</a>·
+	<a href="https://vedicscript.github.io/">Documentation</a>·
+	<a href="https://vedicscript.github.io/vedic-ide">Online Ide</a>
 </p>
 <p align="center">
 	<i>Loved the tool? Please consider <a href="https://paypal.me/ptprashanttripathi/10">donating</a> to help it improve!</i><br>
@@ -23,6 +23,10 @@
 </p>
 
 > VedicScript is World first Programming launguage in Sanskrit
+
+## 📖 Documentation
+
+VedicScript Documentation are available at [vedicscript.github.io](https://vedicscript.github.io/)
 
 ## 👨‍💻 How To Use
 

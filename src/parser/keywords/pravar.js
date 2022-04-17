@@ -26,9 +26,15 @@ class KWpravar {
   }
 
   static getpravarVarNames (context) {
-    const varTokens = context.parseDelimited('`', '`', ',', context.getTokenThatSatisfiesPredicate.bind(context), (token) => token.type === symboltable.VARIABLE);
+    const varTokens = context.parseDelimited(
+      '`',
+      '`',
+      ',',
+      context.getTokenThatSatisfiesPredicate.bind(context),
+      (token) => token.type === symboltable.VARIABLE
+    );
     const varNames = [];
-    varTokens.map(varToken => {
+    varTokens.map((varToken) => {
       varNames.push(varToken.value);
     });
 

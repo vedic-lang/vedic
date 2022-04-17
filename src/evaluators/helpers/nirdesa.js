@@ -1,11 +1,19 @@
-
 class nirdesa {
   interpreteNode (node) {
     const nirdesavalue = this.evaluateNode(node.nirdesavalue);
 
     for (let yadaIndex = 0; yadaIndex < node.nirdesabody.length; yadaIndex++) {
-      if (nirdesa.isyadaValueMatchnirdesaValue(this, node.nirdesabody[yadaIndex].yadavalue, nirdesavalue)) {
-        return nirdesa.runMatchedBody(this, node.nirdesabody[yadaIndex].yadabody);
+      if (
+        nirdesa.isyadaValueMatchnirdesaValue(
+          this,
+          node.nirdesabody[yadaIndex].yadavalue,
+          nirdesavalue
+        )
+      ) {
+        return nirdesa.runMatchedBody(
+          this,
+          node.nirdesabody[yadaIndex].yadabody
+        );
       }
 
       if (nirdesa.canRunyadabhave(yadaIndex, node)) {
@@ -26,7 +34,9 @@ class nirdesa {
   }
 
   static canRunyadabhave (yadaIndex, node) {
-    return (yadaIndex === node.nirdesabody.length - 1) && (node.yadabhave !== undefined);
+    return (
+      yadaIndex === node.nirdesabody.length - 1 && node.yadabhave !== undefined
+    );
   }
 }
 

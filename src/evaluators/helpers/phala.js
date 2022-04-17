@@ -1,4 +1,3 @@
-
 class phala {
   interpreteNode (node) {
     return this.evaluateNode(node.body);

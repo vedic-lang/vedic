@@ -1,4 +1,3 @@
-
 class LeafNl {
   getNode () {
     return {

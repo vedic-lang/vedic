@@ -1,4 +1,3 @@
-
 const symboltable = require('../../symboltable');
 const pravarHelper = require('./pravarhelper');
 const errorhandler = require('../../errorhandler');
@@ -15,15 +14,29 @@ class maan {
       return;
     }
 
-    this.environment().setmaan(this.getCurrentScope(), node.left, maan.getValue(this, node.right));
+    this.environment().setmaan(
+      this.getCurrentScope(),
+      node.left,
+      maan.getValue(this, node.right)
+    );
   }
 
   static setpravarVariable (context, node) {
     const topIndex = context.scopeStack().length - 2;
 
     for (let index = topIndex; index >= 0; index--) {
-      if (context.environment().getmaan(context.scopeStack()[index], node.left) !== undefined) {
-        return context.environment().setmaan(context.scopeStack()[index], node.left, maan.getValue(context, node.right));
+      if (
+        context
+          .environment()
+          .getmaan(context.scopeStack()[index], node.left) !== undefined
+      ) {
+        return context
+          .environment()
+          .setmaan(
+            context.scopeStack()[index],
+            node.left,
+            maan.getValue(context, node.right)
+          );
       }
     }
   }
@@ -40,11 +53,19 @@ class maan {
       }
 
       if (typeof suchiIndex === 'number') {
-        if (!(Array.isArray(suchiLiteral[suchiIndex])) && (i < node.left.indexNodes.length - 1)) {
-          context.throwError(errorhandler.suchiIndexDoesNotExistMsg(node.left.name));
+        if (
+          !Array.isArray(suchiLiteral[suchiIndex]) &&
+          i < node.left.indexNodes.length - 1
+        ) {
+          context.throwError(
+            errorhandler.suchiIndexDoesNotExistMsg(node.left.name)
+          );
         }
 
-        if ((Array.isArray(suchiLiteral[suchiIndex])) && (i < node.left.indexNodes.length - 1)) {
+        if (
+          Array.isArray(suchiLiteral[suchiIndex]) &&
+          i < node.left.indexNodes.length - 1
+        ) {
           suchiLiteral = suchiLiteral[suchiIndex];
         }
 
@@ -54,7 +75,7 @@ class maan {
       } else {
         context.throwError(errorhandler.invalidSuchiIndexTypeMsg(node.name));
       }
-    };
+    }
   }
 
   static getSuchiLiteral (context, node) {
@@ -64,7 +85,7 @@ class maan {
 
   static getValue (context, node) {
     const value = context.evaluateNode(node);
-    if (value === undefined) context.throwError(errorhandler.undefinedValueMsg(node.left));
+    if (value === undefined) { context.throwError(errorhandler.undefinedValueMsg(node.left)); }
     return value;
   }
 }

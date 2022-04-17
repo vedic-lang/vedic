@@ -1,4 +1,3 @@
-
 const symboltable = require('../../symboltable');
 
 class NegativeNl {

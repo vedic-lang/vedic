@@ -1,9 +1,8 @@
-
 const symboltable = require('../../symboltable');
 
 class SuchiNl {
   getNode (suchiNameToken) {
-    return (!suchiNameToken)
+    return !suchiNameToken
       ? SuchiNl.getParsedSuchiLiteral(this)
       : SuchiNl.getParsedSuchiElement(this, suchiNameToken);
   }
@@ -12,8 +11,11 @@ class SuchiNl {
     const node = {};
     node.operation = symboltable.SUCHI;
     node.body = context.parseDelimited(
-      symboltable.SYM.L_SQ_BRACKET, symboltable.SYM.R_SQ_BRACKET, symboltable.SYM.COMMA,
-      context.parseExpression.bind(context), null
+      symboltable.SYM.L_SQ_BRACKET,
+      symboltable.SYM.R_SQ_BRACKET,
+      symboltable.SYM.COMMA,
+      context.parseExpression.bind(context),
+      null
     );
 
     return node;
@@ -42,7 +44,7 @@ class SuchiNl {
     let indexNode = { operation: null, right: null, left: null, value: '' };
 
     context.skipPunctuation(symboltable.SYM.L_SQ_BRACKET);
-    if (SuchiNl.isNotEmptySuchiIndex(context)) indexNode = context.parseExpression();
+    if (SuchiNl.isNotEmptySuchiIndex(context)) { indexNode = context.parseExpression(); }
     context.skipPunctuation(symboltable.SYM.R_SQ_BRACKET);
 
     return indexNode;

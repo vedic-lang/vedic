@@ -1,4 +1,3 @@
-
 const cleaner = require('./cleaner');
 const errorhandler = require('../../errorhandler');
 const symboltable = require('../../symboltable');
@@ -9,19 +8,36 @@ class Callsutra {
 
     if (sutraNode == null) {
       if (this.environment().existSutraSangraha(node.name)) {
-        return cleaner(this.environment().runSutraSangraha(node.name, Callsutra.getsutraHelperParams(this, node.paramValues)));
+        return cleaner(
+          this.environment().runSutraSangraha(
+            node.name,
+            Callsutra.getsutraHelperParams(this, node.paramValues)
+          )
+        );
       }
 
-      this.throwError(errorhandler.varDoesNotExist(symboltable.KW.sutra, node.name));
+      this.throwError(
+        errorhandler.varDoesNotExist(symboltable.KW.sutra, node.name)
+      );
     }
 
-    return Callsutra.startNewScope(this, sutraNode, Callsutra.getResolvedParameterValues(this, node.paramValues));
+    return Callsutra.startNewScope(
+      this,
+      sutraNode,
+      Callsutra.getResolvedParameterValues(this, node.paramValues)
+    );
   }
 
   static getsutraNode (context, sutraName) {
     for (let index = context.scopeStack().length - 1; index >= 0; index--) {
-      if (context.environment().getsutra(context.scopeStack()[index], sutraName) !== undefined) {
-        return context.environment().getsutra(context.scopeStack()[index], sutraName);
+      if (
+        context
+          .environment()
+          .getsutra(context.scopeStack()[index], sutraName) !== undefined
+      ) {
+        return context
+          .environment()
+          .getsutra(context.scopeStack()[index], sutraName);
       }
     }
     return null;
@@ -29,7 +45,7 @@ class Callsutra {
 
   static getsutraHelperParams (context, paramNodeList) {
     const params = [];
-    paramNodeList.forEach(paramNode => {
+    paramNodeList.forEach((paramNode) => {
       params.push(context.evaluateNode(paramNode));
     });
     return params;
@@ -37,7 +53,7 @@ class Callsutra {
 
   static getResolvedParameterValues (context, paramValueNodes) {
     const paramValues = [];
-    paramValueNodes.forEach(paramValueNode => {
+    paramValueNodes.forEach((paramValueNode) => {
       paramValues.push(context.evaluateNode(paramValueNode));
     });
 
@@ -55,7 +71,13 @@ class Callsutra {
 
   static setsutraNodeParam (context, sutraNodeParamTokens, sutraParamValues) {
     for (let i = 0; i < sutraNodeParamTokens.length; i++) {
-      context.environment().setmaan(context.getCurrentScope(), sutraNodeParamTokens[i].value, sutraParamValues[i]);
+      context
+        .environment()
+        .setmaan(
+          context.getCurrentScope(),
+          sutraNodeParamTokens[i].value,
+          sutraParamValues[i]
+        );
     }
   }
 

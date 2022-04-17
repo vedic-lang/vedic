@@ -5,7 +5,7 @@ const KEYWORDS = {
   atha: 'अथ', // else
   satya: 'सत्य', // true
   asatya: 'असत्य', // false
-  sutra: 'सूत्रम्', // function
+  sutra: 'सूत्र', // function
   phala: 'फल', // return
   chakra: 'चक्रम्', // forloop
   paryantam: 'पर्यन्तम्', // whileloop
@@ -22,6 +22,7 @@ const SYMBOLS = {
   PERIOD: '.',
   OR: '||',
   AND: '&&',
+  BINARY_AND: "&",
   L_THAN: '<',
   G_THAN: '>',
   G_THAN_OR_EQ: '>=',
@@ -53,24 +54,49 @@ const SYMBOLS = {
 
 const LIST = {
   PUNCTUATIONS: [
-    SYMBOLS.L_BRACKET, SYMBOLS.R_BRACKET, SYMBOLS.L_PAREN,
-    SYMBOLS.R_PAREN, SYMBOLS.STATEMENT_TERMINATOR, SYMBOLS.COMMA,
-    SYMBOLS.L_SQ_BRACKET, SYMBOLS.R_SQ_BRACKET, SYMBOLS.COLON, SYMBOLS.SGL_QUOTE
+    SYMBOLS.L_BRACKET,
+    SYMBOLS.R_BRACKET,
+    SYMBOLS.L_PAREN,
+    SYMBOLS.R_PAREN,
+    SYMBOLS.STATEMENT_TERMINATOR,
+    SYMBOLS.COMMA,
+    SYMBOLS.L_SQ_BRACKET,
+    SYMBOLS.R_SQ_BRACKET,
+    SYMBOLS.COLON,
+    SYMBOLS.SGL_QUOTE
   ],
   OPERATORS: [
-    SYMBOLS.PLUS, SYMBOLS.MINUS, SYMBOLS.MULTIPLY,
-    SYMBOLS.DIVIDE, SYMBOLS.REMAINDER, SYMBOLS.L_THAN,
-    SYMBOLS.G_THAN, SYMBOLS.EQ, SYMBOLS.EXCLAMATION_POINT,
-    SYMBOLS.PIPE, SYMBOLS.ASSIGN
+    SYMBOLS.PLUS,
+    SYMBOLS.MINUS,
+    SYMBOLS.MULTIPLY,
+    SYMBOLS.DIVIDE,
+    SYMBOLS.REMAINDER,
+    SYMBOLS.L_THAN,
+    SYMBOLS.G_THAN,
+    SYMBOLS.EQ,
+    SYMBOLS.EXCLAMATION_POINT,
+    SYMBOLS.PIPE,
+    SYMBOLS.BINARY_AND,
+    SYMBOLS.ASSIGN
   ],
-  WHITESPACES: [
-    SYMBOLS.EMPTY_SPACE, SYMBOLS.TAB_SPACE, SYMBOLS.NEW_LINE
-  ],
+  WHITESPACES: [SYMBOLS.EMPTY_SPACE, SYMBOLS.TAB_SPACE, SYMBOLS.NEW_LINE],
   KEYWORDS: [
-    KEYWORDS.maan, KEYWORDS.paryantam, KEYWORDS.yadi, KEYWORDS.vad,
-    KEYWORDS.atha, KEYWORDS.satya, KEYWORDS.asatya, KEYWORDS.sutra,
-    KEYWORDS.chakra, KEYWORDS.phala, KEYWORDS.bhanga, KEYWORDS.nirdesa,
-    KEYWORDS.yada, KEYWORDS.yadabhave, KEYWORDS.avahan, KEYWORDS.pravar
+    KEYWORDS.maan,
+    KEYWORDS.paryantam,
+    KEYWORDS.yadi,
+    KEYWORDS.vad,
+    KEYWORDS.atha,
+    KEYWORDS.satya,
+    KEYWORDS.asatya,
+    KEYWORDS.sutra,
+    KEYWORDS.chakra,
+    KEYWORDS.phala,
+    KEYWORDS.bhanga,
+    KEYWORDS.nirdesa,
+    KEYWORDS.yada,
+    KEYWORDS.yadabhave,
+    KEYWORDS.avahan,
+    KEYWORDS.pravar
   ]
 };
 

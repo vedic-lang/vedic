@@ -19,7 +19,8 @@ class KWnirdesa {
   }
 
   static getnirdesaBody (context) {
-    const nirdesaBody = []; const keywordyada = new KWyada();
+    const nirdesaBody = [];
+    const keywordyada = new KWyada();
 
     while (KWnirdesa.isNextTokenyada(context)) {
       nirdesaBody.push(keywordyada.getNode.call(context));
@@ -29,7 +30,10 @@ class KWnirdesa {
   }
 
   static isNextTokenyada (context) {
-    return context.isNotEndOfFile() && context.lexer().peek().value === symboltable.KW.yada;
+    return (
+      context.isNotEndOfFile() &&
+      context.lexer().peek().value === symboltable.KW.yada
+    );
   }
 
   static getyadabhave (context) {
@@ -71,10 +75,12 @@ class KWyada {
   }
 
   static canParseyadaStatements (context) {
-    return context.isNotEndOfFile() &&
-                        context.lexer().peek().value !== symboltable.KW.yada &&
-                        context.lexer().peek().value !== symboltable.KW.yadabhave &&
-                        context.lexer().peek().value !== symboltable.SYM.R_PAREN;
+    return (
+      context.isNotEndOfFile() &&
+      context.lexer().peek().value !== symboltable.KW.yada &&
+      context.lexer().peek().value !== symboltable.KW.yadabhave &&
+      context.lexer().peek().value !== symboltable.SYM.R_PAREN
+    );
   }
 }
 

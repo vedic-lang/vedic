@@ -1,4 +1,3 @@
-
 function kul (args) {
   if (Array.isArray(args)) {
     const [param] = args;

@@ -1,4 +1,4 @@
-const sangraha = require('../sangraha');
+const sangraha = require("../sangraha");
 
 class enviroment {
   constructor() {
@@ -15,7 +15,9 @@ class enviroment {
   }
 
   getmaan(scope, name) {
-    if (this.vars[scope]) { return this.vars[scope][name]; }
+    if (this.vars[scope]) {
+      return this.vars[scope][name];
+    }
   }
 
   setsutra(scope, sutraName, sutraNode) {
@@ -41,14 +43,15 @@ class enviroment {
       return sangraha[sutraName](sutraArgs);
     }
   }
-  
-  digitMapping = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+
+  digitMapping = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
   vad(value) {
-    value = value.toString()
+    value = value
+      .toString()
       .split("")
       .map((char) => {
-        if (isNaN(parseInt(char))) return char
-        return this.digitMapping[char] || char
+        if (isNaN(parseInt(char))) return char;
+        return this.digitMapping[char] || char;
       })
       .join("");
     console.log(value);

@@ -12,8 +12,10 @@ class KWbhanga {
   }
 
   static isExpectedbhangaStatement (context) {
-    return context.getBlockTypeStack().includes(symboltable.KW.chakra) ||
-                                            context.getBlockTypeStack().includes(symboltable.KW.paryantam);
+    return (
+      context.getBlockTypeStack().includes(symboltable.KW.chakra) ||
+      context.getBlockTypeStack().includes(symboltable.KW.paryantam)
+    );
   }
 
   static getParsedbhangaNode (context) {

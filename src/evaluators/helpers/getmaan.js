@@ -1,17 +1,25 @@
-
 const pravarHelper = require('./pravarhelper');
 const errorhandler = require('../../errorhandler');
 const symboltable = require('../../symboltable');
 
 class Getmaan {
   interpreteNode (node) {
-    for (let index = Getmaan.getTopIndex(this, node.name); index >= 0; index--) {
-      if (this.environment().getmaan(this.scopeStack()[index], node.name) !== undefined) {
+    for (
+      let index = Getmaan.getTopIndex(this, node.name);
+      index >= 0;
+      index--
+    ) {
+      if (
+        this.environment().getmaan(this.scopeStack()[index], node.name) !==
+        undefined
+      ) {
         return this.environment().getmaan(this.scopeStack()[index], node.name);
       }
     }
 
-    this.throwError(errorhandler.varDoesNotExist(symboltable.VARIABLE, node.name));
+    this.throwError(
+      errorhandler.varDoesNotExist(symboltable.VARIABLE, node.name)
+    );
   }
 
   static getTopIndex (context, maanName) {

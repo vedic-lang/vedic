@@ -1,4 +1,3 @@
-
 const Parser = require('../../parser');
 const Lexer = require('../../lexer');
 const InputStream = require('../../inputstream');

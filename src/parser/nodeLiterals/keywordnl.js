@@ -13,7 +13,9 @@ class KWNl {
   }
 
   static isBooleanKeywordNl (context) {
-    return [symboltable.KW.satya, symboltable.KW.asatya].includes(context.lexer().peek().value);
+    return [symboltable.KW.satya, symboltable.KW.asatya].includes(
+      context.lexer().peek().value
+    );
   }
 }
 

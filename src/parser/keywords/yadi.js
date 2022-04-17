@@ -8,7 +8,10 @@ class KWyadi {
 
     const node = {};
     node.operation = symboltable.KW.yadi;
-    node.condition = bracketExpressionNl.getNode.call(this, { isArithmeticExpression: false, isBracketExpected: true });
+    node.condition = bracketExpressionNl.getNode.call(this, {
+      isArithmeticExpression: false,
+      isBracketExpected: true
+    });
     node.then = this.parseBlock(symboltable.KW.yadi);
 
     if (this.isNextTokenKeyword(symboltable.KW.atha)) {

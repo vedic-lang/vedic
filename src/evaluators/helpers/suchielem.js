@@ -1,4 +1,3 @@
-
 const contansts = require('../../symboltable');
 const errorhandler = require('../../errorhandler');
 
@@ -11,20 +10,23 @@ class SuchiElement {
   }
 
   static getSuchiElement (context, node, suchiLiteral) {
-    let suchiElement; let isOnedimensionalSuchi = true;
+    let suchiElement;
+    let isOnedimensionalSuchi = true;
 
-    node.indexNodes.map(indexNode => {
+    node.indexNodes.map((indexNode) => {
       const index = context.evaluateNode(indexNode);
 
       if (typeof index === 'number') {
-        suchiElement = (isOnedimensionalSuchi) ? suchiLiteral[index] : suchiElement[index];
+        suchiElement = isOnedimensionalSuchi
+          ? suchiLiteral[index]
+          : suchiElement[index];
         isOnedimensionalSuchi = false;
       } else {
         context.throwError(errorhandler.invalidSuchiIndexTypeMsg(node.name));
       }
     });
 
-    if (!suchiElement) context.throwError(errorhandler.suchiIndexDoesNotExistMsg(node.name));
+    if (!suchiElement) { context.throwError(errorhandler.suchiIndexDoesNotExistMsg(node.name)); }
 
     return suchiElement;
   }

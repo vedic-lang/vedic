@@ -20,5 +20,5 @@ module.exports = (file, check) => {
         chalk.cyan(' [path/to/script.ved]\n')
       );
     }
-  };
+  }
 };

@@ -12,8 +12,11 @@ class KWsutra {
   }
 
   static isExpectedIseDeclaration (context) {
-    return context.getBlockTypeStack().length === 0 || context.peekBlockTypeStack() === symboltable.PROGRAM ||
-                                                    context.peekBlockTypeStack() === symboltable.KW.sutra;
+    return (
+      context.getBlockTypeStack().length === 0 ||
+      context.peekBlockTypeStack() === symboltable.PROGRAM ||
+      context.peekBlockTypeStack() === symboltable.KW.sutra
+    );
   }
 
   static getParsedsutraNode (context) {
@@ -23,8 +26,11 @@ class KWsutra {
       operation: symboltable.KW.sutra,
       name: context.parseVarname(),
       paramTokens: context.parseDelimited(
-        symboltable.SYM.L_BRACKET, symboltable.SYM.R_BRACKET, symboltable.SYM.COMMA,
-        context.getTokenThatSatisfiesPredicate.bind(context), (token) => token.type === symboltable.VARIABLE
+        symboltable.SYM.L_BRACKET,
+        symboltable.SYM.R_BRACKET,
+        symboltable.SYM.COMMA,
+        context.getTokenThatSatisfiesPredicate.bind(context),
+        (token) => token.type === symboltable.VARIABLE
       ),
       body: context.parseBlock(symboltable.KW.sutra)
     };

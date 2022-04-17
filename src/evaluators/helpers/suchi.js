@@ -1,9 +1,8 @@
-
 class Suchi {
   interpreteNode (suchiNode) {
     const arr = [];
 
-    suchiNode.body.forEach(suchiItemNode => {
+    suchiNode.body.forEach((suchiItemNode) => {
       arr.push(this.evaluateNode(suchiItemNode));
     });
 

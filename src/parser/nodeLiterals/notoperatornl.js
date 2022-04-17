@@ -1,4 +1,3 @@
-
 class NotOperatorNl {
   getNode () {
     return {
