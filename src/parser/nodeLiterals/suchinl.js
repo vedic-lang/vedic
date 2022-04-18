@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -50,7 +50,9 @@ class SuchiNl {
     let indexNode = { operation: null, right: null, left: null, value: '' };
 
     context.skipPunctuation(symboltable.SYM.L_SQ_BRACKET);
-    if (SuchiNl.isNotEmptySuchiIndex(context)) { indexNode = context.parseExpression(); }
+    if (SuchiNl.isNotEmptySuchiIndex(context)) {
+      indexNode = context.parseExpression();
+    }
     context.skipPunctuation(symboltable.SYM.R_SQ_BRACKET);
 
     return indexNode;

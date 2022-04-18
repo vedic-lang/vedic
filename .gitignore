@@ -5,7 +5,7 @@ node_modules/
 .vscode/
 tests/
 logs/
-coverage/
+build/
 
 # Packages #
 ############

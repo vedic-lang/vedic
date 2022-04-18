@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/vedicScript/vedicScript"><img alt="VedicScript" src="https://raw.githubusercontent.com/vedicscript/vedicscript/HEAD/.github/logo.png" width="300vw"/></a></p>
+<p align="center"><a href="https://vedicscript.github.io"><img alt="VedicScript" src="https://raw.githubusercontent.com/vedicscript/vedicscript/HEAD/.github/logo.png" width="300vw"/></a></p>
 <p align="center">
 <a href="https://www.npmjs.com/package/vedicscript"><img src="https://img.shields.io/npm/v/vedicscript.svg?style=flat-square" alt="NPM Version"></a> 
 <a href="https://npmjs.org/package/vedicscript"><img src="https://img.shields.io/npm/dt/vedicscript.svg?style=flat-square" alt="NPM Monthly Downloads"></a> 
@@ -30,55 +30,7 @@ VedicScript Documentation are available at [vedicscript.github.io](https://vedic
 
 ## 👨‍💻 How To Use
 
-### 🌐 Online
-
-Vedic Script can be used in online here in our [Vedic IDE](https://vedicscript.github.io/vedic-ide)
-
-### 💻 Desktop
-
-Vedic Script is very easy to set up, you can install vedic cli tool in any os **Mac** **windows** or **Linux** by following command:
-
-```bash
-npm install -g vedicscript
-```
-
-Use `vedic` in command line to start an interactive vedicscript cli:
-
-Pass a file path to compile a file. For example, to compile the file `helloworld.ved` you can use:
-
-```bash
-vedic helloworld.ved
-```
-
-## 🚀 Uses:
-
-```bash
-vedic --help
-```
-
-to print the command-line help options:
-
-```bash
-VedicScript
-
-Version: 1.2.0
-
-Description: VedicScript is World first Programming launguage in Sanskrit
-
-Usage: 
-	vedic [path/to/script.ved] --options
-	
-Options: 
-	-d --debug    	Run in Debug Mod
-	-v --version	Print version number
-	-h --help  		Print Vedic CLI help
-
-Examples:
-	vedic script.ved
-
-  > You can also run command + option at once:
-	vedic script.ved -d  
-```
+Vedic Script is very easy to set up, just follow the [Install Instructions](hhttps://vedicscript.github.io/how-to-use) for your system 
 
 ## 👤 Author
 

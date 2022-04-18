@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -112,7 +112,9 @@ class Parser {
       symboltable.SYM.NOT_EQ
     ];
 
-    if (this.isArithmeticExpression()) { return this.parseWhile(operatorList, this.parsePlusMinus); } else return this.parseWhile(operatorList, this.parseNodeLiteral);
+    if (this.isArithmeticExpression()) {
+      return this.parseWhile(operatorList, this.parsePlusMinus);
+    } else return this.parseWhile(operatorList, this.parseNodeLiteral);
   }
 
   parsePlusMinus () {

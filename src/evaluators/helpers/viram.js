@@ -6,12 +6,10 @@
 
 const symboltable = require('../../symboltable');
 
-class GThanOrEq {
+class viram {
   interpreteNode (node) {
-    return this.evaluateNode(node.left) >= this.evaluateNode(node.right)
-      ? symboltable.KW.satya
-      : symboltable.KW.asatya;
+    return symboltable.KW.viram;
   }
 }
 
-module.exports = new GThanOrEq();
+module.exports = new viram();

@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -13,7 +13,7 @@ keywords[symboltable.KW.yadi] = require('./yadi');
 keywords[symboltable.KW.paryantam] = require('./paryantam');
 keywords[symboltable.KW.chakra] = require('./chakra');
 keywords[symboltable.KW.phala] = require('./phala');
-keywords[symboltable.KW.bhanga] = require('./bhanga');
+keywords[symboltable.KW.viram] = require('./viram');
 keywords[symboltable.KW.sutra] = require('./sutra');
 keywords[symboltable.KW.nirdesa] = require('./nirdesa');
 keywords[symboltable.KW.avahan] = require('./avahan');

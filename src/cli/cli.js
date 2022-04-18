@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -43,7 +43,7 @@ module.exports = {
       ${chalk.green('vedic')} ${chalk.cyan('script.ved')}
 
       ❯ You can also run command + option at once:
-      ${chalk.green('vedic')} ${chalk.cyan('script.ved')} ${chalk.yellow(`-d`)}  
+      ${chalk.green('vedic')} ${chalk.cyan('script.ved')} ${chalk.yellow('-d')}  
       `);
   },
   end: () => {

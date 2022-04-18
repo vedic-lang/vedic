@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -21,7 +21,9 @@ class CallsutraNl {
       null
     );
 
-    if (sutraNameToken.value === undefined) { this.skipPunctuation(symboltable.SYM.STATEMENT_TERMINATOR); }
+    if (sutraNameToken.value === undefined) {
+      this.skipPunctuation(symboltable.SYM.STATEMENT_TERMINATOR);
+    }
 
     return node;
   }

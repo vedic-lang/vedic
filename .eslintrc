@@ -23,11 +23,7 @@
         ],
         "quotes": [
             "error",
-            "single",
-            {
-                "avoidEscape": true,
-                "allowTemplateLiterals": true
-            }
+            "single"
         ],
         "no-multi-spaces": [
             "error",
@@ -56,6 +52,6 @@
         ],
         "no-var": [
             "error"
-        ]      
+        ]
     }
 }

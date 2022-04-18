@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -8,23 +8,23 @@ const symboltable = require('../../symboltable');
 
 const errorhandler = require('../../errorhandler');
 
-class KWbhanga {
+class KWviram {
   getNode () {
-    if (KWbhanga.isExpectedbhangaStatement(this)) {
-      return KWbhanga.getParsedbhangaNode(this);
+    if (KWviram.isExpectedviramStatement(this)) {
+      return KWviram.getParsedviramNode(this);
     }
 
-    this.throwError(errorhandler.unexpectedDeclaration(symboltable.KW.bhanga));
+    this.throwError(errorhandler.unexpectedDeclaration(symboltable.KW.viram));
   }
 
-  static isExpectedbhangaStatement (context) {
+  static isExpectedviramStatement (context) {
     return (
       context.getBlockTypeStack().includes(symboltable.KW.chakra) ||
       context.getBlockTypeStack().includes(symboltable.KW.paryantam)
     );
   }
 
-  static getParsedbhangaNode (context) {
+  static getParsedviramNode (context) {
     const node = {};
     node.operation = context.lexer().next().value;
     context.skipPunctuation(symboltable.SYM.STATEMENT_TERMINATOR);
@@ -33,4 +33,4 @@ class KWbhanga {
   }
 }
 
-module.exports = new KWbhanga();
+module.exports = new KWviram();

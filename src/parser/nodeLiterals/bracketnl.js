@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -13,11 +13,15 @@ class BracketExpressionNl {
       isBracketExpected: true
     };
 
-    if (config.isBracketExpected) { this.skipPunctuation(symboltable.SYM.L_BRACKET); }
+    if (config.isBracketExpected) {
+      this.skipPunctuation(symboltable.SYM.L_BRACKET);
+    }
     this.setIsArithmeticExpression(config.isArithmeticExpression);
     const node = this.parseExpression();
     this.setIsArithmeticExpression(true);
-    if (config.isBracketExpected) { this.skipPunctuation(symboltable.SYM.R_BRACKET); }
+    if (config.isBracketExpected) {
+      this.skipPunctuation(symboltable.SYM.R_BRACKET);
+    }
 
     return node;
   }

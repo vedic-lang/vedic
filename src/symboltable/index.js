@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -15,7 +15,7 @@ const KEYWORDS = {
   phala: 'फल', // return
   chakra: 'चक्रम्', // forloop
   paryantam: 'पर्यन्तम्', // whileloop
-  bhanga: 'विराम्', // break
+  viram: 'विराम्', // break
   nirdesa: 'निर्देश', // Switch
   yada: 'यद', // Case
   yadabhave: 'यदभावे', // Default
@@ -28,7 +28,7 @@ const SYMBOLS = {
   PERIOD: '.',
   OR: '||',
   AND: '&&',
-  BINARY_AND: "&",
+  BINARY_AND: '&',
   L_THAN: '<',
   G_THAN: '>',
   G_THAN_OR_EQ: '>=',
@@ -97,7 +97,7 @@ const LIST = {
     KEYWORDS.sutra,
     KEYWORDS.chakra,
     KEYWORDS.phala,
-    KEYWORDS.bhanga,
+    KEYWORDS.viram,
     KEYWORDS.nirdesa,
     KEYWORDS.yada,
     KEYWORDS.yadabhave,

@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -32,7 +32,9 @@ class SuchiElement {
       }
     });
 
-    if (!suchiElement) { context.throwError(errorhandler.suchiIndexDoesNotExistMsg(node.name)); }
+    if (!suchiElement) {
+      context.throwError(errorhandler.suchiIndexDoesNotExistMsg(node.name));
+    }
 
     return suchiElement;
   }

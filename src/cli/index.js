@@ -1,6 +1,6 @@
-﻿/*
- * ॥ श्री गणेशाय नमः ॥ 
- * © Copyright 2022 @ptprashanttripathi 
+/*
+ * ॥ श्री गणेशाय नमः ॥
+ * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
 
@@ -11,8 +11,8 @@ const fetchSource = require('../fetchSource');
 const { Extensions } = require('../symboltable');
 
 // HANDLING ERROR
-process.on('unhandledRejection', err => {
-  console.error(`UNHANDLED ERROR`, err);
+process.on('unhandledRejection', (err) => {
+  console.error('UNHANDLED ERROR', err);
   process.exit();
 });
 
@@ -33,10 +33,11 @@ if (!cli.input._[0]) {
   cli.showWelcomeMsg();
 } else {
   try {
-    if (!Extensions.includes(cli.input._[0].split('.')[1])) {
-      console.log(cli.input._[0].split('.')[1],
-        '\n' + chalk.hex('#f44336').inverse.bold(' ERROR: ') + '\n\n' +
-        chalk.bold('This file type not supported.\n\nSupported file types: ') + chalk.yellow(`['v', 'ved', 'veda']`) + '\n\n'
+    if (!Extensions.includes(cli.input._[0].split('.').pop())) {
+      console.log(
+        chalk.hex('#f44336').inverse.bold(' ERROR: ') + '\n\n' +
+        chalk.bold('This file type not supported.\n\nSupported file types: ') +
+        chalk.yellow('[\'v\', \'ved\', \'veda\']') + '\n\n'
       );
       cli.end();
     }
