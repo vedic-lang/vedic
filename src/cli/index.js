@@ -48,6 +48,14 @@ if (!cli.input._[0]) {
     if (d) console.time('⌛ Total Runtime');
 
     const file = fetchSource(cli.input._[0], true);
+    if (!file) {
+      console.log(
+        chalk.hex('#FFF').bold('\n Usage: '),
+        chalk.green('vedic'),
+        chalk.cyan(' [path/to/script.ved]\n')
+      );
+      cli.end();
+    }
 
     Interpreter(file.code, file.name, file.dir);
 
