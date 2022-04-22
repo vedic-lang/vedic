@@ -10,7 +10,7 @@ const leafNl = require('./leafnl');
 const errorhandler = require('../../errorhandler');
 
 class KWNl {
-  getNode () {
+  getNode() {
     if (KWNl.isBooleanKeywordNl(this)) {
       return leafNl.getNode.call(this);
     }
@@ -18,7 +18,7 @@ class KWNl {
     this.throwError(errorhandler.expectBooleanMsg());
   }
 
-  static isBooleanKeywordNl (context) {
+  static isBooleanKeywordNl(context) {
     return [symboltable.KW.satya, symboltable.KW.asatya].includes(
       context.lexer().peek().value
     );

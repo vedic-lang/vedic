@@ -5,7 +5,7 @@
  */
 
 class vad {
-  interpreteNode (node) {
+  interpreteNode(node) {
     this.environment().vad(this.evaluateNode(node.body));
   }
 }

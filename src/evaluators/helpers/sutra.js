@@ -7,7 +7,7 @@
 const errorhandler = require('../../errorhandler');
 
 class sutra {
-  interpreteNode (node) {
+  interpreteNode(node) {
     if (
       this.environment().getsutra(this.getCurrentScope(), node.name) !==
       undefined

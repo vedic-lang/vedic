@@ -5,10 +5,10 @@
  */
 
 class NotOperatorNl {
-  getNode () {
+  getNode() {
     return {
       operation: this.lexer().next().value,
-      body: this.parseExpression()
+      body: this.parseExpression(),
     };
   }
 }

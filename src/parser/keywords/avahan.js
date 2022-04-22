@@ -11,7 +11,7 @@ const path = require('path');
 const errorhandler = require('../../errorhandler');
 
 class KWavahan {
-  getNode () {
+  getNode() {
     this.skipKeyword(symboltable.KW.avahan);
     const node = {};
     node.operation = symboltable.KW.avahan;

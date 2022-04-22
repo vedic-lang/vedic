@@ -19,12 +19,12 @@ const KEYWORDS = {
   nirdesa: 'निर्देश', // Switch
   yada: 'यद', // Case
   yadabhave: 'यदभावे', // Default
-  avahan: 'अवहन्' // Import
+  avahan: 'अवहन्', // Import
 };
 
 const SYMBOLS = {
   DBL_QUOTE: '"',
-  SGL_QUOTE: '\'',
+  SGL_QUOTE: "'",
   PERIOD: '.',
   OR: '||',
   AND: '&&',
@@ -55,7 +55,7 @@ const SYMBOLS = {
   EMPTY_SPACE: ' ',
   EXCLAMATION_POINT: '!',
   PIPE: '|',
-  COLON: ':'
+  COLON: ':',
 };
 
 const LIST = {
@@ -69,7 +69,7 @@ const LIST = {
     SYMBOLS.L_SQ_BRACKET,
     SYMBOLS.R_SQ_BRACKET,
     SYMBOLS.COLON,
-    SYMBOLS.SGL_QUOTE
+    SYMBOLS.SGL_QUOTE,
   ],
   OPERATORS: [
     SYMBOLS.PLUS,
@@ -83,7 +83,7 @@ const LIST = {
     SYMBOLS.EXCLAMATION_POINT,
     SYMBOLS.PIPE,
     SYMBOLS.BINARY_AND,
-    SYMBOLS.ASSIGN
+    SYMBOLS.ASSIGN,
   ],
   WHITESPACES: [SYMBOLS.EMPTY_SPACE, SYMBOLS.TAB_SPACE, SYMBOLS.NEW_LINE],
   KEYWORDS: [
@@ -102,13 +102,13 @@ const LIST = {
     KEYWORDS.yada,
     KEYWORDS.yadabhave,
     KEYWORDS.avahan,
-    KEYWORDS.pravar
-  ]
+    KEYWORDS.pravar,
+  ],
 };
 
 const REGEX = {
   DIGIT: /[\u0966-\u096F]/i,
-  IDENTIFIER: /[\u0900-\u097F]/i
+  IDENTIFIER: /[\u0900-\u097F]/i,
 };
 
 const constants = {
@@ -129,7 +129,7 @@ const constants = {
   CALL_sutra: 'callsutra',
   EXP_PUNC: 'expression_punctuations',
   Extensions: ['v', 'ved', 'veda'],
-  NEGATIVE_EXPRESSION: 'negative_exp'
+  NEGATIVE_EXPRESSION: 'negative_exp',
 };
 
 module.exports = constants;

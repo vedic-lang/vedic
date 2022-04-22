@@ -5,7 +5,7 @@
  */
 
 class Suchi {
-  interpreteNode (suchiNode) {
+  interpreteNode(suchiNode) {
     const arr = [];
 
     suchiNode.body.forEach((suchiItemNode) => {

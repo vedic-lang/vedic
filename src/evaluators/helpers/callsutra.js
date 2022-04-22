@@ -9,7 +9,7 @@ const errorhandler = require('../../errorhandler');
 const symboltable = require('../../symboltable');
 
 class Callsutra {
-  interpreteNode (node) {
+  interpreteNode(node) {
     const sutraNode = Callsutra.getsutraNode(this, node.name);
 
     if (sutraNode == null) {
@@ -34,7 +34,7 @@ class Callsutra {
     );
   }
 
-  static getsutraNode (context, sutraName) {
+  static getsutraNode(context, sutraName) {
     for (let index = context.scopeStack().length - 1; index >= 0; index--) {
       if (
         context
@@ -49,7 +49,7 @@ class Callsutra {
     return null;
   }
 
-  static getsutraHelperParams (context, paramNodeList) {
+  static getsutraHelperParams(context, paramNodeList) {
     const params = [];
     paramNodeList.forEach((paramNode) => {
       params.push(context.evaluateNode(paramNode));
@@ -57,7 +57,7 @@ class Callsutra {
     return params;
   }
 
-  static getResolvedParameterValues (context, paramValueNodes) {
+  static getResolvedParameterValues(context, paramValueNodes) {
     const paramValues = [];
     paramValueNodes.forEach((paramValueNode) => {
       paramValues.push(context.evaluateNode(paramValueNode));
@@ -66,7 +66,7 @@ class Callsutra {
     return paramValues;
   }
 
-  static startNewScope (context, sutraNode, paramValues) {
+  static startNewScope(context, sutraNode, paramValues) {
     context.pushToScopeStack(sutraNode.name);
     Callsutra.setsutraNodeParam(context, sutraNode.paramTokens, paramValues);
     const returnedValue = Callsutra.runsutraNodeBody(context, sutraNode.body);
@@ -75,7 +75,7 @@ class Callsutra {
     return returnedValue;
   }
 
-  static setsutraNodeParam (context, sutraNodeParamTokens, sutraParamValues) {
+  static setsutraNodeParam(context, sutraNodeParamTokens, sutraParamValues) {
     for (let i = 0; i < sutraNodeParamTokens.length; i++) {
       context
         .environment()
@@ -87,7 +87,7 @@ class Callsutra {
     }
   }
 
-  static runsutraNodeBody (context, sutraNodeBody) {
+  static runsutraNodeBody(context, sutraNodeBody) {
     for (let i = 0; i < sutraNodeBody.length; i++) {
       const returnedValue = context.evaluateNode(sutraNodeBody[i]);
       if (returnedValue !== undefined) return returnedValue;

@@ -8,13 +8,13 @@ const helpers = require('./helpers');
 const symboltable = require('../symboltable');
 
 class Mainevaluator {
-  constructor (environment, parser) {
+  constructor(environment, parser) {
     this.environment = () => environment;
     this.parser = () => parser;
     this.initScopeStack();
   }
 
-  initScopeStack () {
+  initScopeStack() {
     const _scopeStack = ['global'];
     this.getCurrentScope = () => _scopeStack[_scopeStack.length - 1];
     this.scopeStack = () => [..._scopeStack];
@@ -22,7 +22,7 @@ class Mainevaluator {
     this.popFromScopeStack = () => _scopeStack.pop();
   }
 
-  getLeafValue (leaf) {
+  getLeafValue(leaf) {
     if (leaf.value != null) {
       return leaf.value;
     }
@@ -30,7 +30,7 @@ class Mainevaluator {
     return null;
   }
 
-  evaluateNode (node) {
+  evaluateNode(node) {
     const leafValue = this.getLeafValue(node);
     if (leafValue == null) {
       const evaluator = helpers[node.operation];
@@ -40,11 +40,11 @@ class Mainevaluator {
     return leafValue;
   }
 
-  throwError (msg) {
+  throwError(msg) {
     this.parser().throwError(msg);
   }
 
-  interpreteProgram () {
+  interpreteProgram() {
     this.parser().pushToBlockTypeStack(symboltable.PROGRAM);
     while (this.parser().isNotEndOfFile()) {
       this.evaluateNode(this.parser().parseAst());
@@ -52,7 +52,7 @@ class Mainevaluator {
     this.parser().popBlockTypeStack();
   }
 
-  interpreteImportedProgram (parser) {
+  interpreteImportedProgram(parser) {
     new Mainevaluator(this.environment(), parser).interpreteProgram();
   }
 }

@@ -10,7 +10,7 @@ const variableNl = require('../nodeLiterals/variablenl');
 const errorhandler = require('../../errorhandler');
 
 class KWmaan {
-  getNode (config) {
+  getNode(config) {
     config = config || { shouldExpectTerminator: true };
 
     this.skipKeyword(symboltable.KW.maan);

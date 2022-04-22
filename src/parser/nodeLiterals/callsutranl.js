@@ -7,7 +7,7 @@
 const symboltable = require('../../symboltable');
 
 class CallsutraNl {
-  getNode (sutraNameToken) {
+  getNode(sutraNameToken) {
     sutraNameToken = sutraNameToken || {};
 
     const node = {};

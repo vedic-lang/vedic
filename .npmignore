@@ -3,3 +3,5 @@ node_modules/
 docs/
 tests/
 coverage/
+build/
+sample/

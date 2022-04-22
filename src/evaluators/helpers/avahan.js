@@ -10,7 +10,7 @@ const InputStream = require('../../inputstream');
 const fetchSource = require('../../fetchSource');
 
 class avahan {
-  interpreteNode (node) {
+  interpreteNode(node) {
     const fileName = this.evaluateNode(node.path);
     const file = fetchSource(fileName);
     const parser = new Parser(new Lexer(new InputStream(file)));

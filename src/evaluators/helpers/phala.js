@@ -5,7 +5,7 @@
  */
 
 class phala {
-  interpreteNode (node) {
+  interpreteNode(node) {
     return this.evaluateNode(node.body);
   }
 }

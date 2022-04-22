@@ -11,11 +11,17 @@ const chalk = require('chalk');
 module.exports = {
   showWelcomeMsg: () => {
     console.log(`
-    ${chalk.hex('#ff9933').inverse.bold(' VedicScript ')} ${chalk.hex('#FFF').bold('v' + pkgJSON.version)}
+    ${chalk.hex('#ff9933').inverse.bold(' Vedic ')} ${chalk
+      .hex('#FFF')
+      .bold('v' + pkgJSON.version)}
 
-      ${chalk.hex('#FFF').bold('Use:')} ${chalk.green('vedic')} ${chalk.cyan('[path/to/script.ved]')} 
+      ${chalk.hex('#FFF').bold('Use:')} ${chalk.green('vedic')} ${chalk.cyan(
+      '[path/to/script.ved]'
+    )} 
       
-      ❯ To see help run command ${chalk.green('vedic')} ${chalk.yellow('--help')}
+      ❯ To see help run command ${chalk.green('vedic')} ${chalk.yellow(
+      '--help'
+    )}
 
     `);
   },
@@ -24,15 +30,19 @@ module.exports = {
   },
   showHelp: () => {
     console.log(`
-    ${chalk.hex('#ff9933').inverse.bold(' VedicScript ')} 
+    ${chalk.hex('#ff9933').inverse.bold(' Vedic ')} 
 
-    ${chalk.hex('#FFF').bold(' Version :')} ${chalk.whiteBright(pkgJSON.version)}
+    ${chalk.hex('#FFF').bold(' Version :')} ${chalk.whiteBright(
+      pkgJSON.version
+    )}
 
     ${chalk.hex('#FFF').bold(' Description: ')}
       ${chalk.whiteBright(pkgJSON.description)}
 
     ${chalk.hex('#FFF').bold(' Usage: ')}
-      ${chalk.green('vedic')} ${chalk.cyan('[path/to/script.ved]')} ${chalk.yellow('[--options]')}
+      ${chalk.green('vedic')} ${chalk.cyan(
+      '[path/to/script.ved]'
+    )} ${chalk.yellow('[--options]')}
 
     ${chalk.hex('#FFF').bold(' Options: ')}
       ${chalk.yellow('-d --debug')}    Run in Debug Mod
@@ -43,7 +53,9 @@ module.exports = {
       ${chalk.green('vedic')} ${chalk.cyan('script.ved')}
 
       ❯ You can also run command + option at once:
-      ${chalk.green('vedic')} ${chalk.cyan('script.ved')} ${chalk.yellow('-d')}  
+      ${chalk.green('vedic')} ${chalk.cyan('script.ved')} ${chalk.yellow(
+      '-d'
+    )}  
       `);
   },
   end: () => {
@@ -53,7 +65,7 @@ module.exports = {
     alias: {
       help: ['h'],
       version: ['v'],
-      debug: ['d']
+      debug: ['d'],
     },
     boolean: ['help', 'version', 'debug'],
     // string: [{ key: 'output' }],
@@ -61,7 +73,7 @@ module.exports = {
       help: false,
       version: false,
       log: false,
-      debug: false
-    }
-  })
+      debug: false,
+    },
+  }),
 };

@@ -7,7 +7,7 @@
 const symboltable = require('../../symboltable');
 
 class KWvad {
-  getNode () {
+  getNode() {
     this.skipKeyword(symboltable.KW.vad);
     const node = {};
     node.operation = symboltable.KW.vad;

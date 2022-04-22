@@ -5,5 +5,5 @@
  */
 
 module.exports = {
-  'कुल': require('./kul')
+  कुल: require('./kul'),
 };

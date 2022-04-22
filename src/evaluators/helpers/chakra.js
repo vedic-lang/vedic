@@ -7,7 +7,7 @@
 const symboltable = require('../../symboltable');
 
 class chakra {
-  interpreteNode (node) {
+  interpreteNode(node) {
     this.evaluateNode(node.init);
 
     while (this.evaluateNode(node.condition) !== symboltable.KW.asatya) {

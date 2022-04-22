@@ -4,15 +4,15 @@
  * https://github.com/ptprashanttripathi
  */
 
-function cleaner (returnedValue) {
+function cleaner(returnedValue) {
   switch (typeof returnedValue) {
-  case 'string':
-  case 'number':
-    return returnedValue;
-  case 'boolean':
-    return returnedValue ? 'सत्य' : 'असत्य';
-  case 'object':
-    if (Array.isArray(returnedValue)) return returnedValue;
+    case 'string':
+    case 'number':
+      return returnedValue;
+    case 'boolean':
+      return returnedValue ? 'सत्य' : 'असत्य';
+    case 'object':
+      if (Array.isArray(returnedValue)) return returnedValue;
   }
 
   throw new Error(

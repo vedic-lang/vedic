@@ -11,7 +11,7 @@ const errorhandler = require('../../errorhandler');
 const bracketExpressionNl = require('../nodeLiterals/bracketnl');
 
 class KWchakra {
-  getNode () {
+  getNode() {
     this.skipKeyword(symboltable.KW.chakra);
 
     this.skipPunctuation(symboltable.SYM.L_BRACKET);
@@ -20,12 +20,12 @@ class KWchakra {
     node.init = keywordmaan.getNode.call(this);
     node.condition = bracketExpressionNl.getNode.call(this, {
       isArithmeticExpression: false,
-      isBracketExpected: false
+      isBracketExpected: false,
     });
 
     this.skipPunctuation(symboltable.SYM.STATEMENT_TERMINATOR);
     node.increment = keywordmaan.getNode.call(this, {
-      shouldExpectTerminator: false
+      shouldExpectTerminator: false,
     });
 
     if (KWchakra.isInValidchakraIncrementStatement(node)) {
@@ -38,7 +38,7 @@ class KWchakra {
     return node;
   }
 
-  static isInValidchakraIncrementStatement (chakraNode) {
+  static isInValidchakraIncrementStatement(chakraNode) {
     const incrementNode = chakraNode.increment.right;
 
     if (

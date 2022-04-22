@@ -9,14 +9,14 @@ const symboltable = require('../../symboltable');
 const bracketExpressionNl = require('../nodeLiterals/bracketnl');
 
 class KWyadi {
-  getNode () {
+  getNode() {
     this.skipKeyword(symboltable.KW.yadi);
 
     const node = {};
     node.operation = symboltable.KW.yadi;
     node.condition = bracketExpressionNl.getNode.call(this, {
       isArithmeticExpression: false,
-      isBracketExpected: true
+      isBracketExpected: true,
     });
     node.then = this.parseBlock(symboltable.KW.yadi);
 
@@ -27,7 +27,7 @@ class KWyadi {
     return node;
   }
 
-  static getathaNode (context) {
+  static getathaNode(context) {
     context.skipKeyword(symboltable.KW.atha);
 
     if (context.isNextTokenKeyword(symboltable.KW.yadi)) {

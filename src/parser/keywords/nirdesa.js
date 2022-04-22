@@ -9,7 +9,7 @@ const symboltable = require('../../symboltable');
 const bracketExpressionNl = require('../nodeLiterals/bracketnl');
 
 class KWnirdesa {
-  getNode () {
+  getNode() {
     const node = {};
     node.operation = symboltable.KW.nirdesa;
     this.pushToBlockTypeStack(symboltable.KW.nirdesa);
@@ -24,7 +24,7 @@ class KWnirdesa {
     return node;
   }
 
-  static getnirdesaBody (context) {
+  static getnirdesaBody(context) {
     const nirdesaBody = [];
     const keywordyada = new KWyada();
 
@@ -35,14 +35,14 @@ class KWnirdesa {
     return nirdesaBody;
   }
 
-  static isNextTokenyada (context) {
+  static isNextTokenyada(context) {
     return (
       context.isNotEndOfFile() &&
       context.lexer().peek().value === symboltable.KW.yada
     );
   }
 
-  static getyadabhave (context) {
+  static getyadabhave(context) {
     const yadabhave = [];
 
     if (context.isNextTokenKeyword(symboltable.KW.yadabhave)) {
@@ -59,7 +59,7 @@ class KWnirdesa {
 }
 
 class KWyada {
-  getNode () {
+  getNode() {
     const node = {};
     node.operation = symboltable.KW.yada;
     this.skipKeyword(symboltable.KW.yada);
@@ -70,7 +70,7 @@ class KWyada {
     return node;
   }
 
-  static getyadaBody (context) {
+  static getyadaBody(context) {
     const yadaBody = [];
 
     while (KWyada.canParseyadaStatements(context)) {
@@ -80,7 +80,7 @@ class KWyada {
     return yadaBody;
   }
 
-  static canParseyadaStatements (context) {
+  static canParseyadaStatements(context) {
     return (
       context.isNotEndOfFile() &&
       context.lexer().peek().value !== symboltable.KW.yada &&

@@ -9,7 +9,7 @@ const errorhandler = require('../../errorhandler');
 const symboltable = require('../../symboltable');
 
 class Getmaan {
-  interpreteNode (node) {
+  interpreteNode(node) {
     for (
       let index = Getmaan.getTopIndex(this, node.name);
       index >= 0;
@@ -28,7 +28,7 @@ class Getmaan {
     );
   }
 
-  static getTopIndex (context, maanName) {
+  static getTopIndex(context, maanName) {
     if (pravarHelper.ispravarVariable(context, maanName)) {
       return context.scopeStack().length - 2;
     }

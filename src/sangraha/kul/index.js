@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-function kul (args) {
+function kul(args) {
   if (Array.isArray(args)) {
     const [param] = args;
     if (Array.isArray(param)) return param.length;

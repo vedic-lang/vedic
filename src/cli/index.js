@@ -35,9 +35,13 @@ if (!cli.input._[0]) {
   try {
     if (!Extensions.includes(cli.input._[0].split('.').pop())) {
       console.log(
-        chalk.hex('#f44336').inverse.bold(' ERROR: ') + '\n\n' +
-        chalk.bold('This file type not supported.\n\nSupported file types: ') +
-        chalk.yellow('[\'v\', \'ved\', \'veda\']') + '\n\n'
+        chalk.hex('#f44336').inverse.bold(' ERROR: ') +
+          '\n\n' +
+          chalk.bold(
+            'This file type not supported.\n\nSupported file types: '
+          ) +
+          chalk.yellow("['v', 'ved', 'veda']") +
+          '\n\n'
       );
       cli.end();
     }

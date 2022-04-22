@@ -7,13 +7,13 @@
 const symboltable = require('../../symboltable');
 
 class SuchiNl {
-  getNode (suchiNameToken) {
+  getNode(suchiNameToken) {
     return !suchiNameToken
       ? SuchiNl.getParsedSuchiLiteral(this)
       : SuchiNl.getParsedSuchiElement(this, suchiNameToken);
   }
 
-  static getParsedSuchiLiteral (context) {
+  static getParsedSuchiLiteral(context) {
     const node = {};
     node.operation = symboltable.SUCHI;
     node.body = context.parseDelimited(
@@ -27,7 +27,7 @@ class SuchiNl {
     return node;
   }
 
-  static getParsedSuchiElement (context, suchiNameToken) {
+  static getParsedSuchiElement(context, suchiNameToken) {
     const node = {};
     node.operation = symboltable.SUCHI_ELEM;
     node.name = suchiNameToken.value;
@@ -36,7 +36,7 @@ class SuchiNl {
     return node;
   }
 
-  static getSuchiElementIndexNodes (context) {
+  static getSuchiElementIndexNodes(context) {
     const indexNodes = [SuchiNl.getSuchiElementIndexNode(context)];
 
     while (context.isNextTokenPunctuation(symboltable.SYM.L_SQ_BRACKET)) {
@@ -46,7 +46,7 @@ class SuchiNl {
     return indexNodes;
   }
 
-  static getSuchiElementIndexNode (context) {
+  static getSuchiElementIndexNode(context) {
     let indexNode = { operation: null, right: null, left: null, value: '' };
 
     context.skipPunctuation(symboltable.SYM.L_SQ_BRACKET);
@@ -58,7 +58,7 @@ class SuchiNl {
     return indexNode;
   }
 
-  static isNotEmptySuchiIndex (context) {
+  static isNotEmptySuchiIndex(context) {
     return context.lexer().peek().value !== symboltable.SYM.R_SQ_BRACKET;
   }
 }

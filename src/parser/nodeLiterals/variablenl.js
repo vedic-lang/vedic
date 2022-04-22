@@ -9,7 +9,7 @@ const symboltable = require('../../symboltable');
 const variableNlTypes = require('./variablenltypes');
 
 class VariableNl {
-  getNode () {
+  getNode() {
     const varNameToken = this.lexer().next();
 
     const nextTokenValue = this.lexer().peek().value;
@@ -20,7 +20,7 @@ class VariableNl {
 
     return {
       operation: symboltable.GET_maan,
-      name: varNameToken.value
+      name: varNameToken.value,
     };
   }
 }

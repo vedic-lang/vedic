@@ -9,7 +9,7 @@ const symboltable = require('../../symboltable');
 const errorhandler = require('../../errorhandler');
 
 class KWsutra {
-  getNode () {
+  getNode() {
     if (KWsutra.isExpectedIseDeclaration(this)) {
       return KWsutra.getParsedsutraNode(this);
     }
@@ -17,7 +17,7 @@ class KWsutra {
     this.throwError(errorhandler.unexpectedDeclaration(symboltable.KW.sutra));
   }
 
-  static isExpectedIseDeclaration (context) {
+  static isExpectedIseDeclaration(context) {
     return (
       context.getBlockTypeStack().length === 0 ||
       context.peekBlockTypeStack() === symboltable.PROGRAM ||
@@ -25,7 +25,7 @@ class KWsutra {
     );
   }
 
-  static getParsedsutraNode (context) {
+  static getParsedsutraNode(context) {
     context.skipKeyword(symboltable.KW.sutra);
 
     return {
@@ -38,7 +38,7 @@ class KWsutra {
         context.getTokenThatSatisfiesPredicate.bind(context),
         (token) => token.type === symboltable.VARIABLE
       ),
-      body: context.parseBlock(symboltable.KW.sutra)
+      body: context.parseBlock(symboltable.KW.sutra),
     };
   }
 }

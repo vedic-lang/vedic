@@ -7,7 +7,7 @@
 const symboltable = require('../../symboltable');
 
 class pravarHelper {
-  static ispravarVariable (context, maanName) {
+  static ispravarVariable(context, maanName) {
     const pravarList = context
       .environment()
       .getmaan(context.getCurrentScope(), symboltable.KW.pravar);

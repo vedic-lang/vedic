@@ -10,14 +10,14 @@ const keywords = require('./keywords');
 const nodeLiterals = require('./nodeLiterals');
 
 class Parser {
-  constructor (lexer) {
+  constructor(lexer) {
     this.lexer = () => lexer;
     this.file = lexer.file;
     this.initBlockTypeStack();
     this.initIsArithmeticExpression();
   }
 
-  initBlockTypeStack () {
+  initBlockTypeStack() {
     const _blockTypeStack = [];
     this.pushToBlockTypeStack = (blockName) => {
       _blockTypeStack.push(blockName);
@@ -27,7 +27,7 @@ class Parser {
     this.getBlockTypeStack = () => [..._blockTypeStack];
   }
 
-  initIsArithmeticExpression () {
+  initIsArithmeticExpression() {
     let _isArithmeticExpression = true;
     this.setIsArithmeticExpression = (isArithmetic) => {
       _isArithmeticExpression = isArithmetic;
@@ -35,24 +35,24 @@ class Parser {
     this.isArithmeticExpression = () => _isArithmeticExpression;
   }
 
-  isNextTokenPunctuation (punc) {
+  isNextTokenPunctuation(punc) {
     const token = this.lexer().peek();
     return (
       token && token.type === symboltable.PUNCTUATION && token.value === punc
     );
   }
 
-  isNextTokenOperator (op) {
+  isNextTokenOperator(op) {
     const token = this.lexer().peek();
     return token && token.type === symboltable.OPERATOR && token.value === op;
   }
 
-  isNextTokenKeyword (kw) {
+  isNextTokenKeyword(kw) {
     const token = this.lexer().peek();
     return token && token.type === symboltable.KEYWORD && token.value === kw;
   }
 
-  skipPunctuation (punc) {
+  skipPunctuation(punc) {
     if (this.isNextTokenPunctuation(punc)) this.lexer().next();
     else {
       this.throwError(
@@ -61,7 +61,7 @@ class Parser {
     }
   }
 
-  skipOperator (op) {
+  skipOperator(op) {
     if (this.isNextTokenOperator(op)) this.lexer().next();
     else {
       this.throwError(
@@ -70,7 +70,7 @@ class Parser {
     }
   }
 
-  skipKeyword (kw) {
+  skipKeyword(kw) {
     if (this.isNextTokenKeyword(kw)) this.lexer().next();
     else {
       this.throwError(
@@ -79,37 +79,37 @@ class Parser {
     }
   }
 
-  getCurrentTokenValue () {
+  getCurrentTokenValue() {
     return this.lexer().peek() ? this.lexer().peek().value : null;
   }
 
-  parseExpression () {
+  parseExpression() {
     return this.parseAssign();
   }
 
-  parseAssign () {
+  parseAssign() {
     return this.parseWhile([symboltable.SYM.ASSIGN], this.parseOr);
   }
 
-  parseOr () {
+  parseOr() {
     return this.parseWhile([symboltable.SYM.OR], this.parseAnd);
   }
 
-  parseAnd () {
+  parseAnd() {
     return this.parseWhile(
       [symboltable.SYM.AND],
       this.parseGreaterLesserEquality
     );
   }
 
-  parseGreaterLesserEquality () {
+  parseGreaterLesserEquality() {
     const operatorList = [
       symboltable.SYM.L_THAN,
       symboltable.SYM.G_THAN,
       symboltable.SYM.G_THAN_OR_EQ,
       symboltable.SYM.L_THAN_OR_EQ,
       symboltable.SYM.EQ,
-      symboltable.SYM.NOT_EQ
+      symboltable.SYM.NOT_EQ,
     ];
 
     if (this.isArithmeticExpression()) {
@@ -117,25 +117,25 @@ class Parser {
     } else return this.parseWhile(operatorList, this.parseNodeLiteral);
   }
 
-  parsePlusMinus () {
+  parsePlusMinus() {
     return this.parseWhile(
       [symboltable.SYM.PLUS, symboltable.SYM.MINUS],
       this.parseMultiplyDivisionRemainder
     );
   }
 
-  parseMultiplyDivisionRemainder () {
+  parseMultiplyDivisionRemainder() {
     return this.parseWhile(
       [
         symboltable.SYM.MULTIPLY,
         symboltable.SYM.DIVIDE,
-        symboltable.SYM.REMAINDER
+        symboltable.SYM.REMAINDER,
       ],
       this.parseNodeLiteral
     );
   }
 
-  parseWhile (operatorList, parseOperationWithLesserPrecedence) {
+  parseWhile(operatorList, parseOperationWithLesserPrecedence) {
     let node = parseOperationWithLesserPrecedence.bind(this)();
 
     while (this.isNextTokenInOperatorList(operatorList)) {
@@ -143,20 +143,20 @@ class Parser {
         left: node,
         operation: this.lexer().next().value,
         right: parseOperationWithLesserPrecedence.bind(this)(),
-        value: null
+        value: null,
       };
     }
 
     return node;
   }
 
-  isNextTokenInOperatorList (operatorList) {
+  isNextTokenInOperatorList(operatorList) {
     return (
       this.isNotEndOfFile() && operatorList.includes(this.lexer().peek().value)
     );
   }
 
-  parseNodeLiteral () {
+  parseNodeLiteral() {
     const token = this.lexer().peek();
 
     if (nodeLiterals[token.type]) {
@@ -172,7 +172,7 @@ class Parser {
     this.lexer().throwError(errorhandler.unexpectedtoken(token.value));
   }
 
-  parseBlock (currentBlock) {
+  parseBlock(currentBlock) {
     this.pushToBlockTypeStack(currentBlock);
     this.skipPunctuation(symboltable.SYM.L_PAREN);
     const block = [];
@@ -185,22 +185,22 @@ class Parser {
     return block;
   }
 
-  isNotEndOfBlock () {
+  isNotEndOfBlock() {
     return (
       this.isNotEndOfFile() &&
       this.lexer().peek().value !== symboltable.SYM.R_PAREN
     );
   }
 
-  parseVarname () {
+  parseVarname() {
     return this.lexer().peek().type === symboltable.VARIABLE
       ? this.lexer().next().value
       : this.lexer().throwError(
-        errorhandler.unexpectedtoken(this.lexer().peek().value)
-      );
+          errorhandler.unexpectedtoken(this.lexer().peek().value)
+        );
   }
 
-  parseDelimited (start, stop, separator, parser, predicate) {
+  parseDelimited(start, stop, separator, parser, predicate) {
     const varList = [];
     let firstVar = true;
 
@@ -217,14 +217,14 @@ class Parser {
     return varList;
   }
 
-  getTokenThatSatisfiesPredicate (predicate) {
+  getTokenThatSatisfiesPredicate(predicate) {
     const token = this.lexer().next();
     if (predicate(token)) return token;
 
     this.throwError(errorhandler.unexpectedtoken(token.type));
   }
 
-  parseAst () {
+  parseAst() {
     const token = this.lexer().peek();
 
     if (keywords[token.value]) {
@@ -240,11 +240,11 @@ class Parser {
     this.throwError(errorhandler.unexpectedtoken(token.value));
   }
 
-  isNotEndOfFile () {
+  isNotEndOfFile() {
     return this.lexer().isNotEndOfFile();
   }
 
-  throwError (msg) {
+  throwError(msg) {
     this.lexer().throwError(msg);
   }
 }

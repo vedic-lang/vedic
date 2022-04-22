@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require("../symboltable");
+const symboltable = require('../symboltable');
 
 class Lexer {
   constructor(inputStream) {
@@ -38,7 +38,7 @@ class Lexer {
   }
 
   readWhile(predicate) {
-    let str = "";
+    let str = '';
 
     while (
       this.inputStream.isNotEndOfFile() &&
@@ -74,19 +74,19 @@ class Lexer {
       value: identifier,
     };
   }
-  digitMapping = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
+  digitMapping = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
   devtoengNum(str) {
     return parseFloat(
       str
         .toString()
-        .split("")
+        .split('')
         .map((char) => {
           const englishDigit = this.digitMapping.findIndex(
             (digit) => digit === char
           );
           return englishDigit === -1 ? char : `${englishDigit}`;
         })
-        .join("")
+        .join('')
     );
   }
   readNumber() {

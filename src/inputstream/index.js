@@ -7,7 +7,7 @@
 const symboltable = require('../symboltable');
 
 class InputStream {
-  constructor (input) {
+  constructor(input) {
     this.file = { path: input.name, dir: input.dir };
     this.code = input.code;
     this.line = 1;
@@ -15,7 +15,7 @@ class InputStream {
     this.position = 0;
   }
 
-  next () {
+  next() {
     const character = this.code.charAt(this.position++);
 
     if (character === symboltable.SYM.NEW_LINE) {
@@ -28,21 +28,21 @@ class InputStream {
     return character;
   }
 
-  peek () {
+  peek() {
     return this.code.charAt(this.position);
   }
 
-  throwError (msg) {
+  throwError(msg) {
     throw new Error(
       `${msg} \n\tat ${this.file.path}:${this.line}:${this.column}`
     );
   }
 
-  isEndOfFile () {
+  isEndOfFile() {
     return this.peek() === '';
   }
 
-  isNotEndOfFile () {
+  isNotEndOfFile() {
     return this.peek() !== '';
   }
 }

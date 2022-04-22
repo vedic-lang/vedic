@@ -7,7 +7,7 @@
 const errorhandler = require('../../errorhandler');
 
 class NegateExpression {
-  interpreteNode (node) {
+  interpreteNode(node) {
     const expressionValue = this.evaluateNode(node.body);
     if (typeof expressionValue === 'number') {
       return -parseFloat(expressionValue);

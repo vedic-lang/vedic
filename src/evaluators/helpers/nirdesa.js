@@ -5,7 +5,7 @@
  */
 
 class nirdesa {
-  interpreteNode (node) {
+  interpreteNode(node) {
     const nirdesavalue = this.evaluateNode(node.nirdesavalue);
 
     for (let yadaIndex = 0; yadaIndex < node.nirdesabody.length; yadaIndex++) {
@@ -28,18 +28,18 @@ class nirdesa {
     }
   }
 
-  static isyadaValueMatchnirdesaValue (context, yadavalueNode, nirdesavalue) {
+  static isyadaValueMatchnirdesaValue(context, yadavalueNode, nirdesavalue) {
     return context.evaluateNode(yadavalueNode) === nirdesavalue;
   }
 
-  static runMatchedBody (context, body) {
+  static runMatchedBody(context, body) {
     for (let i = 0; i < body.length; i++) {
       const returnedValue = context.evaluateNode(body[i]);
       if (returnedValue !== undefined) return returnedValue;
     }
   }
 
-  static canRunyadabhave (yadaIndex, node) {
+  static canRunyadabhave(yadaIndex, node) {
     return (
       yadaIndex === node.nirdesabody.length - 1 && node.yadabhave !== undefined
     );

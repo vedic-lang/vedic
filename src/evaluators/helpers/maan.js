@@ -9,7 +9,7 @@ const pravarHelper = require('./pravarhelper');
 const errorhandler = require('../../errorhandler');
 
 class maan {
-  interpreteNode (node) {
+  interpreteNode(node) {
     if (node.left.operation === symboltable.SUCHI_ELEM) {
       maan.setSuchiElement(this, node);
       return;
@@ -27,7 +27,7 @@ class maan {
     );
   }
 
-  static setpravarVariable (context, node) {
+  static setpravarVariable(context, node) {
     const topIndex = context.scopeStack().length - 2;
 
     for (let index = topIndex; index >= 0; index--) {
@@ -47,7 +47,7 @@ class maan {
     }
   }
 
-  static setSuchiElement (context, node) {
+  static setSuchiElement(context, node) {
     let suchiLiteral = maan.getSuchiLiteral(context, node);
 
     for (let i = 0; i < node.left.indexNodes.length; i++) {
@@ -84,12 +84,12 @@ class maan {
     }
   }
 
-  static getSuchiLiteral (context, node) {
+  static getSuchiLiteral(context, node) {
     const maanNode = { name: node.left.name, operation: symboltable.GET_maan };
     return context.evaluateNode(maanNode);
   }
 
-  static getValue (context, node) {
+  static getValue(context, node) {
     const value = context.evaluateNode(node);
     if (value === undefined) {
       context.throwError(errorhandler.undefinedValueMsg(node.left));

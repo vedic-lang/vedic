@@ -7,7 +7,7 @@
 const symboltable = require('../../symboltable');
 
 class paryantam {
-  interpreteNode (node) {
+  interpreteNode(node) {
     while (this.evaluateNode(node.condition) !== symboltable.KW.asatya) {
       for (let i = 0; i < node.body.length; i++) {
         const returnedValue = this.evaluateNode(node.body[i]);

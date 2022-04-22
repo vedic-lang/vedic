@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const sangraha = require("../sangraha");
+const sangraha = require('../sangraha');
 
 class enviroment {
   constructor() {
@@ -50,21 +50,21 @@ class enviroment {
     }
   }
 
-  digitMapping = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
+  digitMapping = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
   cleaner(value) {
     switch (typeof value) {
-      case "string":
-      case "number":
+      case 'string':
+      case 'number':
         return value
           .toString()
-          .split("")
+          .split('')
           .map((char) => {
             if (isNaN(parseInt(char))) return char;
             return this.digitMapping[char] || char;
           })
-          .join("")
-          .replace(/\\n/g, "\n");
-      case "object":
+          .join('')
+          .replace(/\\n/g, '\n');
+      case 'object':
         if (Array.isArray(value)) return value.map((v) => this.cleaner(v));
       default:
         return value;

@@ -7,10 +7,10 @@
 const symboltable = require('../../symboltable');
 
 class BracketExpressionNl {
-  getNode (config) {
+  getNode(config) {
     config = config || {
       isArithmeticExpression: true,
-      isBracketExpected: true
+      isBracketExpected: true,
     };
 
     if (config.isBracketExpected) {

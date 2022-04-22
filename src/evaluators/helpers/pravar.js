@@ -7,7 +7,7 @@
 const symboltable = require('../../symboltable');
 
 class pravar {
-  interpreteNode (node) {
+  interpreteNode(node) {
     let pravar = this.environment().getmaan(
       this.getCurrentScope(),
       symboltable.KW.pravar

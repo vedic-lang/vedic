@@ -8,14 +8,14 @@ const contansts = require('../../symboltable');
 const errorhandler = require('../../errorhandler');
 
 class SuchiElement {
-  interpreteNode (node) {
+  interpreteNode(node) {
     const maanNode = { name: node.name, operation: contansts.GET_maan };
     const suchiLiteral = this.evaluateNode(maanNode);
 
     return SuchiElement.getSuchiElement(this, node, suchiLiteral);
   }
 
-  static getSuchiElement (context, node, suchiLiteral) {
+  static getSuchiElement(context, node, suchiLiteral) {
     let suchiElement;
     let isOnedimensionalSuchi = true;
 

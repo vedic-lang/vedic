@@ -9,7 +9,7 @@ const symboltable = require('../../symboltable');
 const errorhandler = require('../../errorhandler');
 
 class KWphala {
-  getNode () {
+  getNode() {
     if (KWphala.isExpectedphalaStatement(this)) {
       return KWphala.getParsedphalaNode(this);
     }
@@ -17,11 +17,11 @@ class KWphala {
     this.throwError(errorhandler.unexpectedDeclaration(symboltable.KW.phala));
   }
 
-  static isExpectedphalaStatement (context) {
+  static isExpectedphalaStatement(context) {
     return context.getBlockTypeStack().includes(symboltable.KW.sutra);
   }
 
-  static getParsedphalaNode (context) {
+  static getParsedphalaNode(context) {
     context.skipKeyword(symboltable.KW.phala);
     const node = {};
     node.operation = symboltable.KW.phala;

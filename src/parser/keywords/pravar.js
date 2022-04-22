@@ -9,7 +9,7 @@ const symboltable = require('../../symboltable');
 const errorhandler = require('../../errorhandler');
 
 class KWpravar {
-  getNode () {
+  getNode() {
     if (KWpravar.isExpectedpravarStatement(this)) {
       return KWpravar.getParsedpravarNode(this);
     }
@@ -17,11 +17,11 @@ class KWpravar {
     this.throwError(errorhandler.unexpectedDeclaration(symboltable.KW.pravar));
   }
 
-  static isExpectedpravarStatement (context) {
+  static isExpectedpravarStatement(context) {
     return context.getBlockTypeStack().includes(symboltable.KW.sutra);
   }
 
-  static getParsedpravarNode (context) {
+  static getParsedpravarNode(context) {
     context.skipKeyword(symboltable.KW.pravar);
     const node = {};
     node.operation = symboltable.KW.pravar;
@@ -31,7 +31,7 @@ class KWpravar {
     return node;
   }
 
-  static getpravarVarNames (context) {
+  static getpravarVarNames(context) {
     const varTokens = context.parseDelimited(
       '`',
       '`',

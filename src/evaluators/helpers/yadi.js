@@ -7,7 +7,7 @@
 const symboltable = require('../../symboltable');
 
 class yadi {
-  interpreteNode (node) {
+  interpreteNode(node) {
     if (this.evaluateNode(node.condition) !== symboltable.KW.asatya) {
       return yadi.runBody(this, node.then);
     } else if (node.else !== undefined) {
@@ -15,7 +15,7 @@ class yadi {
     }
   }
 
-  static runBody (context, body) {
+  static runBody(context, body) {
     if (!(body instanceof Array)) return context.evaluateNode(body);
 
     for (let i = 0; i < body.length; i++) {

@@ -5,12 +5,12 @@
  */
 
 class LeafNl {
-  getNode () {
+  getNode() {
     return {
       value: this.lexer().next().value,
       left: null,
       right: null,
-      operation: null
+      operation: null,
     };
   }
 }
