@@ -24,7 +24,7 @@
     "vedic": "main.js"
   },
   "scripts": {
-    "test": "jest",
+    "test": "./test.sh",
     "build": "browserify src/interpreter --standalone vedic | uglifyjs -cm > dist/vedicscript.js",
     "lint": "eslint ./src --fix",
     "prettier": "prettier src --write"
@@ -35,11 +35,7 @@
   "homepage": "https://github.com/vedicscript/vedicscript#readme",
   "npmurl": "https://www.npmjs.com/package/vedicscript",
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^4.0.1",
     "yargs-parser": "^21.0.1"
-  },
-  "devDependencies": {
-    "browserify": "^17.0.0",
-    "uglify-js": "^3.15.4"
   }
 }
