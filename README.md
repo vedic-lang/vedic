@@ -20,7 +20,7 @@ Vedic Documentation are available at [vedic-lang.github.io](https://vedic-lang.g
 
 ## 👨‍💻 How To Use
 
-Vedic Script is very easy to set up, just follow the [Install Instructions](hhttps://vedic-lang.github.io/how-to-use) for your system 
+Vedic Script is very easy to set up, just follow the [Install Instructions](https://vedic-lang.github.io/how-to-use) for your system 
 
 ## 👤 Author
 
