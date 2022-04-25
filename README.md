@@ -16,10 +16,10 @@
 
 ## ⌨️ Sample Code
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/huf3tyxv5zjmnls899as.png)
-**Output:**
+![sample vedic code](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/liheiu245awmlwq5sdjj.png)
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sbm02a969noozf3gbdwr.png)
+**Output:**
+![output](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uzg8o7t1b6pmejaknbj0.png)
 
 ## 📖 Documentation
 
