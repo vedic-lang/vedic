@@ -14,6 +14,13 @@
 
 > Vedic is World first Programming launguage in Sanskrit
 
+## ⌨️ Sample Code
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/huf3tyxv5zjmnls899as.png)
+**Output:**
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sbm02a969noozf3gbdwr.png)
+
 ## 📖 Documentation
 
 Vedic Documentation are available at [vedic-lang.github.io](https://vedic-lang.github.io/)
