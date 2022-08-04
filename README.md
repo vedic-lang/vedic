@@ -29,6 +29,10 @@ Vedic Documentation are available at [vedic-lang.github.io](https://vedic-lang.g
 
 Vedic Script is very easy to set up, just follow the [Install Instructions](https://vedic-lang.github.io/how-to-use) for your system 
 
+## 🌐 Join us on Discord
+
+<p><a href="https://discord.gg/sWCHauhNQ2"><img width="60" src="https://raw.githubusercontent.com/vedic-lang/vedic/main/discord.png"/></a></p>
+
 ## 👤 Author
 
 <p><a href="https://github.com/vedic"><img width="60" src="https://avatars2.githubusercontent.com/u/26687933?s=200&v=4"/></a></p>
