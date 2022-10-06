@@ -6,7 +6,8 @@
 
 const KEYWORDS = {
   maan: 'मान', // var
-  vad: 'वद्', // print
+  vad: 'वद', // print
+  padh: 'पठ', // read
   yadi: 'यदि', // if
   atha: 'अथ', // else
   satya: 'सत्य', // true
