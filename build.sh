@@ -50,3 +50,6 @@ zip -r -Z bzip2 ./release/${NAME}_windows.zip . -i ./vedic/vedic.exe
 echo "Building macos binary"
 pkg -t node14-mac ./main.js --compress GZip --output ./vedic/vedic
 zip -r -Z bzip2 ./release/${NAME}-macos.zip . -i ./vedic/vedic
+
+# clear old temp
+rm -rf vedic
