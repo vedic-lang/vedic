@@ -133,4 +133,4 @@ const constants = {
   NEGATIVE_EXPRESSION: 'negative_exp',
 };
 
-module.exports = constants;
+export default constants;

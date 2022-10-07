@@ -10,4 +10,4 @@ class Remainder {
   }
 }
 
-module.exports = new Remainder();
+export default new Remainder();

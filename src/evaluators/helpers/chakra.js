@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class chakra {
   interpreteNode(node) {
@@ -22,4 +22,4 @@ class chakra {
   }
 }
 
-module.exports = new chakra();
+export default new chakra();

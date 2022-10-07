@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const cleaner = require('./cleaner');
-const errorhandler = require('../../errorhandler');
-const symboltable = require('../../symboltable');
+import cleaner from './cleaner.js';
+import errorhandler from '../../errorhandler/main.js';
+import symboltable from '../../symboltable/main.js';
 
 class Callsutra {
   interpreteNode(node) {
@@ -95,4 +95,4 @@ class Callsutra {
   }
 }
 
-module.exports = new Callsutra();
+export default new Callsutra();

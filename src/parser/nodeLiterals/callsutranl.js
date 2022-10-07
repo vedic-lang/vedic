@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class CallsutraNl {
   getNode(sutraNameToken) {
@@ -29,4 +29,4 @@ class CallsutraNl {
   }
 }
 
-module.exports = new CallsutraNl();
+export default new CallsutraNl();

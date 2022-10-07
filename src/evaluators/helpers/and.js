@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class And {
   interpreteNode(node) {
@@ -15,4 +15,4 @@ class And {
   }
 }
 
-module.exports = new And();
+export default new And();

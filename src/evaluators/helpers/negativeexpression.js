@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const errorhandler = require('../../errorhandler');
+import errorhandler from '../../errorhandler/main.js';
 
 class NegateExpression {
   interpreteNode(node) {
@@ -17,4 +17,4 @@ class NegateExpression {
   }
 }
 
-module.exports = new NegateExpression();
+export default new NegateExpression();

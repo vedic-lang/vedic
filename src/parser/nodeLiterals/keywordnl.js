@@ -4,10 +4,10 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
-const leafNl = require('./leafnl');
+import symboltable from '../../symboltable/main.js';
 
-const errorhandler = require('../../errorhandler');
+import leafNl from './leafnl.js';
+import errorhandler from '../../errorhandler/main.js';
 
 class KWNl {
   getNode() {
@@ -25,4 +25,4 @@ class KWNl {
   }
 }
 
-module.exports = new KWNl();
+export default new KWNl();

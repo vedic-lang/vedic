@@ -10,4 +10,4 @@ class Minus {
   }
 }
 
-module.exports = new Minus();
+export default new Minus();

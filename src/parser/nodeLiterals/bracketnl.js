@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class BracketExpressionNl {
   getNode(config) {
@@ -27,4 +27,4 @@ class BracketExpressionNl {
   }
 }
 
-module.exports = new BracketExpressionNl();
+export default new BracketExpressionNl();

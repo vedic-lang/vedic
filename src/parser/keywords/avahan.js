@@ -4,11 +4,11 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
-const leafnl = require('../nodeLiterals/leafnl');
-const path = require('path');
-const errorhandler = require('../../errorhandler');
+import leafnl from '../nodeLiterals/leafnl.js';
+import path from 'path';
+import errorhandler from '../../errorhandler/main.js';
 
 class KWavahan {
   getNode() {
@@ -33,4 +33,4 @@ class KWavahan {
   }
 }
 
-module.exports = new KWavahan();
+export default new KWavahan();

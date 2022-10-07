@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
-const variableNlTypes = require('./variablenltypes');
+import variableNlTypes from './variablenltypes.js';
 
 class VariableNl {
   getNode() {
@@ -25,4 +25,4 @@ class VariableNl {
   }
 }
 
-module.exports = new VariableNl();
+export default new VariableNl();

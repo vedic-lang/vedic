@@ -4,8 +4,8 @@
  * https://github.com/ptprashanttripathi
  */
 
-const contansts = require('../../symboltable');
-const errorhandler = require('../../errorhandler');
+import contansts from '../../symboltable/main.js';
+import errorhandler from '../../errorhandler/main.js';
 
 class SuchiElement {
   interpreteNode(node) {
@@ -40,4 +40,4 @@ class SuchiElement {
   }
 }
 
-module.exports = new SuchiElement();
+export default new SuchiElement();

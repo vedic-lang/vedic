@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../symboltable');
+import symboltable from '../symboltable/main.js';
 
 class InputStream {
   constructor(input) {
@@ -47,4 +47,4 @@ class InputStream {
   }
 }
 
-module.exports = InputStream;
+export default InputStream;

@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class Or {
   interpreteNode(node) {
@@ -15,4 +15,4 @@ class Or {
   }
 }
 
-module.exports = new Or();
+export default new Or();

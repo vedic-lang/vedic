@@ -4,11 +4,12 @@
  * https://github.com/ptprashanttripathi
  */
 
-const chalk = require('chalk');
-const cli = require('./cli');
-const Interpreter = require('../interpreter');
-const fetchSource = require('../fetchSource');
-const { Extensions } = require('../symboltable');
+import chalk from 'chalk';
+
+import cli from './cli.js';
+import Interpreter from '../interpreter/main.js';
+import fetchSource from '../fetchSource/main.js';
+import symboltable from '../symboltable/main.js';
 
 // HANDLING ERROR
 process.on('unhandledRejection', (err) => {
@@ -33,7 +34,7 @@ if (!cli.input._[0]) {
   cli.showWelcomeMsg();
 } else {
   try {
-    if (!Extensions.includes(cli.input._[0].split('.').pop())) {
+    if (!symboltable.Extensions.includes(cli.input._[0].split('.').pop())) {
       console.log(
         chalk.hex('#f44336').inverse.bold(' ERROR: ') +
           '\n\n' +

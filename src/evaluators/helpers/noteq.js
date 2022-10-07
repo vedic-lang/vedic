@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class NotEq {
   interpreteNode(node) {
@@ -14,4 +14,4 @@ class NotEq {
   }
 }
 
-module.exports = new NotEq();
+export default new NotEq();

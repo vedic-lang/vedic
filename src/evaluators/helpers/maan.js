@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
-const pravarHelper = require('./pravarhelper');
-const errorhandler = require('../../errorhandler');
+import symboltable from '../../symboltable/main.js';
+import pravarHelper from './pravarhelper.js';
+import errorhandler from '../../errorhandler/main.js';
 
 class maan {
   interpreteNode(node) {
@@ -98,4 +98,4 @@ class maan {
   }
 }
 
-module.exports = new maan();
+export default new maan();

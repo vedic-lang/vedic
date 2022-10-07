@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const sangraha = require('../sangraha');
+import sangraha from '../sangraha/main.js';
 
-class enviroment {
+class environment {
   constructor() {
     this.vars = {};
     this.sutraDeclarations = {};
@@ -76,4 +76,4 @@ class enviroment {
   }
 }
 
-module.exports = enviroment;
+export default environment;

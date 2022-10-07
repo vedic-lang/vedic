@@ -4,10 +4,10 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
-const variableNl = require('../nodeLiterals/variablenl');
-const errorhandler = require('../../errorhandler');
+import variableNl from '../nodeLiterals/variablenl.js';
+import errorhandler from '../../errorhandler/main.js';
 
 class KWmaan {
   getNode(config) {
@@ -33,4 +33,4 @@ class KWmaan {
   }
 }
 
-module.exports = new KWmaan();
+export default new KWmaan();

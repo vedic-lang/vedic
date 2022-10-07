@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../symboltable');
+import symboltable from '../symboltable/main.js';
 
 class Lexer {
   constructor(inputStream) {
@@ -159,4 +159,4 @@ class Lexer {
   }
 }
 
-module.exports = Lexer;
+export default Lexer;

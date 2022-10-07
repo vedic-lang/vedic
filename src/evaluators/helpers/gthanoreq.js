@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class GThanOrEq {
   interpreteNode(node) {
@@ -14,4 +14,4 @@ class GThanOrEq {
   }
 }
 
-module.exports = new GThanOrEq();
+export default new GThanOrEq();

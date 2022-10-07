@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
-const bracketExpressionNl = require('../nodeLiterals/bracketnl');
+import bracketExpressionNl from '../nodeLiterals/bracketnl.js';
 
 class KWnirdesa {
   getNode() {
@@ -90,4 +90,4 @@ class KWyada {
   }
 }
 
-module.exports = new KWnirdesa();
+export default new KWnirdesa();

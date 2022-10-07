@@ -4,11 +4,11 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
-const keywordmaan = require('./maan');
-const errorhandler = require('../../errorhandler');
-const bracketExpressionNl = require('../nodeLiterals/bracketnl');
+import keywordmaan from './maan.js';
+import errorhandler from '../../errorhandler/main.js';
+import bracketExpressionNl from '../nodeLiterals/bracketnl.js';
 
 class KWchakra {
   getNode() {
@@ -61,4 +61,4 @@ class KWchakra {
   }
 }
 
-module.exports = new KWchakra();
+export default new KWchakra();

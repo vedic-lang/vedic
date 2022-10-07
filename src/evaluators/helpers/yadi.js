@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class yadi {
   interpreteNode(node) {
@@ -25,4 +25,4 @@ class yadi {
   }
 }
 
-module.exports = new yadi();
+export default new yadi();

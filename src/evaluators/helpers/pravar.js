@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class pravar {
   interpreteNode(node) {
@@ -24,4 +24,4 @@ class pravar {
   }
 }
 
-module.exports = new pravar();
+export default new pravar();

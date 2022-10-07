@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const errorhandler = require('../../errorhandler');
+import errorhandler from '../../errorhandler/main.js';
 
 class Divide {
   interpreteNode(node) {
@@ -18,4 +18,4 @@ class Divide {
   }
 }
 
-module.exports = new Divide();
+export default new Divide();

@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const errorhandler = require('../../errorhandler');
+import errorhandler from '../../errorhandler/main.js';
 
 class sutra {
   interpreteNode(node) {
@@ -21,4 +21,4 @@ class sutra {
   }
 }
 
-module.exports = new sutra();
+export default new sutra();

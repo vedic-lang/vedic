@@ -10,4 +10,4 @@ class phala {
   }
 }
 
-module.exports = new phala();
+export default new phala();

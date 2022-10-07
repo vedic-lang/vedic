@@ -4,10 +4,11 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
-
+import symboltable from '../../symboltable/main.js';
+import callsutranl from './callsutranl.js';
+import suchinl from './suchinl.js';
 const variableNlTypes = {};
-variableNlTypes[symboltable.SYM.L_BRACKET] = require('./callsutranl');
-variableNlTypes[symboltable.SYM.L_SQ_BRACKET] = require('./suchinl'); // when current variable is an suchi element
+variableNlTypes[symboltable.SYM.L_BRACKET] = callsutranl;
+variableNlTypes[symboltable.SYM.L_SQ_BRACKET] = suchinl; // when current variable is an suchi element
 
-module.exports = variableNlTypes;
+export default variableNlTypes;

@@ -15,4 +15,4 @@ function kul(args) {
   throw new Error(' system error');
 }
 
-module.exports = kul;
+export default kul;

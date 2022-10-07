@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
-const errorhandler = require('../../errorhandler');
+import errorhandler from '../../errorhandler/main.js';
 
 class KWviram {
   getNode() {
@@ -33,4 +33,4 @@ class KWviram {
   }
 }
 
-module.exports = new KWviram();
+export default new KWviram();

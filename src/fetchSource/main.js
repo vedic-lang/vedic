@@ -4,9 +4,10 @@
  * https://github.com/ptprashanttripathi
  */
 
-const fs = require('fs');
-const path = require('path');
-module.exports = (file) => {
+import fs from 'fs';
+import path from 'path';
+
+export default (file) => {
   try {
     const name = path.resolve(file);
     const dir = path.dirname(name);

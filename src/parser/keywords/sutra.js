@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
-const errorhandler = require('../../errorhandler');
+import errorhandler from '../../errorhandler/main.js';
 
 class KWsutra {
   getNode() {
@@ -43,4 +43,4 @@ class KWsutra {
   }
 }
 
-module.exports = new KWsutra();
+export default new KWsutra();

@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class NotOperator {
   interpreteNode(node) {
@@ -14,4 +14,4 @@ class NotOperator {
   }
 }
 
-module.exports = new NotOperator();
+export default new NotOperator();

@@ -10,4 +10,4 @@ class vad {
   }
 }
 
-module.exports = new vad();
+export default new vad();

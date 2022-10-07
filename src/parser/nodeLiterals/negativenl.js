@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class NegativeNl {
   getNode() {
@@ -17,4 +17,4 @@ class NegativeNl {
   }
 }
 
-module.exports = new NegativeNl();
+export default new NegativeNl();

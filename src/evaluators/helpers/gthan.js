@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class GThan {
   interpreteNode(node) {
@@ -14,4 +14,4 @@ class GThan {
   }
 }
 
-module.exports = new GThan();
+export default new GThan();

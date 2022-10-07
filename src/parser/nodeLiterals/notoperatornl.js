@@ -13,4 +13,4 @@ class NotOperatorNl {
   }
 }
 
-module.exports = new NotOperatorNl();
+export default new NotOperatorNl();

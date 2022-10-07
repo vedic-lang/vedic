@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class paryantam {
   interpreteNode(node) {
@@ -18,4 +18,4 @@ class paryantam {
   }
 }
 
-module.exports = new paryantam();
+export default new paryantam();

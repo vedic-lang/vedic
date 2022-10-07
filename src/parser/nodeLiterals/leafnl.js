@@ -15,4 +15,4 @@ class LeafNl {
   }
 }
 
-module.exports = new LeafNl();
+export default new LeafNl();

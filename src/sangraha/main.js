@@ -3,7 +3,8 @@
  * © Copyright 2022 @ptprashanttripathi
  * https://github.com/ptprashanttripathi
  */
+import kul from './kul.js';
 
-module.exports = {
-  कुल: require('./kul'),
+export default {
+  कुल: kul,
 };

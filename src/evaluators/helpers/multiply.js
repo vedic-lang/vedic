@@ -10,4 +10,4 @@ class Multiply {
   }
 }
 
-module.exports = new Multiply();
+export default new Multiply();

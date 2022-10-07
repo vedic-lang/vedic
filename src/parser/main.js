@@ -4,10 +4,10 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../symboltable');
-const errorhandler = require('../errorhandler');
-const keywords = require('./keywords');
-const nodeLiterals = require('./nodeLiterals');
+import symboltable from '../symboltable/main.js';
+import errorhandler from '../errorhandler/main.js';
+import keywords from './keywords/main.js';
+import nodeLiterals from './nodeLiterals/main.js';
 
 class Parser {
   constructor(lexer) {
@@ -249,4 +249,4 @@ class Parser {
   }
 }
 
-module.exports = Parser;
+export default Parser;

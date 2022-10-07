@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class viram {
   interpreteNode(node) {
@@ -12,4 +12,4 @@ class viram {
   }
 }
 
-module.exports = new viram();
+export default new viram();

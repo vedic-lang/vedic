@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
-const bracketExpressionNl = require('../nodeLiterals/bracketnl');
+import bracketExpressionNl from '../nodeLiterals/bracketnl.js';
 class KWparyantam {
   getNode() {
     this.skipKeyword(symboltable.KW.paryantam);
@@ -19,4 +19,4 @@ class KWparyantam {
   }
 }
 
-module.exports = new KWparyantam();
+export default new KWparyantam();

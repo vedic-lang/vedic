@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class KWvad {
   getNode() {
@@ -18,4 +18,4 @@ class KWvad {
   }
 }
 
-module.exports = new KWvad();
+export default new KWvad();

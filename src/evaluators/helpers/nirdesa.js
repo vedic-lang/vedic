@@ -46,4 +46,4 @@ class nirdesa {
   }
 }
 
-module.exports = new nirdesa();
+export default new nirdesa();

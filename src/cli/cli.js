@@ -4,11 +4,15 @@
  * https://github.com/ptprashanttripathi
  */
 
-const yargsparser = require('yargs-parser');
-const pkgJSON = require('../../package.json');
-const chalk = require('chalk');
+import yargsparser from 'yargs-parser';
+import { readFile } from 'fs/promises';
+import chalk from 'chalk';
 
-module.exports = {
+const pkgJSON = JSON.parse(
+  await readFile(new URL('../../package.json', import.meta.url))
+);
+
+export default {
   showWelcomeMsg: () => {
     console.log(`
     ${chalk.hex('#ff9933').inverse.bold(' Vedic ')} ${chalk

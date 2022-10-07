@@ -20,4 +20,4 @@ function cleaner(returnedValue) {
   );
 }
 
-module.exports = cleaner;
+export default cleaner;

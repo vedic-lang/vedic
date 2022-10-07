@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
-const errorhandler = require('../../errorhandler');
+import errorhandler from '../../errorhandler/main.js';
 
 class KWpravar {
   getNode() {
@@ -48,4 +48,4 @@ class KWpravar {
   }
 }
 
-module.exports = new KWpravar();
+export default new KWpravar();

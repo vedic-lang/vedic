@@ -4,7 +4,7 @@
  * https://github.com/ptprashanttripathi
  */
 
-const symboltable = require('../../symboltable');
+import symboltable from '../../symboltable/main.js';
 
 class pravarHelper {
   static ispravarVariable(context, maanName) {
@@ -15,4 +15,4 @@ class pravarHelper {
   }
 }
 
-module.exports = pravarHelper;
+export default pravarHelper;

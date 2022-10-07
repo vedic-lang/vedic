@@ -1,6 +1,7 @@
 {
   "name": "vedic-lang",
-  "version": "1.2.2",
+  "version": "1.2.4",
+  "type": "module",
   "description": "Vedic is World first Programming launguage in Sanskrit",
   "license": "MIT",
   "repository": "https://github.com/vedic-lang/vedic",
@@ -33,7 +34,7 @@
     "url": "https://github.com/vedic-lang/vedic/issues"
   },
   "homepage": "https://github.com/vedic-lang/vedic#readme",
-  "npmurl":"https://www.npmjs.com/package/vedic-lang",  
+  "npmurl": "https://www.npmjs.com/package/vedic-lang",
   "dependencies": {
     "chalk": "^4.0.1",
     "yargs-parser": "^21.0.1"

@@ -16,4 +16,4 @@ class Suchi {
   }
 }
 
-module.exports = new Suchi();
+export default new Suchi();

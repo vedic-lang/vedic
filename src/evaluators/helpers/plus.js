@@ -10,4 +10,4 @@ class Plus {
   }
 }
 
-module.exports = new Plus();
+export default new Plus();

@@ -4,9 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const pravarHelper = require('./pravarhelper');
-const errorhandler = require('../../errorhandler');
-const symboltable = require('../../symboltable');
+import pravarHelper from './pravarhelper.js';
+import errorhandler from '../../errorhandler/main.js';
+import symboltable from '../../symboltable/main.js';
 
 class Getmaan {
   interpreteNode(node) {
@@ -37,4 +37,4 @@ class Getmaan {
   }
 }
 
-module.exports = new Getmaan();
+export default new Getmaan();

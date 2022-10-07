@@ -4,10 +4,11 @@
  * https://github.com/ptprashanttripathi
  */
 
-const Parser = require('../../parser');
-const Lexer = require('../../lexer');
-const InputStream = require('../../inputstream');
-const fetchSource = require('../../fetchSource');
+import Parser from '../../parser/main.js';
+
+import Lexer from '../../lexer/main.js';
+import InputStream from '../../inputstream/main.js';
+import fetchSource from '../../fetchSource/main.js';
 
 class avahan {
   interpreteNode(node) {
@@ -18,4 +19,4 @@ class avahan {
   }
 }
 
-module.exports = new avahan();
+export default new avahan();

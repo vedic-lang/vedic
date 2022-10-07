@@ -4,8 +4,9 @@
  * https://github.com/ptprashanttripathi
  */
 
-const helpers = require('./helpers');
-const symboltable = require('../symboltable');
+import helpers from './helpers/main.js';
+
+import symboltable from '../symboltable/main.js';
 
 class Mainevaluator {
   constructor(environment, parser) {
@@ -57,4 +58,4 @@ class Mainevaluator {
   }
 }
 
-module.exports = Mainevaluator;
+export default Mainevaluator;

@@ -4,11 +4,11 @@
  * https://github.com/ptprashanttripathi
  */
 
-const InputStream = require('../inputstream');
-const Lexer = require('../lexer');
-const Parser = require('../parser');
-const Environment = require('../environment');
-const Evaluator = require('../evaluators');
+import InputStream from '../inputstream/main.js';
+import Lexer from '../lexer/main.js';
+import Parser from '../parser/main.js';
+import Environment from '../environment/main.js';
+import Evaluator from '../evaluators/main.js';
 
 const Interpreter = (code, name = 'script', dir = '') => {
   const is = new InputStream({ name, dir, code });
@@ -19,4 +19,4 @@ const Interpreter = (code, name = 'script', dir = '') => {
   evaluator.interpreteProgram();
 };
 
-module.exports = Interpreter;
+export default Interpreter;

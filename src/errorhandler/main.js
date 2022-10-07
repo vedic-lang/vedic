@@ -26,4 +26,4 @@ const message = {
     `Cannot apply negation operator to the given expression: ${arg}`,
 };
 
-module.exports = message;
+export default message;
