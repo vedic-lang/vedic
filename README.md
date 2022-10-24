@@ -16,7 +16,7 @@
 
 ## ⌨️ Sample Code
 
-![sample vedic code](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/liheiu245awmlwq5sdjj.png)
+![sample vedic code](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yp0z1i5j08isr1fbc04h.png)
 
 **Output:**
 ![output](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uzg8o7t1b6pmejaknbj0.png)
