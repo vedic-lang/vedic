@@ -1,7 +1,6 @@
 {
   "name": "vedic-lang",
   "version": "1.2.4",
-  "type": "module",
   "description": "Vedic is World first Programming launguage in Sanskrit",
   "license": "MIT",
   "repository": "https://github.com/vedic-lang/vedic",
@@ -17,18 +16,18 @@
     "Vedic",
     "VedicJS"
   ],
-  "main": "main.js",
-  "unpkg": "./dist/vedic.js",
-  "jsdelivr": "./dist/vedic.js",
+  "main": "./core/main.js",
+  "unpkg": "./core/vedic.js",
+  "jsdelivr": "./core/vedic.js",
   "bin": {
-    "vsc": "main.js",
-    "vedic": "main.js"
+    "vsc": "./core/main.js",
+    "ved": "./core/main.js",
+    "vedic": "./core/main.js"
   },
   "scripts": {
-    "test": "./test.sh",
-    "build": "browserify src/interpreter --standalone vedic | uglifyjs -cm > dist/vedic.js",
-    "lint": "eslint ./src --fix",
-    "prettier": "prettier src --single-quote --write"
+    "test": "./util/test.sh",
+    "build": "browserify core/interpreter --standalone vedic | uglifyjs -cm > dist/vedic.js",
+    "prettier": "prettier core --single-quote --write"
   },
   "bugs": {
     "url": "https://github.com/vedic-lang/vedic/issues"
@@ -38,5 +37,8 @@
   "dependencies": {
     "chalk": "^4.0.1",
     "yargs-parser": "^21.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
   }
 }

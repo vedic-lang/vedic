@@ -31,7 +31,7 @@ Vedic Script is very easy to set up, just follow the [Install Instructions](http
 
 ## 🌐 Join us on Discord
 
-<p><a href="https://discord.gg/sWCHauhNQ2"><img width="150" src="https://raw.githubusercontent.com/vedic-lang/vedic/main/discord.png"/></a></p>
+<p><a href="https://discord.gg/sWCHauhNQ2"><img width="150" src="https://raw.githubusercontent.com/vedic-lang/vedic/main/.github/discord.png"/></a></p>
 
 ## 👤 Author
 
