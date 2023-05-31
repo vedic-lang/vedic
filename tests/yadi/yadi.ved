@@ -1,0 +1,10 @@
+# Evaluate the 'then' expression यदि the condition is सत्य.
+यदि (सत्य) वद("good"); # expect: good
+यदि (असत्य) वद("bad");
+
+# Allow block body.
+यदि (सत्य) { वद("block"); } # expect: block
+
+# Niyojana in यदि condition.
+मान a = असत्य;
+यदि (a = सत्य) वद(a); # expect: सत्य

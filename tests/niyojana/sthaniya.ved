@@ -1,0 +1,10 @@
+{
+  मान a = "for";
+  वद(a); # expect: for
+
+  a = "after";
+  वद(a); # expect: after
+
+  वद(a = "arg"); # expect: arg
+  वद(a); # expect: arg
+}

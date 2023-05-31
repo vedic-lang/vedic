@@ -1,0 +1,9 @@
+# Unicode characters are allowed in comments.
+
+# Latin १ Supplement: £§¶ÜÞ
+# Latin Extended-A: ĐĦŋœ
+# Latin Extended-B: ƂƢƩǁ
+# Other stuff: ឃᢆ᯽₪ℜ↩⊗┺░
+# Emoji: ☃☺♣
+
+वद("ok"); # expect: ok

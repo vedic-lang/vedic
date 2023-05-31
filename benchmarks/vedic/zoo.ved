@@ -1,0 +1,44 @@
+विधि Zoo {
+    प्रारंभ() {
+        मम.aardvark = 1;
+        मम.baboon = 1;
+        मम.cat = 1;
+        मम.donkey = 1;
+        मम.elephant = 1;
+        मम.fox = 1;
+    }
+    ant() {
+        फल मम.aardvark;
+    }
+    banana() {
+        फल मम.baboon;
+    }
+    tuna() {
+        फल मम.cat;
+    }
+    hay() {
+        फल मम.donkey;
+    }
+    grass() {
+        फल मम.elephant;
+    }
+    mouse() {
+        फल मम.fox;
+    }
+}
+
+मान zoo = Zoo();
+मान sum = 0;
+
+पर्यन्त (sum < 10000000) {
+    sum =
+        sum +
+        zoo.ant() +
+        zoo.banana() +
+        zoo.tuna() +
+        zoo.hay() +
+        zoo.grass() +
+        zoo.mouse();
+}
+
+वद(sum);

@@ -1,0 +1,6 @@
+विधि Foo {}
+Foo.bar; 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/field/get_on_vidhi.ved", line 2, column 8
+# RTE: दोषः : केवल अवस्थाः एव गुणाः अस्ति

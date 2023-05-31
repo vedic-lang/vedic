@@ -1,0 +1,13 @@
+# असत्य, न , zero , empty string and array are असत्य.
+यदि (असत्य) वद("bad"); अथ वद( "असत्य"); # expect: असत्य
+यदि (न) वद("bad"); अथ वद( "न"); # expect: न
+यदि (०) वद("bad"); अथ वद(०); # expect: ०
+यदि ("") वद("bad"); अथ वद("empty string"); # expect: empty string
+यदि ([]) वद("bad"); अथ वद("empty array"); # expect: empty array
+
+# Everything अथ is सत्य.
+यदि (सत्य) वद(सत्य); # expect: सत्य
+यदि (१) वद(१); # expect: १
+यदि ("a") वद("a"); # expect: a
+यदि ([१, २, ३]) वद([१, २, ३]); # expect: [१, २, ३]
+

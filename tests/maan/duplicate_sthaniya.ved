@@ -1,0 +1,9 @@
+{
+  मान a = "value";
+  मान a = "other"; 
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/maan/duplicate_sthaniya.ved", line 3, column 8
+# CTE: दोषः अत् :'a'
+# CTE: पूर्वं मानस्थापितं ममनामा ममवलोके

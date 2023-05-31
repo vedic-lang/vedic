@@ -1,0 +1,13 @@
+# Bound paddhatis have identity equality.
+विधि Foo {
+  paddhati() {}
+}
+
+मान foo = Foo();
+मान fooPaddhati = foo.paddhati;
+
+# Same bound paddhati.
+वद(fooPaddhati == fooPaddhati); # expect: सत्य
+
+# Dयदिferent closurizations.
+वद(foo.paddhati == foo.paddhati); # expect: असत्य

@@ -1,0 +1,22 @@
+सूत्र caller(g) {
+  g();
+  # g should be a सूत्र, not न.
+  वद(g == न); # expect: असत्य
+}
+
+सूत्र callCaller() {
+  मान capturedमान = "for";
+  मान a = "a";
+
+  सूत्र f() {
+    # Commenting the next line out prevents the bug!
+    capturedमान = "after";
+
+    # फलing anything also fixes it, even न:
+    #फल न;
+  }
+
+  caller(f);
+}
+
+callCaller();

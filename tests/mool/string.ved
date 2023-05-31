@@ -1,0 +1,14 @@
+मान a = १२३;
+वद(प्रकार(a)); # expect: अंक
+
+# convert to string
+a = शब्द(a); 
+वद(प्रकार(a)); # expect: वाक्य
+
+वद(शब्द(वद)); # expect: <mool fn>
+
+शब्द(); 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/mool/string.ved", line 10, column 7
+# RTE: दोषः : Invalid argument to string Function

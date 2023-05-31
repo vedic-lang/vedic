@@ -1,0 +1,16 @@
+विधि Base {
+  foo() {
+    वद("Base.foo()");
+  }
+}
+
+विधि Derived सन्धि Base {
+  foo() {
+    वद("Derived.foo()");
+    मित्र.foo();
+  }
+}
+
+Derived().foo();
+# expect: Derived.foo()
+# expect: Base.foo()

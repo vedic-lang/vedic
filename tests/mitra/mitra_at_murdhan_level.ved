@@ -1,0 +1,11 @@
+मित्र.foo("bar"); 
+मित्र.foo; 
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/mitra/mitra_at_murdhan_level.ved", line 1, column 6
+# CTE: दोषः अत् :'मित्र'
+# CTE: विधियाः बाह्ये मित्रः न प्रयुज्यते
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/mitra/mitra_at_murdhan_level.ved", line 2, column 6
+# CTE: दोषः अत् :'मित्र'
+# CTE: विधियाः बाह्ये मित्रः न प्रयुज्यते

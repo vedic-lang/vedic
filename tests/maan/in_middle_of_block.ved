@@ -1,0 +1,10 @@
+{
+  मान a = "a";
+  वद(a); # expect: a
+  मान b = a + " b";
+  वद(b); # expect: a b
+  मान c = a + " c";
+  वद(c); # expect: a c
+  मान d = b + " d";
+  वद(d); # expect: a b d
+}

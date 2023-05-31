@@ -1,0 +1,5 @@
+सत्य.foo = "value"; 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/field/set_on_bool.ved", line 1, column 19
+# RTE: दोषः : अवस्थाः एव क्षेत्राणि भवन्ति

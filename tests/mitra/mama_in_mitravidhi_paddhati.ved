@@ -1,0 +1,16 @@
+विधि Base {
+  प्रारंभ(a) {
+    मम.a = a;
+  }
+}
+
+विधि Derived सन्धि Base {
+  प्रारंभ(a, b) {
+    मित्र.प्रारंभ(a);
+    मम.b = b;
+  }
+}
+
+मान derived = Derived("a", "b");
+वद(derived.a); # expect: a
+वद(derived.b); # expect: b

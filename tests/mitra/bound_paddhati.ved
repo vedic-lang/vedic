@@ -1,0 +1,18 @@
+विधि A {
+  paddhati(arg) {
+    वद("A.paddhati(" + arg + ")");
+  }
+}
+
+विधि B सन्धि A {
+  getClosure() {
+    फल मित्र.paddhati;
+  }
+
+  paddhati(arg) {
+    वद("B.paddhati(" + arg + ")");
+  }
+}
+
+मान closure = B().getClosure();
+closure("arg"); # expect: A.paddhati(arg)

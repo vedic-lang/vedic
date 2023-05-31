@@ -1,0 +1,6 @@
+पर्यन्त (सत्य) मान foo;
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/parayant/maan_in_body.ved", line 1, column 19
+# CTE: दोषः अत् :'मान'
+# CTE: व्याख्या अपेक्षितः

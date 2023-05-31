@@ -1,0 +1,5 @@
+यदि (असत्य) {
+  वद(notDefined);
+}
+
+वद("ok"); # expect: ok

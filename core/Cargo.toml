@@ -1,0 +1,12 @@
+[package]
+name = "vedic-core"
+version = "2.0.4"
+edition = "2021"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+mimalloc = { version = "0.1.27", default-features = false }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+web-sys = { version = "0.3.37", features = ["console"] }
+wasm-bindgen = "0.2.37"
+wee_alloc = "0.4.5"

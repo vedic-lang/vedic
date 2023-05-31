@@ -1,0 +1,17 @@
+विधि Base {
+  foo(a, b) {
+    वद("Base.foo(" + a + ", " + b + ")");
+  }
+}
+
+विधि Derived सन्धि Base {
+  foo() {
+    मित्र.foo(१);   
+  }
+}
+
+Derived().foo();
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/mitra/missing_arguments.ved", line 9, column 17
+# RTE: दोषः : अपेक्षितानि 2 विभक्तीषु प्रतीयमानानि 1 विभक्तीषु सन्ति

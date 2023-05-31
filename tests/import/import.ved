@@ -1,0 +1,3 @@
+अवहन "../std.ved"; # import
+print२("Hello ","World"); # expect: Hello World
+print१("Hello World"); # expect: Hello World

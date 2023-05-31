@@ -1,0 +1,10 @@
+विधि Foo {
+  प्रारंभ() {
+    वद("प्रारंभ");
+    फल;
+    वद("nope");
+  }
+}
+
+मान foo = Foo(); # expect: प्रारंभ
+वद(foo); # expect: Foo avastha

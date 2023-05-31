@@ -1,0 +1,13 @@
+सूत्र फलArg(arg) {
+  फल arg;
+}
+
+सूत्र फलसूत्रCallWithArg(सूत्रName, arg) {
+  फल फलArg(सूत्रName)(arg);
+}
+
+सूत्र vadArg(arg) {
+  वद(arg);
+}
+
+फलसूत्रCallWithArg(vadArg, "hello world"); # expect: hello world

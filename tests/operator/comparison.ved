@@ -1,0 +1,25 @@
+वद(१ < २);    # expect: सत्य
+वद(२ < २);    # expect: असत्य
+वद(२ < १);    # expect: असत्य
+
+वद(१ <= २);    # expect: सत्य
+वद(२ <= २);    # expect: सत्य
+वद(२ <= १);    # expect: असत्य
+
+वद(१ > २);    # expect: असत्य
+वद(२ > २);    # expect: असत्य
+वद(२ > १);    # expect: सत्य
+
+वद(१ >= २);    # expect: असत्य
+वद(२ >= २);    # expect: सत्य
+वद(२ >= १);    # expect: सत्य
+
+# Zero and negative zero compare the same.
+वद(० < -०); # expect: असत्य
+वद(-० < ०); # expect: असत्य
+वद(० > -०); # expect: असत्य
+वद(-० > ०); # expect: असत्य
+वद(० <= -०); # expect: सत्य
+वद(-० <= ०); # expect: सत्य
+वद(० >= -०); # expect: सत्य
+वद(-० >= ०); # expect: सत्य

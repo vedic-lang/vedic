@@ -1,0 +1,18 @@
+{
+    "fileViewType": "tree",
+    "pullRequestConfig": {
+        "provider": "github",
+        "hostRootUrl": "https://github.com",
+        "sourceRemote": "origin",
+        "sourceOwner": "vedic-lang",
+        "sourceRepo": "vedic",
+        "destRemote": "origin",
+        "destOwner": "vedic-lang",
+        "destRepo": "vedic",
+        "destProjectId": "",
+        "destBranch": "main",
+        "custom": null
+    },
+    "showRemoteBranches": true,
+    "exportedAt": 1680333984445
+}

@@ -1,0 +1,170 @@
+विधि Foo {}
+
+मान foo = Foo();
+सूत्र setFields() {
+  foo.bilberry = "bilberry";
+  foo.lime = "lime";
+  foo.elderberry = "elderberry";
+  foo.raspberry = "raspberry";
+  foo.gooseberry = "gooseberry";
+  foo.longan = "longan";
+  foo.mandarine = "mandarine";
+  foo.kiwयदिruit = "kiwयदिruit";
+  foo.orange = "orange";
+  foo.pomegranate = "pomegranate";
+  foo.tomato = "tomato";
+  foo.banana = "banana";
+  foo.juniper = "juniper";
+  foo.damson = "damson";
+  foo.blackcurrant = "blackcurrant";
+  foo.peach = "peach";
+  foo.grape = "grape";
+  foo.mango = "mango";
+  foo.redcurrant = "redcurrant";
+  foo.watermelon = "watermelon";
+  foo.plumcot = "plumcot";
+  foo.papaya = "papaya";
+  foo.cloudberry = "cloudberry";
+  foo.rambutan = "rambutan";
+  foo.salak = "salak";
+  foo.physalis = "physalis";
+  foo.huckleberry = "huckleberry";
+  foo.coconut = "coconut";
+  foo.date = "date";
+  foo.tamarind = "tamarind";
+  foo.lychee = "lychee";
+  foo.raisin = "raisin";
+  foo.apple = "apple";
+  foo.avocado = "avocado";
+  foo.nectarine = "nectarine";
+  foo.pomelo = "pomelo";
+  foo.melon = "melon";
+  foo.currant = "currant";
+  foo.plum = "plum";
+  foo.persimmon = "persimmon";
+  foo.olive = "olive";
+  foo.cranberry = "cranberry";
+  foo.boysenberry = "boysenberry";
+  foo.blackberry = "blackberry";
+  foo.passionfruit = "passionfruit";
+  foo.mulberry = "mulberry";
+  foo.marionberry = "marionberry";
+  foo.plantain = "plantain";
+  foo.lemon = "lemon";
+  foo.yuzu = "yuzu";
+  foo.loquat = "loquat";
+  foo.kumquat = "kumquat";
+  foo.salmonberry = "salmonberry";
+  foo.tangerine = "tangerine";
+  foo.durian = "durian";
+  foo.pear = "pear";
+  foo.cantaloupe = "cantaloupe";
+  foo.quince = "quince";
+  foo.guava = "guava";
+  foo.strawberry = "strawberry";
+  foo.nance = "nance";
+  foo.apricot = "apricot";
+  foo.jambul = "jambul";
+  foo.grapefruit = "grapefruit";
+  foo.clementine = "clementine";
+  foo.jujube = "jujube";
+  foo.cherry = "cherry";
+  foo.feijoa = "feijoa";
+  foo.jackfruit = "jackfruit";
+  foo.fig = "fig";
+  foo.cherimoya = "cherimoya";
+  foo.pineapple = "pineapple";
+  foo.blueberry = "blueberry";
+  foo.jabuticaba = "jabuticaba";
+  foo.miracle = "miracle";
+  foo.dragonfruit = "dragonfruit";
+  foo.satsuma = "satsuma";
+  foo.tamarillo = "tamarillo";
+  foo.honeydew = "honeydew";
+}
+
+setFields();
+
+सूत्र वदFields() {
+  वद(foo.apple); # expect: apple
+  वद(foo.apricot); # expect: apricot
+  वद(foo.avocado); # expect: avocado
+  वद(foo.banana); # expect: banana
+  वद(foo.bilberry); # expect: bilberry
+  वद(foo.blackberry); # expect: blackberry
+  वद(foo.blackcurrant); # expect: blackcurrant
+  वद(foo.blueberry); # expect: blueberry
+  वद(foo.boysenberry); # expect: boysenberry
+  वद(foo.cantaloupe); # expect: cantaloupe
+  वद(foo.cherimoya); # expect: cherimoya
+  वद(foo.cherry); # expect: cherry
+  वद(foo.clementine); # expect: clementine
+  वद(foo.cloudberry); # expect: cloudberry
+  वद(foo.coconut); # expect: coconut
+  वद(foo.cranberry); # expect: cranberry
+  वद(foo.currant); # expect: currant
+  वद(foo.damson); # expect: damson
+  वद(foo.date); # expect: date
+  वद(foo.dragonfruit); # expect: dragonfruit
+  वद(foo.durian); # expect: durian
+  वद(foo.elderberry); # expect: elderberry
+  वद(foo.feijoa); # expect: feijoa
+  वद(foo.fig); # expect: fig
+  वद(foo.gooseberry); # expect: gooseberry
+  वद(foo.grape); # expect: grape
+  वद(foo.grapefruit); # expect: grapefruit
+  वद(foo.guava); # expect: guava
+  वद(foo.honeydew); # expect: honeydew
+  वद(foo.huckleberry); # expect: huckleberry
+  वद(foo.jabuticaba); # expect: jabuticaba
+  वद(foo.jackfruit); # expect: jackfruit
+  वद(foo.jambul); # expect: jambul
+  वद(foo.jujube); # expect: jujube
+  वद(foo.juniper); # expect: juniper
+  वद(foo.kiwयदिruit); # expect: kiwयदिruit
+  वद(foo.kumquat); # expect: kumquat
+  वद(foo.lemon); # expect: lemon
+  वद(foo.lime); # expect: lime
+  वद(foo.longan); # expect: longan
+  वद(foo.loquat); # expect: loquat
+  वद(foo.lychee); # expect: lychee
+  वद(foo.mandarine); # expect: mandarine
+  वद(foo.mango); # expect: mango
+  वद(foo.marionberry); # expect: marionberry
+  वद(foo.melon); # expect: melon
+  वद(foo.miracle); # expect: miracle
+  वद(foo.mulberry); # expect: mulberry
+  वद(foo.nance); # expect: nance
+  वद(foo.nectarine); # expect: nectarine
+  वद(foo.olive); # expect: olive
+  वद(foo.orange); # expect: orange
+  वद(foo.papaya); # expect: papaya
+  वद(foo.passionfruit); # expect: passionfruit
+  वद(foo.peach); # expect: peach
+  वद(foo.pear); # expect: pear
+  वद(foo.persimmon); # expect: persimmon
+  वद(foo.physalis); # expect: physalis
+  वद(foo.pineapple); # expect: pineapple
+  वद(foo.plantain); # expect: plantain
+  वद(foo.plum); # expect: plum
+  वद(foo.plumcot); # expect: plumcot
+  वद(foo.pomegranate); # expect: pomegranate
+  वद(foo.pomelo); # expect: pomelo
+  वद(foo.quince); # expect: quince
+  वद(foo.raisin); # expect: raisin
+  वद(foo.rambutan); # expect: rambutan
+  वद(foo.raspberry); # expect: raspberry
+  वद(foo.redcurrant); # expect: redcurrant
+  वद(foo.salak); # expect: salak
+  वद(foo.salmonberry); # expect: salmonberry
+  वद(foo.satsuma); # expect: satsuma
+  वद(foo.strawberry); # expect: strawberry
+  वद(foo.tamarillo); # expect: tamarillo
+  वद(foo.tamarind); # expect: tamarind
+  वद(foo.tangerine); # expect: tangerine
+  वद(foo.tomato); # expect: tomato
+  वद(foo.watermelon); # expect: watermelon
+  वद(foo.yuzu); # expect: yuzu
+}
+
+वदFields();

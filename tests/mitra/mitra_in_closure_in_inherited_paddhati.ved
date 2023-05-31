@@ -1,0 +1,26 @@
+विधि A {
+  say() {
+    वद("A");
+  }
+}
+
+विधि B सन्धि A {
+  getClosure() {
+    सूत्र closure() {
+      मित्र.say();
+    }
+    फल closure;
+  }
+
+  say() {
+    वद("B");
+  }
+}
+
+विधि C सन्धि B {
+  say() {
+    वद("C");
+  }
+}
+
+C().getClosure()(); # expect: A

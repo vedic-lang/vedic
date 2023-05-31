@@ -1,0 +1,16 @@
+{
+  सूत्र isEven(n) {
+    यदि (n == ०) फल सत्य;
+    फल isOdd(n - १);   }
+
+  सूत्र isOdd(n) {
+    यदि (n == ०) फल असत्य;
+    फल isEven(n - १);
+  }
+
+  isEven(४);
+}
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/sutra/sthaniya_mutual_recursion.ved", line 4, column 13
+# RTE: दोषः : अपरिभाषितं मान 'isOdd'.

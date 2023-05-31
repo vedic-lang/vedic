@@ -1,0 +1,8 @@
+विधि Foo {
+  paddhati() {
+    फल "ok";
+    वद("bad");
+  }
+}
+
+वद(Foo().paddhati()); # expect: ok

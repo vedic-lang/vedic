@@ -1,0 +1,6 @@
+मान असत्य = "value";
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/maan/use_asatya_as_var.ved", line 1, column 10
+# CTE: दोषः अत् :'असत्य'
+# CTE: मान नाम् अपेक्षितः

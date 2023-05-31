@@ -1,0 +1,86 @@
+विधि Node {
+    प्रारंभ(item) {
+        मम.item = item;
+        मम.next = न;
+        मम.prev = न;
+    }
+}
+
+विधि सूचि {
+    प्रारंभ() {
+        मम.head = न;
+        मम.tail = न;
+        मम.कुल = ०;
+    }
+
+    push(item) {
+        मान node = Node(item);
+        node.next = मम.head;
+        यदि (मम.head) {
+            मम.head.prev = node;
+        } अथ {
+            मम.tail = node;
+        }
+        मम.head = node;
+        मम.कुल = मम.कुल + १;
+        फल मम;
+    }
+
+    pop() {
+        मान node = मम.head;
+        यदि (node) {
+            मम.head = node.next;
+            यदि (मम.head) {
+                मम.head.prev = न;
+            } अथ {
+                मम.tail = न;
+            }
+            मम.कुल = मम.कुल - १;
+            फल node.item;
+        } अथ {
+            वद("IndexDosa : List is empty");
+            # फल न;
+        }
+    }
+    
+    foreach(f) {
+        मान node = मम.tail;
+        पर्यन्त (node) {
+            f(node.item);
+            node = node.prev;
+        }
+    }
+
+    get(index) {
+        यदि (index < ० || index >= मम.कुल) {
+            त्रुटि("IndexDosa : Index out of range");
+            निर्गम(१);
+        }
+        मान node = मम.tail;
+        चक्र (मान i = ०; i < index; i = i + १) {
+            node = node.prev;
+        }        
+        फल node.item;
+    }
+}
+
+मान list = सूचि();
+चक्र (मान i = ०; i < १०; i = i + १) {
+    list.push(i);
+}
+
+# print list
+list.foreach(वद); # expect: १\n२\n३\n४\n५\n६\n७\n८\n९\n१०
+
+# print list length
+वद("length =",list.कुल); # expect: length = १०
+
+# get item from list
+चक्र (मान i = ०; i <= ११; i = i + १) {
+    वद("item at index",i,":",list.get(i)); # expect: item at index ५ = ५
+}
+
+# pop from list
+चक्र (मान i = १; i <= ११; i = i + १) {
+    वद(i,"pop =>",list.pop());
+}

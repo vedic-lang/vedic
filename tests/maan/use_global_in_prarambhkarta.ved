@@ -1,0 +1,3 @@
+मान a = "value";
+मान a = a;
+वद(a); # expect: value

@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = ["cli", "core", "wasm"]
+default-members = ["cli", "core"]
+
+[workspace.metadata]
+name = "vedic"
+version = "2.0.4"
+authors = ["Pt. Prashant Tripathi <ptprashanttripathi@outlook.com>"]
+edition = "2021"
+description = "Vedic is World first Programming launguage in Sanskrit"
+license = "MIT"
+repository = "https://github.com/vedic-lang/vedic"
+documentation = "https://github.com/vedic-lang/vedic"
+readme = "README.md"
+keywords = ["vedic", "cli", "rust","command-line-utilities","programming-languages","sanskrit","vedic","interpreter","compiler"]
+categories = ["command-line-utilities"]
+
+[profile.release]
+codegen-units = 1
+incremental = true
+lto = true
+opt-level = 'z'
+overflow-checks = true

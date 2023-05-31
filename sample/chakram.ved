@@ -1,6 +1,0 @@
-चक्रम्(मान अ = ०; अ < १०; मान  अ = अ+ १)
-{
-  # चक्रम् takes in 3 parameters initial value, and condition, and a step size
-  वद  "अ = " + अ;
-} 
-# This will print ० to ९

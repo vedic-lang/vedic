@@ -1,0 +1,4 @@
+वद("Exit Function"); # expect: Exit Function
+निर्गम(); # Exit Function
+
+वद("Exit Sub"); # unreachable code

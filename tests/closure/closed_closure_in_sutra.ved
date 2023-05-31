@@ -1,0 +1,11 @@
+मान f;
+
+{
+  मान sthaniya = "sthaniya";
+  सूत्र f_() {
+    वद(sthaniya);
+  }
+  f = f_;
+}
+
+f(); # expect: sthaniya

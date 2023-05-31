@@ -1,0 +1,11 @@
+# Tests that we correctly track the line info across multiline strings.
+मान a = "१
+२
+३
+";
+
+err;
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/string/dosa_after_multiline.ved", line 7, column 4
+# RTE: दोषः : अपरिभाषितं मान 'err'.

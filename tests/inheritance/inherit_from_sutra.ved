@@ -1,0 +1,7 @@
+सूत्र foo() {}
+
+विधि Subविधि सन्धि foo {} 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/inheritance/inherit_from_sutra.ved", line 3, column 23
+# RTE: दोषः : मित्र-विधि: एक विधि भविष्यति।

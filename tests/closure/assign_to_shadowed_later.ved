@@ -1,0 +1,13 @@
+मान a = "global";
+
+{
+  सूत्र assign() {
+    a = "assigned";
+  }
+
+  मान a = "inner";
+  assign();
+  वद(a); # expect: inner
+}
+
+वद(a); # expect: assigned

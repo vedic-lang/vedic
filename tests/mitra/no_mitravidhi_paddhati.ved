@@ -1,0 +1,13 @@
+विधि Base {}
+
+विधि Derived सन्धि Base {
+  foo() {
+    मित्र.doesNotExist(१);   
+  }
+}
+
+Derived().foo();
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/mitra/no_mitravidhi_paddhati.ved", line 5, column 26
+# RTE: दोषः : अपरिभाषितं गुण : 'doesNotExist'

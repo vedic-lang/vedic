@@ -1,0 +1,8 @@
+मान nan = ०/०;
+
+वद(nan == ०); # expect: असत्य
+वद(nan != १); # expect: सत्य
+
+# NaN is not equal to self.
+वद(nan == nan); # expect: असत्य
+वद(nan != nan); # expect: सत्य

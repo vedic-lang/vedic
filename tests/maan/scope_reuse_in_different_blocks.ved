@@ -1,0 +1,8 @@
+{
+  मान a = "first";
+  वद(a); # expect: first
+}
+{
+  मान a = "second";
+  वद(a); # expect: second
+}

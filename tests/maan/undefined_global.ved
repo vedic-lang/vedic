@@ -1,0 +1,5 @@
+वद(notDefined);  
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/maan/undefined_global.ved", line 1, column 14
+# RTE: दोषः : अपरिभाषितं मान 'notDefined'.

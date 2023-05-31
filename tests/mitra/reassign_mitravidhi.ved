@@ -1,0 +1,22 @@
+विधि Base {
+  paddhati() {
+    वद("Base.paddhati()");
+  }
+}
+
+विधि Derived सन्धि Base {
+  paddhati() {
+    मित्र.paddhati();
+  }
+}
+
+विधि OtherBase {
+  paddhati() {
+    वद("OtherBase.paddhati()");
+  }
+}
+
+मान derived = Derived();
+derived.paddhati(); # expect: Base.paddhati()
+Base = OtherBase;
+derived.paddhati(); # expect: Base.paddhati()

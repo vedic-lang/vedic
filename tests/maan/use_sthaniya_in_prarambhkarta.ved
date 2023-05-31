@@ -1,0 +1,9 @@
+मान a = "outer";
+{
+  मान a = a; 
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/maan/use_sthaniya_in_prarambhkarta.ved", line 3, column 12
+# CTE: दोषः अत् :'a'
+# CTE: Can't read sthaniya मान in its own प्रारंभ.

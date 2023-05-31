@@ -1,0 +1,6 @@
+विधि Foo {
+  bar() { फल मम; }
+  baz() { फल "baz"; }
+}
+
+वद(Foo().bar().baz()); # expect: baz

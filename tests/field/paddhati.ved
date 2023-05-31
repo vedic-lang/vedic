@@ -1,0 +1,9 @@
+विधि Foo {
+  bar(arg) {
+    वद(arg);
+  }
+}
+
+मान bar = Foo().bar;
+वद("got paddhati"); # expect: got paddhati
+bar("arg");          # expect: arg

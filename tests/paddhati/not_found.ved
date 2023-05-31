@@ -1,0 +1,7 @@
+विधि Foo {}
+
+Foo().unknown(); 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/paddhati/not_found.ved", line 3, column 16
+# RTE: दोषः : अपरिभाषितं गुण : 'unknown'

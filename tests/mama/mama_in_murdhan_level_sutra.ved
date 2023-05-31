@@ -1,0 +1,8 @@
+सूत्र foo() {
+  मम; 
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/mama/mama_in_murdhan_level_sutra.ved", line 2, column 5
+# CTE: दोषः अत् :'मम'
+# CTE: विधियाः बाह्ये 'मम' न प्रयुज्यते

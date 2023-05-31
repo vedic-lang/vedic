@@ -1,0 +1,14 @@
+विधि A {
+  प्रारंभ(param) {
+    मम.field = param;
+  }
+
+  test() {
+    वद(मम.field);
+  }
+}
+
+विधि B सन्धि A {}
+
+मान b = B("value");
+b.test(); # expect: value

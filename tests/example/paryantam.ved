@@ -1,0 +1,13 @@
+# This will print ० to ५
+मान अ = ०;
+पर्यन्त( अ <= ५)
+{
+  वद(अ);
+  अ = अ+ १;
+} 
+# expect: ०
+# expect: १
+# expect: २
+# expect: ३
+# expect: ४
+# expect: ५

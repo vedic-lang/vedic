@@ -1,0 +1,9 @@
+सूत्र foo(arg,
+        arg) { 
+  "body";
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/maan/duplicate_parameter.ved", line 2, column 12
+# CTE: दोषः अत् :'arg'
+# CTE: पूर्वं मानस्थापितं ममनामा ममवलोके

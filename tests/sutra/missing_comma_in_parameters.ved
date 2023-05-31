@@ -1,0 +1,8 @@
+सूत्र foo(a, b c, d, e, f) {
+    return a + b + c + d + e + f;
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/sutra/missing_comma_in_parameters.ved", line 1, column 17
+# CTE: दोषः अत् :'c'
+# CTE: परिमितिनाम् पश्चात् ')' अपेक्षितः

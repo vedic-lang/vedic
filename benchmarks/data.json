@@ -1,0 +1,152 @@
+[
+    {
+        "lang": "vedic",
+        "test": "arithmetic",
+        "time": 1016.72119140625
+    },
+    {
+        "lang": "vedic",
+        "test": "binary_trees",
+        "time": 2250.386962890625
+    },
+    {
+        "lang": "vedic",
+        "test": "equality",
+        "time": 1617.5625
+    },
+    {
+        "lang": "vedic",
+        "test": "fib",
+        "time": 1895.2958984375
+    },
+    {
+        "lang": "vedic",
+        "test": "instantiation",
+        "time": 1050.251220703125
+    },
+    {
+        "lang": "vedic",
+        "test": "invocation",
+        "time": 354.427978515625
+    },
+    {
+        "lang": "vedic",
+        "test": "method_call",
+        "time": 1311.045166015625
+    },
+    {
+        "lang": "vedic",
+        "test": "properties",
+        "time": 3259.435791015625
+    },
+    {
+        "lang": "vedic",
+        "test": "trees",
+        "time": 2831.22021484375
+    },
+    {
+        "lang": "vedic",
+        "test": "zoo",
+        "time": 421.7587890625
+    },
+    {
+        "lang": "python3",
+        "test": "arithmetic",
+        "time": 3428.43896484375
+    },
+    {
+        "lang": "python3",
+        "test": "binary_trees",
+        "time": 4184.440185546875
+    },
+    {
+        "lang": "python3",
+        "test": "equality",
+        "time": 2844.77258301
+    },
+    {
+        "lang": "python3",
+        "test": "fib",
+        "time": 2288.538330078125
+    },
+    {
+        "lang": "python3",
+        "test": "instantiation",
+        "time": 1748.10595703125
+    },
+    {
+        "lang": "python3",
+        "test": "invocation",
+        "time": 1435.2099609375
+    },
+    {
+        "lang": "python3",
+        "test": "method_call",
+        "time": 987.20109375
+    },
+    {
+        "lang": "python3",
+        "test": "properties",
+        "time": 1427.3081054687
+    },
+    {
+        "lang": "python3",
+        "test": "trees",
+        "time": 6698.005859375
+    },
+    {
+        "lang": "python3",
+        "test": "zoo",
+        "time": 988.4373428125
+    },
+    {
+        "lang": "nodejs",
+        "test": "arithmetic",
+        "time": 670.99609375
+    },
+    {
+        "lang": "nodejs",
+        "test": "binary_trees",
+        "time": 2803.955078125
+    },
+    {
+        "lang": "nodejs",
+        "test": "equality",
+        "time": 1254.37488281
+    },
+    {
+        "lang": "nodejs",
+        "test": "fib",
+        "time": 959.962890625
+    },
+    {
+        "lang": "nodejs",
+        "test": "instantiation",
+        "time": 684.766845703125
+    },
+    {
+        "lang": "nodejs",
+        "test": "invocation",
+        "time": 628.922119140625
+    },
+    {
+        "lang": "nodejs",
+        "test": "method_call",
+        "time": 489.63134765625
+    },
+    {
+        "lang": "nodejs",
+        "test": "properties",
+        "time": 376.793212890625
+    },
+    {
+        "lang": "nodejs",
+        "test": "trees",
+        "time": 1943.781005859375
+    },
+    {
+        "lang": "nodejs",
+        "test": "zoo",
+        "time": 514.396728515625
+    }
+]

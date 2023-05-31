@@ -1,0 +1,29 @@
+विधि Tree {
+    प्रारंभ(depth) {
+        मम.depth = depth;
+        यदि (depth > 0) {
+            मम.a = Tree(depth - 1);
+            मम.b = Tree(depth - 1);
+            मम.c = Tree(depth - 1);
+            मम.d = Tree(depth - 1);
+            मम.e = Tree(depth - 1);
+        }
+    }
+
+    walk() {
+        यदि (मम.depth == 0) फल 0;
+        फल (
+            मम.depth +
+            मम.a.walk() +
+            मम.b.walk() +
+            मम.c.walk() +
+            मम.d.walk() +
+            मम.e.walk()
+        );
+    }
+}
+
+मान tree = Tree(8);
+चक्र (मान i = 0; i < 100; i = i + 1) {
+    यदि (tree.walk() != 122068) वद("Dosa");
+}

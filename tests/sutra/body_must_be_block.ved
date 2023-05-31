@@ -1,0 +1,9 @@
+सूत्र f() १२३;
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/sutra/body_must_be_block.ved", line 1, column 14
+# CTE: दोषः अत् :'१२३'
+# CTE: सूत्रम् पूर्वं '{' अपेक्षितः
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/sutra/body_must_be_block.ved", line 10, column 1
+# CTE: दोषः अन्ते : खण्ड पश्चात् '}' अपेक्षितः

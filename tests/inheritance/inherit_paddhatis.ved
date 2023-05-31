@@ -1,0 +1,14 @@
+विधि Foo {
+  paddhatiOnFoo() { वद("foo"); }
+  override() { वद("foo"); }
+}
+
+विधि Bar सन्धि Foo {
+  paddhatiOnBar() { वद("bar"); }
+  override() { वद("bar"); }
+}
+
+मान bar = Bar();
+bar.paddhatiOnFoo(); # expect: foo
+bar.paddhatiOnBar(); # expect: bar
+bar.override(); # expect: bar

@@ -1,0 +1,14 @@
+विधि A {
+  paddhati() {}
+}
+
+विधि B सन्धि A {
+  paddhati() {
+        (मित्र).paddhati();
+  }
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/mitra/parenthesized.ved", line 7, column 16
+# CTE: दोषः अत् :')'
+# CTE: मित्र पश्चात् '.' अपेक्षितः

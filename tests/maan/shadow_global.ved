@@ -1,0 +1,6 @@
+मान a = "global";
+{
+  मान a = "shadow";
+  वद(a); # expect: shadow
+}
+वद(a); # expect: global

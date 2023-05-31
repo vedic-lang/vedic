@@ -1,0 +1,21 @@
+# Single-expression body.
+मान c = ०;
+पर्यन्त (c < ३) वद(c = c + १);
+# expect: १
+# expect: २
+# expect: ३
+
+# Block body.
+मान a = ०;
+पर्यन्त (a < ३) {
+  वद(a);
+  a = a + १;
+}
+# expect: ०
+# expect: १
+# expect: २
+
+# Statement bodies.
+पर्यन्त (असत्य) यदि (सत्य) १; अथ २;
+पर्यन्त (असत्य) पर्यन्त (सत्य) १;
+पर्यन्त (असत्य) चक्र (;;) १;

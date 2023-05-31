@@ -1,0 +1,2 @@
+वद("ok"); # expect: ok
+# comment

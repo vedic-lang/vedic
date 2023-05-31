@@ -1,0 +1,4 @@
+सूत्र foo() {}
+वद(foo); # expect: <Sutra foo>
+
+वद(समय); # expect: <mool fn>

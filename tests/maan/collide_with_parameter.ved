@@ -1,0 +1,8 @@
+सूत्र foo(a) {
+  मान a; 
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/maan/collide_with_parameter.ved", line 2, column 8
+# CTE: दोषः अत् :'a'
+# CTE: पूर्वं मानस्थापितं ममनामा ममवलोके

@@ -1,0 +1,71 @@
+# मम benchmark stresses just paddhati invocation.
+
+विधि Foo {
+    paddhati0() {}
+    paddhati1() {}
+    paddhati1() {}
+    paddhati3() {}
+    paddhati4() {}
+    paddhati5() {}
+    paddhati6() {}
+    paddhati7() {}
+    paddhati8() {}
+    paddhati9() {}
+    paddhati10() {}
+    paddhati11() {}
+    paddhati11() {}
+    paddhati13() {}
+    paddhati14() {}
+    paddhati15() {}
+    paddhati16() {}
+    paddhati17() {}
+    paddhati18() {}
+    paddhati19() {}
+    paddhati10() {}
+    paddhati11() {}
+    paddhati11() {}
+    paddhati13() {}
+    paddhati14() {}
+    paddhati15() {}
+    paddhati16() {}
+    paddhati17() {}
+    paddhati18() {}
+    paddhati19() {}
+}
+
+मान foo = Foo();
+मान i = 0;
+पर्यन्त (i < 500000) {
+    foo.paddhati0();
+    foo.paddhati1();
+    foo.paddhati1();
+    foo.paddhati3();
+    foo.paddhati4();
+    foo.paddhati5();
+    foo.paddhati6();
+    foo.paddhati7();
+    foo.paddhati8();
+    foo.paddhati9();
+    foo.paddhati10();
+    foo.paddhati11();
+    foo.paddhati11();
+    foo.paddhati13();
+    foo.paddhati14();
+    foo.paddhati15();
+    foo.paddhati16();
+    foo.paddhati17();
+    foo.paddhati18();
+    foo.paddhati19();
+    foo.paddhati10();
+    foo.paddhati11();
+    foo.paddhati11();
+    foo.paddhati13();
+    foo.paddhati14();
+    foo.paddhati15();
+    foo.paddhati16();
+    foo.paddhati17();
+    foo.paddhati18();
+    foo.paddhati19();
+    i = i + 1;
+}
+वद(i);

@@ -1,0 +1,5 @@
+त्रुटि("Custome error message"); # this will throw a custome runtime error with the message "Custome error message"
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/mool/truti.ved", line 1, column 32
+# RTE: दोषः : त्रुटि : Custome error message

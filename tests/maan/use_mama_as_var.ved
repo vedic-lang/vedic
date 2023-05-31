@@ -1,0 +1,6 @@
+मान मम = "value";
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/maan/use_mama_as_var.ved", line 1, column 7
+# CTE: दोषः अत् :'मम'
+# CTE: मान नाम् अपेक्षितः

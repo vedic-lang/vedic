@@ -1,0 +1,16 @@
+{
+  मान f;
+
+  {
+    मान a = "a";
+    सूत्र f_() { वद(a); }
+    f = f_;
+  }
+
+  {
+    # Since a is out of scope, the sthaniya slot will be reused by b. Make sure
+    # that f still closes over a.
+    मान b = "b";
+    f(); # expect: a
+  }
+}

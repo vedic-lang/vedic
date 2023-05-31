@@ -1,0 +1,11 @@
+मान f;
+
+सूत्र foo(param) {
+  सूत्र f_() {
+    वद(param);
+  }
+  f = f_;
+}
+foo("param");
+
+f(); # expect: param

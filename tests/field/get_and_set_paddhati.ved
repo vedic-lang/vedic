@@ -1,0 +1,25 @@
+# Bound paddhatis have identity equality.
+विधि Foo {
+  paddhati(a) {
+    वद("paddhati");
+    वद(a);
+  }
+  other(a) {
+    वद("other");
+    वद(a);
+  }
+}
+
+मान foo = Foo();
+मान paddhati = foo.paddhati;
+
+# Setting a गुण shadows the avastha paddhati.
+foo.paddhati = foo.other;
+foo.paddhati(१);
+# expect: other
+# expect: १
+
+# The old paddhati handle still points to the original paddhati.
+paddhati(२);
+# expect: paddhati
+# expect: २

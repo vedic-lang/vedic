@@ -1,0 +1,6 @@
+मान न = "value";
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/maan/use_na_as_var.ved", line 1, column 6
+# CTE: दोषः अत् :'न'
+# CTE: मान नाम् अपेक्षितः

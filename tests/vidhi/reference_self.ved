@@ -1,0 +1,7 @@
+विधि Foo {
+  फलSelf() {
+    फल Foo;
+  }
+}
+
+वद(Foo().फलSelf()); # expect: Foo

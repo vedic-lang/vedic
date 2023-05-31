@@ -1,0 +1,50 @@
+# Single-expression body.
+चक्र (मान c = ०; c < ३;) वद(c = c + १);
+# expect: १
+# expect: २
+# expect: ३
+
+# Block body.
+चक्र (मान a = ०; a < ३; a = a + १) {
+  वद(a);
+}
+# expect: ०
+# expect: १
+# expect: २
+
+# No clauses.
+सूत्र foo() {
+  चक्र (;;) फल "done";
+}
+वद(foo()); # expect: done
+
+# No मान.
+मान i = ०;
+चक्र (; i < २; i = i + १) वद(i);
+# expect: ०
+# expect: १
+
+# No condition.
+सूत्र bar() {
+  चक्र (मान i = ०;; i = i + १) {
+    वद(i);
+    यदि (i >= २) फल;
+  }
+}
+bar();
+# expect: ०
+# expect: १
+# expect: २
+
+# No increment.
+चक्र (मान i = ०; i < २;) {
+  वद(i);
+  i = i + १;
+}
+# expect: ०
+# expect: १
+
+# Statement bodies.
+चक्र (; असत्य;) यदि (सत्य) १; अथ २;
+चक्र (; असत्य;) पर्यन्त (सत्य) १;
+चक्र (; असत्य;) चक्र (;;) १;

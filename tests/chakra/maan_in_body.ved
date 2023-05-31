@@ -1,0 +1,6 @@
+चक्र (;;) मान foo;
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/chakra/maan_in_body.ved", line 1, column 14
+# CTE: दोषः अत् :'मान'
+# CTE: व्याख्या अपेक्षितः

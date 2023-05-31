@@ -1,0 +1,6 @@
+{
+  वद(notDefined);  }
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/maan/undefined_sthaniya.ved", line 2, column 16
+# RTE: दोषः : अपरिभाषितं मान 'notDefined'.

@@ -1,0 +1,6 @@
+मान Null = न;
+विधि Foo सन्धि Null {} 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/inheritance/inherit_from_na.ved", line 2, column 20
+# RTE: दोषः : मित्र-विधि: एक विधि भविष्यति।
