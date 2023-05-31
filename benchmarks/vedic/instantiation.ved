@@ -1,0 +1,40 @@
+# मम benchmark stresses avastha creation and प्रारंभ calling.
+
+विधि Foo {
+    प्रारंभ() {}
+}
+
+मान i = 0;
+पर्यन्त (i < 500000) {
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    Foo();
+    i = i + 1;
+}

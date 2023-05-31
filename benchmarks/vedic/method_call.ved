@@ -1,0 +1,69 @@
+विधि Toggle {
+    प्रारंभ(startState) {
+        मम.state = startState;
+    }
+
+    value() {
+        फल मम.state;
+    }
+
+    activate() {
+        मम.state = !मम.state;
+        फल मम;
+    }
+}
+
+विधि NthToggle सन्धि Toggle {
+    प्रारंभ(startState, maxCounter) {
+        मित्र.प्रारंभ(startState);
+        मम.countMax = maxCounter;
+        मम.count = 0;
+    }
+
+    activate() {
+        मम.count = मम.count + 1;
+        यदि (मम.count >= मम.countMax) {
+            मित्र.activate();
+            मम.count = 0;
+        }
+
+        फल मम;
+    }
+}
+
+मान n = 100000;
+मान val = सत्य;
+मान toggle = Toggle(val);
+
+चक्र (मान i = 0; i < n; i = i + 1) {
+    val = toggle.activate().value();
+    val = toggle.activate().value();
+    val = toggle.activate().value();
+    val = toggle.activate().value();
+    val = toggle.activate().value();
+    val = toggle.activate().value();
+    val = toggle.activate().value();
+    val = toggle.activate().value();
+    val = toggle.activate().value();
+    val = toggle.activate().value();
+}
+
+वद(toggle.value());
+
+val = सत्य;
+मान ntoggle = NthToggle(val, 3);
+
+चक्र (मान i = 0; i < n; i = i + 1) {
+    val = ntoggle.activate().value();
+    val = ntoggle.activate().value();
+    val = ntoggle.activate().value();
+    val = ntoggle.activate().value();
+    val = ntoggle.activate().value();
+    val = ntoggle.activate().value();
+    val = ntoggle.activate().value();
+    val = ntoggle.activate().value();
+    val = ntoggle.activate().value();
+    val = ntoggle.activate().value();
+}
+
+वद(ntoggle.value());

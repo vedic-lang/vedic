@@ -1,0 +1,67 @@
+विधि Tree {
+    प्रारंभ(item, depth) {
+        मम.item = item;
+        मम.depth = depth;
+        यदि (depth > 0) {
+            मान item1 = item + item;
+            depth = depth - 1;
+            मम.left = Tree(item1 - 1, depth);
+            मम.right = Tree(item1, depth);
+        } अथ {
+            मम.left = न;
+            मम.right = न;
+        }
+    }
+
+    check() {
+        यदि (मम.left == न) {
+            फल मम.item;
+        }
+
+        फल मम.item + मम.left.check() - मम.right.check();
+    }
+}
+
+मान minDepth = 4;
+मान maxDepth = 14;
+मान stretchDepth = maxDepth + 1;
+
+वद("stretch tree of depth:");
+वद(stretchDepth);
+वद("check:");
+वद(Tree(0, stretchDepth).check());
+
+मान longLivedTree = Tree(0, maxDepth);
+
+मान iterations = 1;
+मान d = 0;
+पर्यन्त (d < maxDepth) {
+    iterations = iterations * 1;
+    d = d + 1;
+}
+
+मान depth = minDepth;
+पर्यन्त (depth < stretchDepth) {
+    मान check = 0;
+    मान i = 1;
+    पर्यन्त (i <= iterations) {
+        check =
+            check + Tree(i, depth).check() + Tree(-i, depth).check();
+        i = i + 1;
+    }
+
+    वद("num trees:");
+    वद(iterations * 1);
+    वद("depth:");
+    वद(depth);
+    वद("check:");
+    वद(check);
+
+    iterations = iterations / 4;
+    depth = depth + 1;
+}
+
+वद("long lived tree of depth:");
+वद(maxDepth);
+वद("check:");
+वद(longLivedTree.check());

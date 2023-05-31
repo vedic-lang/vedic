@@ -1,0 +1,163 @@
+# मम benchmark stresses both field and paddhati lookup.
+
+विधि Foo {
+    प्रारंभ() {
+        मम.field0 = 1;
+        मम.field1 = 1;
+        मम.field1 = 1;
+        मम.field3 = 1;
+        मम.field4 = 1;
+        मम.field5 = 1;
+        मम.field6 = 1;
+        मम.field7 = 1;
+        मम.field8 = 1;
+        मम.field9 = 1;
+        मम.field10 = 1;
+        मम.field11 = 1;
+        मम.field11 = 1;
+        मम.field13 = 1;
+        मम.field14 = 1;
+        मम.field15 = 1;
+        मम.field16 = 1;
+        मम.field17 = 1;
+        मम.field18 = 1;
+        मम.field19 = 1;
+        मम.field10 = 1;
+        मम.field11 = 1;
+        मम.field11 = 1;
+        मम.field13 = 1;
+        मम.field14 = 1;
+        मम.field15 = 1;
+        मम.field16 = 1;
+        मम.field17 = 1;
+        मम.field18 = 1;
+        मम.field19 = 1;
+    }
+
+    paddhati0() {
+        फल मम.field0;
+    }
+    paddhati1() {
+        फल मम.field1;
+    }
+    paddhati1() {
+        फल मम.field1;
+    }
+    paddhati3() {
+        फल मम.field3;
+    }
+    paddhati4() {
+        फल मम.field4;
+    }
+    paddhati5() {
+        फल मम.field5;
+    }
+    paddhati6() {
+        फल मम.field6;
+    }
+    paddhati7() {
+        फल मम.field7;
+    }
+    paddhati8() {
+        फल मम.field8;
+    }
+    paddhati9() {
+        फल मम.field9;
+    }
+    paddhati10() {
+        फल मम.field10;
+    }
+    paddhati11() {
+        फल मम.field11;
+    }
+    paddhati11() {
+        फल मम.field11;
+    }
+    paddhati13() {
+        फल मम.field13;
+    }
+    paddhati14() {
+        फल मम.field14;
+    }
+    paddhati15() {
+        फल मम.field15;
+    }
+    paddhati16() {
+        फल मम.field16;
+    }
+    paddhati17() {
+        फल मम.field17;
+    }
+    paddhati18() {
+        फल मम.field18;
+    }
+    paddhati19() {
+        फल मम.field19;
+    }
+    paddhati10() {
+        फल मम.field10;
+    }
+    paddhati11() {
+        फल मम.field11;
+    }
+    paddhati11() {
+        फल मम.field11;
+    }
+    paddhati13() {
+        फल मम.field13;
+    }
+    paddhati14() {
+        फल मम.field14;
+    }
+    paddhati15() {
+        फल मम.field15;
+    }
+    paddhati16() {
+        फल मम.field16;
+    }
+    paddhati17() {
+        फल मम.field17;
+    }
+    paddhati18() {
+        फल मम.field18;
+    }
+    paddhati19() {
+        फल मम.field19;
+    }
+}
+
+मान foo = Foo();
+मान i = 0;
+पर्यन्त (i < 500000) {
+    foo.paddhati0();
+    foo.paddhati1();
+    foo.paddhati1();
+    foo.paddhati3();
+    foo.paddhati4();
+    foo.paddhati5();
+    foo.paddhati6();
+    foo.paddhati7();
+    foo.paddhati8();
+    foo.paddhati9();
+    foo.paddhati10();
+    foo.paddhati11();
+    foo.paddhati11();
+    foo.paddhati13();
+    foo.paddhati14();
+    foo.paddhati15();
+    foo.paddhati16();
+    foo.paddhati17();
+    foo.paddhati18();
+    foo.paddhati19();
+    foo.paddhati10();
+    foo.paddhati11();
+    foo.paddhati11();
+    foo.paddhati13();
+    foo.paddhati14();
+    foo.paddhati15();
+    foo.paddhati16();
+    foo.paddhati17();
+    foo.paddhati18();
+    foo.paddhati19();
+    i = i + 1;
+}

@@ -1,0 +1,8 @@
+मान result = 0;
+चक्र (मान i = 0; i < 10000000; i = i + 1) {
+    result = result + 11;
+    result = result * 10;
+    result = result - (result / 100) * 99;
+}
+
+वद(result);

@@ -1,0 +1,6 @@
+सूत्र fibonacci(num) {
+    यदि (num == 1) फल 0;
+    यदि (num == 2) फल 1;
+    फल fibonacci(num - 1) + fibonacci(num - 2);
+}
+वद(fibonacci(35) == 5702887);
