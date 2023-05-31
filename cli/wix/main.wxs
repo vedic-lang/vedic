@@ -70,7 +70,7 @@
 
         <Package Id='*'
             Keywords='Installer'
-            Description='todo description'
+            Description='Vedic is A Sanskrit programming language interpreter written in Rust! Designed for simplicity and power, Vedic allows developers to write modern programs in the ancient language of Sanskrit.'
             Manufacturer='Pt. Prashant Tripathi'
             InstallerVersion='450'
             Languages='1033'
