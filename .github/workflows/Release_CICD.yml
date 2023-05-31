@@ -1,0 +1,152 @@
+name: Vedic Release CICD
+
+on:
+    workflow_dispatch:
+        inputs:
+            vesion:
+                description: Version
+                required: true
+            prerelease:
+                description: Prerelease
+                required: true
+                type: boolean
+
+jobs:
+    Build-Windows:
+        name: "Build release for Windows"
+        runs-on: windows-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Install Rust
+              uses: actions-rs/toolchain@v1
+              with:
+                  profile: default
+                  toolchain: stable
+                  target: x86_64-pc-windows-msvc
+
+            - name: Build binary
+              shell: pwsh
+              run: cicd/build_windows.ps1
+
+            - name: Upload release
+              uses: actions/upload-artifact@v3
+              with:
+                  name: windows
+                  path: release_windows/*
+
+    Build-Mac:
+        name: "Build release for MacOS"
+        runs-on: macos-latest # macos-11.0
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Install Rust
+              uses: actions-rs/toolchain@v1
+              with:
+                  profile: default
+                  toolchain: stable
+                  target: x86_64-apple-darwin
+
+            - name: Build binary
+              shell: bash
+              run: bash cicd/build_mac.sh
+
+            - name: Upload release
+              uses: actions/upload-artifact@v3
+              with:
+                  name: mac
+                  path: release_mac/*
+
+    Build-Linux:
+        name: "Build release for Linux"
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Install Rust
+              uses: actions-rs/toolchain@v1
+              with:
+                  profile: default
+                  toolchain: stable
+                  target: x86_64-unknown-linux-gnu
+
+            - name: Build Linux
+              shell: bash
+              run: bash cicd/build_linux.sh
+
+            - name: Upload release
+              uses: actions/upload-artifact@v3
+              with:
+                  name: linux
+                  path: release_linux/*
+
+    Release:
+        needs: [Build-Windows, Build-Mac, Build-Linux]
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Download release windows
+              uses: actions/download-artifact@v3
+              with:
+                  name: windows
+                  path: release_windows
+
+            - name: Download release mac
+              uses: actions/download-artifact@v3
+              with:
+                  name: mac
+                  path: release_mac
+
+            - name: Download release linux
+              uses: actions/download-artifact@v3
+              with:
+                  name: linux
+                  path: release_linux
+
+            - name: Generate SHA256 checksums
+              run: |
+                  sha256sum release_windows/* >> sha256sums.txt
+                  sha256sum release_linux/* >> sha256sums.txt
+                  sha256sum release_mac/* >> sha256sums.txt
+
+            - name: Publish
+              uses: softprops/action-gh-release@v1
+              with:
+                  name: Vedic ${{ github.event.inputs.vesion }}
+                  tag_name: v${{ github.event.inputs.vesion }}
+                  prerelease: ${{ github.event.inputs.prerelease }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  generate_release_notes: true
+                  draft: true
+                  files: |
+                      release_windows/*
+                      release_linux/*
+                      release_mac/*
+                      sha256sums.txt
+                  body: |
+                      ## Installers and Binaries
+
+                      Standalone binaries and installer are built out for Windows, MacOS, and Linux for multipal architectures.
+
+                      -   **vedic-win-x86_64-installer.msi** : Windows installer for windows on x86_64 architecture
+                      -   **vedic-win-x86_64.zip** : standalone binary for Windows on x86-64 architecture
+                      -   **vedic-darwin-aarch64.tar.gz** : standalone binary for MacOS on aarch64 architecture
+                      -   **vedic-darwin-x86_64.tar.gz** : standalone binary for MacOS on x86_64 architecture
+                      -   **vedic-linux-x86_64.deb** : Debian installer for Linux on x86_64 architecture
+                      -   **vedic-linux-gnu-x86_64.tar.xz** : standalone binary for Linux on x86_64 architecture using GNU C Library
+                      -   **vedic-linux-gnu-aarch64.tar.xz** : standalone binary for Linux on aarch64 architecture using GNU C Library
+                      -   **vedic-linux-gnu-i686.tar.xz** : standalone binary for Linux on i686 architecture using GNU C Library
+                      -   **vedic-linux-musl-x86_64.tar.xz** : standalone binary for Linux on x86_64 architecture using musl C library (static binary, no libc dependency)
+                      -   **vedic-linux-musl-aarch64.tar.xz** : standalone binary for Linux on aarch64 architecture using musl C library (static binary, no libc dependency)
+                      -   **vedic-linux-gnueabihf-armv7.tar.xz** : standalone binary for Raspberry PI Linux on armv7 architecture using GNU C Library 
+                      -   **vedic-android-aarch64.tar.xz** : standalone binary for Android on aarch64 architecture
+                      -   **vedic-android-armv7.tar.xz** : standalone binary for Android on armv7 architecture
+                      -   **vedic-android-i686.tar.xz** : standalone binary for Android on i686 architecture
+                      -   **vedic-android-x86_64.tar.xz** : standalone binary for Android on x86_64 architecture
