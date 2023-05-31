@@ -1,0 +1,10 @@
+मान a = "outer";
+{
+  सूत्र foo() {
+    वद(a);
+  }
+
+  foo(); # expect: outer
+  मान a = "inner";
+  foo(); # expect: outer
+}

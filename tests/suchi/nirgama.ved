@@ -1,0 +1,23 @@
+मान सप्तर्षि = [
+    "Kashyapa",
+    "Atri",
+    "Vasistha",
+    "Vishwamitra",
+    "Bharadvaja",
+    "Gautama",
+    "Jamadagni"
+    ];
+
+# pop from list
+चक्र (मान i = ७; i > ०; i = i - १) {
+    वद(i,"=>",सप्तर्षि.निर्गम());
+}
+# expect: ७ => Jamadagni
+# expect: ६ => Gautama
+# expect: ५ => Bharadvaja
+# expect: ४ => Vishwamitra
+# expect: ३ => Vasistha
+# expect: २ => Atri
+# expect: १ => Kashyapa
+
+वद("remaining count =>",कुल(सप्तर्षि)); # expect: remaining count => ०

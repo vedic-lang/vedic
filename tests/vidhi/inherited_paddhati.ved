@@ -1,0 +1,22 @@
+विधि Foo {
+  inFoo() {
+    वद("in foo");
+  }
+}
+
+विधि Bar सन्धि Foo {
+  inBar() {
+    वद("in bar");
+  }
+}
+
+विधि Baz सन्धि Bar {
+  inBaz() {
+    वद("in baz");
+  }
+}
+
+मान baz = Baz();
+baz.inFoo(); # expect: in foo
+baz.inBar(); # expect: in bar
+baz.inBaz(); # expect: in baz

@@ -1,0 +1,3 @@
+विधि Foo {}
+
+वद(Foo); # expect: Foo

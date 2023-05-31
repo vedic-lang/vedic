@@ -1,0 +1,10 @@
+विधि Foo {}
+
+मान foo = Foo();
+foo.bar = "not fn";
+
+foo.bar(); 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/field/call_nonsutra_field.ved", line 6, column 10
+# RTE: दोषः : केवलं सूत्रं च विधिं च उक्त्वा वदन्तु शक्त्यः

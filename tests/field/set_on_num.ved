@@ -1,0 +1,5 @@
+१२३.foo = "value"; 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/field/set_on_num.ved", line 1, column 18
+# RTE: दोषः : अवस्थाः एव क्षेत्राणि भवन्ति

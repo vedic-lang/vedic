@@ -1,0 +1,10 @@
+चक्र ({}; a < २; a = a + १) {}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/chakra/statement_prarambhkarta.ved", line 1, column 8
+# CTE: दोषः अत् :'{'
+# CTE: व्याख्या अपेक्षितः
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/chakra/statement_prarambhkarta.ved", line 1, column 28
+# CTE: दोषः अत् :')'
+# CTE: व्याख्या पश्चात् ';' अपेक्षितः

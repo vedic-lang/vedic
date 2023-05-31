@@ -1,0 +1,7 @@
+{} # By itself.
+
+# In a statement.
+यदि (सत्य) {}
+यदि (असत्य) {} अथ {}
+
+वद("ok"); # expect: ok

@@ -1,0 +1,17 @@
+विधि Base {
+  toString() { फल "Base"; }
+}
+
+विधि Derived सन्धि Base {
+  getClosure() {
+    सूत्र closure() {
+      फल मित्र.toString();
+    }
+    फल closure;
+  }
+
+  toString() { फल "Derived"; }
+}
+
+मान closure = Derived().getClosure();
+वद(closure()); # expect: Base

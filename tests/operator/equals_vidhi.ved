@@ -1,0 +1,13 @@
+# Bound paddhatis have identity equality.
+विधि Foo {}
+विधि Bar {}
+
+वद(Foo == Foo); # expect: सत्य
+वद(Foo == Bar); # expect: असत्य
+वद(Bar == Foo); # expect: असत्य
+वद(Bar == Bar); # expect: सत्य
+
+वद(Foo == "Foo"); # expect: असत्य
+वद(Foo == न);   # expect: असत्य
+वद(Foo == १२३);   # expect: असत्य
+वद(Foo == सत्य);  # expect: असत्य

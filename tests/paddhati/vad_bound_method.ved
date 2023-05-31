@@ -1,0 +1,5 @@
+विधि Foo {
+  paddhati() { }
+}
+मान foo = Foo();
+वद(foo.paddhati); # expect: <Paddhati paddhati>

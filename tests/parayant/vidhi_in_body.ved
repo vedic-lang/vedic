@@ -1,0 +1,6 @@
+पर्यन्त (सत्य) विधि Foo {}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/parayant/vidhi_in_body.ved", line 1, column 20
+# CTE: दोषः अत् :'विधि'
+# CTE: व्याख्या अपेक्षितः

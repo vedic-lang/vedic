@@ -1,0 +1,9 @@
+विधि Foo {}
+
+मान foo = Foo();
+
+वद(foo.bar = "bar value"); # expect: bar value
+वद(foo.baz = "baz value"); # expect: baz value
+
+वद(foo.bar); # expect: bar value
+वद(foo.baz); # expect: baz value

@@ -1,0 +1,28 @@
+# मम is a regression test. When closing gyaatmaans चक्र discarded sthaniya, it
+# wouldn't make sure it discarded the gyaatmaan चक्र the correct rashi slot.
+
+# Here we create two sthaniya that can be closed over, but only the first one
+# actually is. When "b" goes out of scope, we need to make sure we don't
+# prematurely close "a".
+मान closure;
+
+{
+  मान a = "a";
+
+  {
+    मान b = "b";
+    सूत्र फलA() {
+      फल a;
+    }
+
+    closure = फलA;
+
+    यदि (असत्य) {
+      सूत्र फलB() {
+        फल b;
+      }
+    }
+  }
+
+  वद(closure()); # expect: a
+}

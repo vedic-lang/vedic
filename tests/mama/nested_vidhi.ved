@@ -1,0 +1,20 @@
+विधि Outer {
+  paddhati() {
+    वद(मम); # expect: Outer avastha
+
+    सूत्र f() {
+      वद(मम); # expect: Outer avastha
+
+      विधि Inner {
+        paddhati() {
+          वद(मम); # expect: Inner avastha
+        }
+      }
+
+      Inner().paddhati();
+    }
+    f();
+  }
+}
+
+Outer().paddhati();

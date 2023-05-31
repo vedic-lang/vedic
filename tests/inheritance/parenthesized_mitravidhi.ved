@@ -1,0 +1,8 @@
+विधि Foo {}
+
+विधि Bar सन्धि (Foo) {}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/inheritance/parenthesized_mitravidhi.ved", line 3, column 17
+# CTE: दोषः अत् :'('
+# CTE: संधि पश्चात् मित्र-विधिनाम् अपेक्षितः

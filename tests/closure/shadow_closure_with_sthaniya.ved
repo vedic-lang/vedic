@@ -1,0 +1,12 @@
+{
+  मान foo = "closure";
+  सूत्र f() {
+    {
+      वद(foo); # expect: closure
+      मान foo = "shadow";
+      वद(foo); # expect: shadow
+    }
+    वद(foo); # expect: closure
+  }
+  f();
+}

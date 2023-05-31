@@ -1,0 +1,19 @@
+विधि Foo {
+  getClosure() {
+    सूत्र f() {
+      सूत्र g() {
+        सूत्र h() {
+          फल मम.toString();
+        }
+        फल h;
+      }
+      फल g;
+    }
+    फल f;
+  }
+
+  toString() { फल "Foo"; }
+}
+
+मान closure = Foo().getClosure();
+वद(closure()()()); # expect: Foo

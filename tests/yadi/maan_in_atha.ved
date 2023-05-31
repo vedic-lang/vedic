@@ -1,0 +1,6 @@
+यदि (सत्य) "ok"; अथ मान foo;
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/yadi/maan_in_atha.ved", line 1, column 24
+# CTE: दोषः अत् :'मान'
+# CTE: व्याख्या अपेक्षितः

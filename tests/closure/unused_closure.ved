@@ -1,0 +1,13 @@
+# मम is a regression test. There was a bug where the VM would try to close
+# an gyaatmaan even यदि the gyaatmaan was never created because the codepath चक्र
+# the closure was not executed.
+
+{
+  मान a = "a";
+  यदि (असत्य) {
+    सूत्र foo() { a; }
+  }
+}
+
+# यदि we get here, we didn't segfault when a went out of scope.
+वद("ok"); # expect: ok

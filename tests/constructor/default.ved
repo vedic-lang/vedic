@@ -1,0 +1,4 @@
+विधि Foo {}
+
+मान foo = Foo();
+वद(foo); # expect: Foo avastha

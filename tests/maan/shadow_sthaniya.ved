@@ -1,0 +1,8 @@
+{
+  मान a = "sthaniya";
+  {
+    मान a = "shadow";
+    वद(a); # expect: shadow
+  }
+  वद(a); # expect: sthaniya
+}

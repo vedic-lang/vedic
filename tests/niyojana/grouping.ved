@@ -1,0 +1,7 @@
+मान a = "a";
+(a) = "value"; 
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/niyojana/grouping.ved", line 2, column 6
+# CTE: दोषः अत् :'='
+# CTE: अमान्यं नियोजन​ लक्ष्यम्

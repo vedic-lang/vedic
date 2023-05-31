@@ -1,0 +1,6 @@
+{
+  मान a = "outer";
+  {
+    वद(a); # expect: outer
+  }
+}

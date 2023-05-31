@@ -1,0 +1,13 @@
+मान f;
+
+विधि Foo {
+  paddhati(param) {
+    सूत्र f_() {
+      वद(param);
+    }
+    f = f_;
+  }
+}
+
+Foo().paddhati("param");
+f(); # expect: param

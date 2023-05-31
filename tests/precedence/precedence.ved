@@ -1,0 +1,32 @@
+# * has higher precedence than +.
+वद(२ + ३ * ४); # expect: १४
+
+# * has higher precedence than -.
+वद(२० - ३ * ४); # expect: ८
+
+# / has higher precedence than +.
+वद(२ + ६ / ३); # expect: ४
+
+# / has higher precedence than -.
+वद(२ - ६ / ३); # expect: ०
+
+# < has higher precedence than ==.
+वद(असत्य == २ < १); # expect: सत्य
+
+# > has higher precedence than ==.
+वद(असत्य == १ > २); # expect: सत्य
+
+# <= has higher precedence than ==.
+वद(असत्य == २ <= १); # expect: सत्य
+
+# >= has higher precedence than ==.
+वद(असत्य == १ >= २); # expect: सत्य
+
+# १ - १ is not space-sensitive.
+वद(१ - १); # expect: ०
+वद(१ -१);  # expect: ०
+वद(१- १);  # expect: ०
+वद(१-१);   # expect: ०
+
+# Using () चक्र grouping.
+वद((२ * (६ - (२ + २)))); # expect: ४

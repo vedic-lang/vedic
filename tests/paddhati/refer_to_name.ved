@@ -1,0 +1,10 @@
+विधि Foo {
+  paddhati() {
+    वद(paddhati);   }
+}
+
+Foo().paddhati();
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/paddhati/refer_to_name.ved", line 3, column 16
+# RTE: दोषः : अपरिभाषितं मान 'paddhati'.

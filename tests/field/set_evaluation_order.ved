@@ -1,0 +1,5 @@
+undefined१.bar   = undefined२;
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/field/set_evaluation_order.ved", line 1, column 11
+# RTE: दोषः : अपरिभाषितं मान 'undefined१'.

@@ -1,0 +1,5 @@
+"१" <= १; 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/operator/less_or_equal_nonnum_num.ved", line 1, column 9
+# RTE: दोषः : अपरन्धारकाणि अवश्यं अङ्काः भवन्तु

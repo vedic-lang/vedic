@@ -1,0 +1,38 @@
+विधि Foo {
+  foo(a, b) {
+    मम.field१ = a;
+    मम.field२ = b;
+  }
+
+  fooवद() {
+    वद(मम.field१);
+    वद(मम.field२);
+  }
+}
+
+विधि Bar सन्धि Foo {
+  bar(a, b) {
+    मम.field१ = a;
+    मम.field२ = b;
+  }
+
+  barवद() {
+    वद(मम.field१);
+    वद(मम.field२);
+  }
+}
+
+मान bar = Bar();
+bar.foo("foo १", "foo २");
+bar.fooवद();
+# expect: foo १
+# expect: foo २
+
+bar.bar("bar १", "bar २");
+bar.fooवद();
+# expect: bar १
+# expect: bar २
+
+bar.fooवद();
+# expect: bar १
+# expect: bar २

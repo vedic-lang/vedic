@@ -1,0 +1,15 @@
+विधि Foo {}
+
+सूत्र bar(a, b) {
+  वद("bar");
+  वद(a);
+  वद(b);
+}
+
+मान foo = Foo();
+foo.bar = bar;
+
+foo.bar(१, २);
+# expect: bar
+# expect: १
+# expect: २

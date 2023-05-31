@@ -1,0 +1,5 @@
+वद("(" + "" + ")");   # expect: ()
+वद("a string"); # expect: a string
+
+# Non-ASCII.
+वद("A~¶Þॐஃ"); # expect: A~¶Þॐஃ

@@ -1,0 +1,9 @@
+मान a = "a";
+मान b = "b";
+मान c = "c";
+
+# Niyojana is right-associative.
+a = b = c;
+वद(a); # expect: c
+वद(b); # expect: c
+वद(c); # expect: c

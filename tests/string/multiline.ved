@@ -1,0 +1,7 @@
+मान a = "१
+२
+३";
+वद(a);
+# expect: १
+# expect: २
+# expect: ३

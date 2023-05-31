@@ -1,0 +1,6 @@
+# Evaluate the 'अथ' expression यदि the condition is असत्य.
+यदि (सत्य) वद("good"); अथ वद ("bad"); # expect: good
+यदि (असत्य) वद("bad"); अथ वद ("good"); # expect: good
+
+# Allow block body.
+यदि (असत्य) न; अथ { वद("block"); } # expect: block

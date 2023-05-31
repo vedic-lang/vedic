@@ -1,0 +1,19 @@
+विधि Foo {
+  sayName(a) {
+    वद(मम.name);
+    वद(a);
+  }
+}
+
+मान foo१ = Foo();
+foo१.name = "foo१";
+
+मान foo२ = Foo();
+foo२.name = "foo२";
+
+# Store the paddhati reference on another object.
+foo२.fn = foo१.sayName;
+# Still retains original receiver.
+foo२.fn(१);
+# expect: foo१
+# expect: १

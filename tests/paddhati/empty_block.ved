@@ -1,0 +1,5 @@
+विधि Foo {
+  bar() {}
+}
+
+वद(Foo().bar()); # expect: न

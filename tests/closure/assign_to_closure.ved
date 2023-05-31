@@ -1,0 +1,27 @@
+मान f;
+मान g;
+
+{
+  मान sthaniya = "sthaniya";
+  सूत्र f_sthaniya() {
+    वद(sthaniya);
+    sthaniya = "after f";
+    वद(sthaniya);
+  }
+  f = f_sthaniya;
+
+  सूत्र g_sthaniya() {
+    वद(sthaniya);
+    sthaniya = "after g";
+    वद(sthaniya);
+  }
+  g = g_sthaniya;
+}
+
+f();
+# expect: sthaniya
+# expect: after f
+
+g();
+# expect: after f
+# expect: after g

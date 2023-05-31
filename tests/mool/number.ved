@@ -1,0 +1,13 @@
+मान a = "१";
+वद(प्रकार(a)); # expect: वाक्य
+
+# convert to number
+a = अंक(a); 
+वद(प्रकार(a)); # expect: अंक
+
+# dosa if not a number
+a = अंक("a"); 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/mool/number.ved", line 9, column 13
+# RTE: दोषः : वाक्य 'a' को संख्या के रूप में परिवर्तित नहीं कर सकता

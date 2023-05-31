@@ -1,0 +1,10 @@
+विधि Foo {
+  प्रारंभ() {
+    फल "result"; 
+  }
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/constructor/phala_value.ved", line 3, column 7
+# CTE: दोषः अत् :'फल'
+# CTE: प्रारंभकर्ता फलः प्रतिगच्छामि न शक्नोमि

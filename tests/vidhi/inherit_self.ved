@@ -1,0 +1,6 @@
+विधि Foo सन्धि Foo {} 
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/vidhi/inherit_self.ved", line 1, column 19
+# CTE: दोषः अत् :'Foo'
+# CTE: विधिः स्वयम् इत्थंभूतम् नानुवाद्यते

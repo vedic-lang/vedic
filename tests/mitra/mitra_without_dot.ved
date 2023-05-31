@@ -1,0 +1,12 @@
+विधि A {}
+
+विधि B सन्धि A {
+  paddhati() {
+        मित्र;
+  }
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/mitra/mitra_without_dot.ved", line 5, column 15
+# CTE: दोषः अत् :';'
+# CTE: मित्र पश्चात् '.' अपेक्षितः

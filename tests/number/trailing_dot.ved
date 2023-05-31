@@ -1,0 +1,6 @@
+१२३.;
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/number/trailing_dot.ved", line 1, column 6
+# CTE: दोषः अत् :';'
+# CTE: '.' पश्चात् गुणनाम् अपेक्षितः

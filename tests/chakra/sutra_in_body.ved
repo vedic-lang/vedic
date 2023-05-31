@@ -1,0 +1,6 @@
+चक्र (;;) सूत्र foo() {}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/chakra/sutra_in_body.ved", line 1, column 16
+# CTE: दोषः अत् :'सूत्र'
+# CTE: व्याख्या अपेक्षितः

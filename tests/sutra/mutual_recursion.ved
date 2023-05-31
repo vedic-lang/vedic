@@ -1,0 +1,12 @@
+सूत्र isEven(n) {
+  यदि (n == ०) फल सत्य;
+  फल isOdd(n - १);
+}
+
+सूत्र isOdd(n) {
+  यदि (n == ०) फल असत्य;
+  फल isEven(n - १);
+}
+
+वद(isEven(४)); # expect: सत्य
+वद(isOdd(३)); # expect: सत्य

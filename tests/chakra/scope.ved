@@ -1,0 +1,26 @@
+{
+  मान i = "for";
+
+  # New मान is in inner scope.
+  चक्र (मान i = ०; i < १; i = i + १) {
+    वद(i); # expect: ०
+
+    # Loop body is in second inner scope.
+    मान i = -१;
+    वद(i); # expect: -१
+  }
+}
+
+{
+  # New मान shadows outer मान.
+  चक्र (मान i = ०; i > ०; i = i + १) {}
+
+  # Goes out of scope after loop.
+  मान i = "after";
+  वद(i); # expect: after
+
+  # Can reuse an existing मान.
+  चक्र (i = ०; i < १; i = i + १) {
+    वद(i); # expect: ०
+  }
+}

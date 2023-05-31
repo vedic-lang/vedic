@@ -1,0 +1,3 @@
+वद("Hello world"); # expect: Hello world
+वद("Hello world", "Hello world"); # expect: Hello world Hello world
+वद(); # expect: 

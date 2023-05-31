@@ -1,0 +1,15 @@
+# मम is a regression test. There was a bug where यदि an gyaatmaan चक्र an
+# earlier sthaniya (here "a") was captured *after* a later one ("b"), then it
+# would crash because it walked to the end of the gyaatmaan list (correct), but
+# then didn't handle not finding the मान.
+
+सूत्र f() {
+  मान a = "a";
+  मान b = "b";
+  सूत्र g() {
+    वद(b); # expect: b
+    वद(a); # expect: a
+  }
+  g();
+}
+f();

@@ -1,0 +1,110 @@
+सूत्र f() {
+  मान a००; मान a०१; मान a०२; मान a०३; मान a०४; मान a०५; मान a०६; मान a०७;
+  मान a०८; मान a०९; मान a०a; मान a०b; मान a०c; मान a०d; मान a०e; मान a०f;
+
+  मान a१०; मान a११; मान a१२; मान a१३; मान a१४; मान a१५; मान a१६; मान a१७;
+  मान a१८; मान a१९; मान a१a; मान a१b; मान a१c; मान a१d; मान a१e; मान a१f;
+
+  मान a२०; मान a२१; मान a२२; मान a२३; मान a२४; मान a२५; मान a२६; मान a२७;
+  मान a२८; मान a२९; मान a२a; मान a२b; मान a२c; मान a२d; मान a२e; मान a२f;
+
+  मान a३०; मान a३१; मान a३२; मान a३३; मान a३४; मान a३५; मान a३६; मान a३७;
+  मान a३८; मान a३९; मान a३a; मान a३b; मान a३c; मान a३d; मान a३e; मान a३f;
+
+  मान a४०; मान a४१; मान a४२; मान a४३; मान a४४; मान a४५; मान a४६; मान a४७;
+  मान a४८; मान a४९; मान a४a; मान a४b; मान a४c; मान a४d; मान a४e; मान a४f;
+
+  मान a५०; मान a५१; मान a५२; मान a५३; मान a५४; मान a५५; मान a५६; मान a५७;
+  मान a५८; मान a५९; मान a५a; मान a५b; मान a५c; मान a५d; मान a५e; मान a५f;
+
+  मान a६०; मान a६१; मान a६२; मान a६३; मान a६४; मान a६५; मान a६६; मान a६७;
+  मान a६८; मान a६९; मान a६a; मान a६b; मान a६c; मान a६d; मान a६e; मान a६f;
+
+  मान a७०; मान a७१; मान a७२; मान a७३; मान a७४; मान a७५; मान a७६; मान a७७;
+  मान a७८; मान a७९; मान a७a; मान a७b; मान a७c; मान a७d; मान a७e; मान a७f;
+
+  सूत्र g() {
+    मान a८०; मान a८१; मान a८२; मान a८३; मान a८४; मान a८५; मान a८६; मान a८७;
+    मान a८८; मान a८९; मान a८a; मान a८b; मान a८c; मान a८d; मान a८e; मान a८f;
+
+    मान a९०; मान a९१; मान a९२; मान a९३; मान a९४; मान a९५; मान a९६; मान a९७;
+    मान a९८; मान a९९; मान a९a; मान a९b; मान a९c; मान a९d; मान a९e; मान a९f;
+
+    मान aa०; मान aa१; मान aa२; मान aa३; मान aa४; मान aa५; मान aa६; मान aa७;
+    मान aa८; मान aa९; मान aaa; मान aab; मान aac; मान aad; मान aae; मान aaf;
+
+    मान ab०; मान ab१; मान ab२; मान ab३; मान ab४; मान ab५; मान ab६; मान ab७;
+    मान ab८; मान ab९; मान aba; मान abb; मान abc; मान abd; मान abe; मान abf;
+
+    मान ac०; मान ac१; मान ac२; मान ac३; मान ac४; मान ac५; मान ac६; मान ac७;
+    मान ac८; मान ac९; मान aca; मान acb; मान acc; मान acd; मान ace; मान acf;
+
+    मान ad०; मान ad१; मान ad२; मान ad३; मान ad४; मान ad५; मान ad६; मान ad७;
+    मान ad८; मान ad९; मान ada; मान adb; मान adc; मान add; मान ade; मान adf;
+
+    मान ae०; मान ae१; मान ae२; मान ae३; मान ae४; मान ae५; मान ae६; मान ae७;
+    मान ae८; मान ae९; मान aea; मान aeb; मान aec; मान aed; मान aee; मान aef;
+
+    मान af०; मान af१; मान af२; मान af३; मान af४; मान af५; मान af६; मान af७;
+    मान af८; मान af९; मान afa; मान afb; मान afc; मान afd; मान afe; मान aff;
+
+    मान oops;
+
+    सूत्र h() {
+      a००; a०१; a०२; a०३; a०४; a०५; a०६; a०७;
+      a०८; a०९; a०a; a०b; a०c; a०d; a०e; a०f;
+
+      a१०; a११; a१२; a१३; a१४; a१५; a१६; a१७;
+      a१८; a१९; a१a; a१b; a१c; a१d; a१e; a१f;
+
+      a२०; a२१; a२२; a२३; a२४; a२५; a२६; a२७;
+      a२८; a२९; a२a; a२b; a२c; a२d; a२e; a२f;
+
+      a३०; a३१; a३२; a३३; a३४; a३५; a३६; a३७;
+      a३८; a३९; a३a; a३b; a३c; a३d; a३e; a३f;
+
+      a४०; a४१; a४२; a४३; a४४; a४५; a४६; a४७;
+      a४८; a४९; a४a; a४b; a४c; a४d; a४e; a४f;
+
+      a५०; a५१; a५२; a५३; a५४; a५५; a५६; a५७;
+      a५८; a५९; a५a; a५b; a५c; a५d; a५e; a५f;
+
+      a६०; a६१; a६२; a६३; a६४; a६५; a६६; a६७;
+      a६८; a६९; a६a; a६b; a६c; a६d; a६e; a६f;
+
+      a७०; a७१; a७२; a७३; a७४; a७५; a७६; a७७;
+      a७८; a७९; a७a; a७b; a७c; a७d; a७e; a७f;
+
+      a८०; a८१; a८२; a८३; a८४; a८५; a८६; a८७;
+      a८८; a८९; a८a; a८b; a८c; a८d; a८e; a८f;
+
+      a९०; a९१; a९२; a९३; a९४; a९५; a९६; a९७;
+      a९८; a९९; a९a; a९b; a९c; a९d; a९e; a९f;
+
+      aa०; aa१; aa२; aa३; aa४; aa५; aa६; aa७;
+      aa८; aa९; aaa; aab; aac; aad; aae; aaf;
+
+      ab०; ab१; ab२; ab३; ab४; ab५; ab६; ab७;
+      ab८; ab९; aba; abb; abc; abd; abe; abf;
+
+      ac०; ac१; ac२; ac३; ac४; ac५; ac६; ac७;
+      ac८; ac९; aca; acb; acc; acd; ace; acf;
+
+      ad०; ad१; ad२; ad३; ad४; ad५; ad६; ad७;
+      ad८; ad९; ada; adb; adc; add; ade; adf;
+
+      ae०; ae१; ae२; ae३; ae४; ae५; ae६; ae७;
+      ae८; ae९; aea; aeb; aec; aed; aee; aef;
+
+      af०; af१; af२; af३; af४; af५; af६; af७;
+      af८; af९; afa; afb; afc; afd; afe; aff;
+
+      oops; 
+    }
+  }
+}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/limit/too_many_gyaatmaans.ved", line 102, column 11
+# CTE: दोषः अत् :'oops'
+# CTE: सूत्र में बहुत अधिक संवरण मान हैं।

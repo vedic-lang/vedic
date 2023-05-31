@@ -1,0 +1,15 @@
+# Adding elements to a सूचि
+मान सप्तर्षि = []; # रिक्त सूचि - Empty list
+
+सप्तर्षि.आगम("Kashyapa");
+सप्तर्षि.आगम("Atri");
+सप्तर्षि.आगम("Vasistha");
+सप्तर्षि.आगम("Vishwamitra");
+सप्तर्षि.आगम("Bharadvaja");
+सप्तर्षि.आगम("Gautama");
+सप्तर्षि.आगम("Jamadagni");
+
+वद(सप्तर्षि); # expect: [Kashyapa, Atri, Vasistha, Vishwamitra, Bharadvaja, Gautama, Jamadagni]
+वद("length =",कुल(सप्तर्षि)); # expect: length = ७
+
+वद(सप्तर्षि.निर्गम()); # expect: Jamadagni

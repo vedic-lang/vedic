@@ -1,0 +1,22 @@
+विधि Foo {
+  paddhati०() { फल "no args"; }
+  paddhati१(a) { फल a; }
+  paddhati२(a, b) { फल a + b; }
+  paddhati३(a, b, c) { फल a + b + c; }
+  paddhati४(a, b, c, d) { फल a + b + c + d; }
+  paddhati५(a, b, c, d, e) { फल a + b + c + d + e; }
+  paddhati६(a, b, c, d, e, f) { फल a + b + c + d + e + f; }
+  paddhati७(a, b, c, d, e, f, g) { फल a + b + c + d + e + f + g; }
+  paddhati८(a, b, c, d, e, f, g, h) { फल a + b + c + d + e + f + g + h; }
+}
+
+मान foo = Foo();
+वद(foo.paddhati०()); # expect: no args
+वद(foo.paddhati१(१)); # expect: १
+वद(foo.paddhati२(१, २)); # expect: ३
+वद(foo.paddhati३(१, २, ३)); # expect: ६
+वद(foo.paddhati४(१, २, ३, ४)); # expect: १०
+वद(foo.paddhati५(१, २, ३, ४, ५)); # expect: १५
+वद(foo.paddhati६(१, २, ३, ४, ५, ६)); # expect: २१
+वद(foo.paddhati७(१, २, ३, ४, ५, ६, ७)); # expect: २८
+वद(foo.paddhati८(१, २, ३, ४, ५, ६, ७, ८)); # expect: ३६

@@ -1,0 +1,6 @@
+मान Number = १२३;
+विधि Foo सन्धि Number {} 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/inheritance/inherit_from_number.ved", line 2, column 22
+# RTE: दोषः : मित्र-विधि: एक विधि भविष्यति।

@@ -1,0 +1,16 @@
+चक्र(मान अ = ०; अ < १०; अ = अ+ १)
+{
+  # चक्रम् takes in 3 parameters प्रारंभial value, and condition, and a step size
+  वद("अ =",अ);
+} 
+
+# expect: अ = ०
+# expect: अ = १
+# expect: अ = २
+# expect: अ = ३
+# expect: अ = ४
+# expect: अ = ५
+# expect: अ = ६
+# expect: अ = ७
+# expect: अ = ८
+# expect: अ = ९

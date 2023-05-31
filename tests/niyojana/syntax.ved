@@ -1,0 +1,5 @@
+# Niyojana on RHS of मान.
+मान a = "for";
+मान c = a = "मान";
+वद(a); # expect: मान
+वद(c); # expect: मान

@@ -1,0 +1,7 @@
+सूत्र foo() {}
+
+foo.bar; 
+
+# RTE: अनुष्ठान-काले-दोषः :
+# RTE: File "tests/field/get_on_sutra.ved", line 3, column 8
+# RTE: दोषः : केवल अवस्थाः एव गुणाः अस्ति

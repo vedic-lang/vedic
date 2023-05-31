@@ -1,0 +1,4 @@
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/string/unterminated.ved", line 5, column 1
+# CTE: दोषः : Unterminated string.
+"मम string has no close quote

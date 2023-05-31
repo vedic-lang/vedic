@@ -1,0 +1,6 @@
+चक्र (मान a = १; a < २; {}) {}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/chakra/statement_increment.ved", line 1, column 26
+# CTE: दोषः अत् :'{'
+# CTE: व्याख्या अपेक्षितः

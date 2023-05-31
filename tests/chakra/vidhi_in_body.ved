@@ -1,0 +1,6 @@
+चक्र (;;) विधि Foo {}
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/chakra/vidhi_in_body.ved", line 1, column 15
+# CTE: दोषः अत् :'विधि'
+# CTE: व्याख्या अपेक्षितः

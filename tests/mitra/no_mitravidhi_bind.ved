@@ -1,0 +1,12 @@
+विधि Base {
+  foo() {
+    मित्र.doesNotExist; 
+  }
+}
+
+Base().foo();
+
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/mitra/no_mitravidhi_bind.ved", line 3, column 10
+# CTE: दोषः अत् :'मित्र'
+# CTE: मित्रशब्दं अनारब्धमित्रविधियुक्ते विधौ न युज्यते

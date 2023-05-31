@@ -1,0 +1,15 @@
+विधि Foo {
+  प्रारंभ(arg) {
+    वद("Foo.प्रारंभ(" + arg + ")");
+    मम.field = "प्रारंभ";
+  }
+}
+
+मान foo = Foo("one"); # expect: Foo.प्रारंभ(one)
+foo.field = "field";
+
+मान foo२ = foo.प्रारंभ("two"); # expect: Foo.प्रारंभ(two)
+वद(foo२); # expect: Foo avastha
+
+# Make sure प्रारंभ() doesn't create a fresh avastha.
+वद(foo.field); # expect: प्रारंभ

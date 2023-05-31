@@ -1,0 +1,2 @@
+वद(१२३ + ४५६); # expect: ५७९
+वद("str" + "ing"); # expect: string
