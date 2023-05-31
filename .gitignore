@@ -1,14 +1,3 @@
-# NPM #
-##########
-# Ignore all directories called node_modules in current folder and any subfolders.
-node_modules/
-.vscode/
-tests/
-tmp/
-release/
-build/
-vedic/
-
 # Packages #
 ############
 *.7z
@@ -41,41 +30,14 @@ Thumbs.db
 ######################
 *.un~
 
-# SASS #
-##########
-**/.sass-cache
-**/.sass-cache/*
-**/.map
-
-# Composer #
-##########
-!assets/js/vendor/
-wpcs/
-/vendor/
-
-# Bower #
-##########
-assets/bower_components/*
-
-# Codekit #
-##########
-/codekit-config.json
-*.codekit
-**.codekit-cache/*
-
 # Compiled Files and Build Dirs #
 ##########
-/README.html
-
-# PhpStrom Project Files #
-.idea/
-library/vendors/composer
-assets/img/.DS_Store
-
-# Visual Studio Project Files #
-.vs/
+target
+bin
+old
+release*
+__pycache__
+*.wasm
 
 # No lock files.
-package-lock.json
-yarn.lock
 settings.dat
