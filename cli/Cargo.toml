@@ -1,0 +1,49 @@
+[package]
+name = "vedic"
+version = "2.4.1"
+authors = ["Pt. Prashant Tripathi <ptprashanttripathi@outlook.com>"]
+edition = "2021"
+description = "Vedic is World first Programming launguage in Sanskrit"
+license = "MIT"
+
+[dependencies]
+vedic-core = { path = "../core" }
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"
+
+[package.metadata.winres]
+OriginalFilename = "vedic.exe"
+LegalCopyright = "Copyright © 2016"
+
+[package.metadata.deb]
+maintainer = "Pt. Prashant Tripathi <ptprashanttripathi@outlook.com>"
+copyright = "Copyright (c) Pt. Prashant Tripathi 2022. All rights reserved."
+license-file = ["../LICENSE", "0"]
+extended-description = """
+Vedic is World first Programming launguage in Sanskrit
+building Debian packages from Rust projects."""
+depends = "$auto"
+section = "utility"
+priority = "optional"
+assets = [
+    ["target/release/vedic", "usr/bin/", "755"],
+    ["../README.md", "usr/share/doc/vedic/README", "644"],
+    ["../LICENSE", "usr/share/doc/vedic/LICENSE", "644"],
+]
+
+[package.metadata.bundle]
+identifier = "io.github.vedic-lang.vedic"
+icon = ["32x32.png", "128x128.png", "128x128@2x.png"]
+resources = ["../assets/*.png"]
+copyright = "Copyright (c) Pt. Prashant Tripathi 2022. All rights reserved."
+category = "Developer Tool"
+short_description = "Vedic is World first Programming launguage in Sanskrit"
+long_description = """
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut
+enim ad minim veniam, quis nostrud exercitation ullamco laboris
+nisi ut aliquip ex ea commodo consequat.
+"""
+osx_frameworks = ["SDL2"]
+osx_url_schemes = ["vedic"]
