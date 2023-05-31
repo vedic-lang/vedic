@@ -41,3 +41,4 @@ __pycache__
 
 # No lock files.
 settings.dat
+settings.dat.old
