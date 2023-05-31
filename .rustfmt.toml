@@ -1,0 +1,12 @@
+max_width = 100
+tab_spaces = 4
+edition = "2021"
+reorder_impl_items = true
+reorder_modules = true
+reorder_imports = true
+format_strings = true
+normalize_comments = true
+imports_granularity = "Item"
+group_imports = "StdExternalCrate"
+unstable_features = true
+newline_style = "Unix"
