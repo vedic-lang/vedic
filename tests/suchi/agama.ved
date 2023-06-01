@@ -10,6 +10,6 @@
 सप्तर्षि.आगम("Jamadagni");
 
 वद(सप्तर्षि); # expect: [Kashyapa, Atri, Vasistha, Vishwamitra, Bharadvaja, Gautama, Jamadagni]
-वद("length =",कुल(सप्तर्षि)); # expect: length = ७
+वद("लंबाई =",कुल(सप्तर्षि)); # expect: लंबाई = ७
 
 वद(सप्तर्षि.निर्गम()); # expect: Jamadagni

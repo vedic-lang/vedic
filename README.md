@@ -1,49 +1,61 @@
-<p align="center"><a href="https://vedic-lang.github.io"><img alt="Vedic" src="https://raw.githubusercontent.com/vedic-lang/vedic/main/assets/vedic-lang.png" width="300vw"/></a></p>
 <p align="center">
-	<a href="https://vedic-lang.github.io/download">Download</a> ·
-	<a href="https://vedic-lang.github.io/">Documentation</a> ·
-	<a href="https://vedic-lang.github.io/vedic-ide">Online Ide</a>
+    <a href="https://vedic-lang.github.io">
+        <img alt="Vedic"src="https://raw.githubusercontent.com/vedic-lang/vedic/main/assets/vedic-lang.png" width="300vw"/>
+    </a>
+    <br>
+    <a href="https://vedic-lang.github.io/download">Download</a> ·
+    <a href="https://vedic-lang.github.io/">Documentation</a> ·
+    <a href="https://vedic-lang.github.io/vedic-ide">Online Ide</a>
+    <br><br>
+    <i>Loved the tool? Please consider <a href="https://paypal.me/ptprashanttripathi/10">donating</a> to help it improve!</i>
+    <br>
+	<a href="https://paypal.me/PtPrashantTripathi">
+        <img height='23' src="https://img.shields.io/badge/support-PayPal-blue?logo=PayPal&style=flat-square&label=Donate" alt="Donate"/>
+    </a>
+	<a href='https://ko-fi.com/ptprashanttripathi' target='_blank'>
+        <img height='23' width="100" src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' alt='Buy Coffee for ptprashanttripathi' />
+    </a>
+	<a href="https://www.buymeacoffee.com/ptprashant09" target="_blank">
+        <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="23" width="100" style="border-radius:1px" />
+    </a>
 </p>
-<p align="center">
-	<i>Loved the tool? Please consider <a href="https://paypal.me/ptprashanttripathi/10">donating</a> to help it improve!</i><br>
-	<a href="https://paypal.me/PtPrashantTripathi"><img height='23' src="https://img.shields.io/badge/support-PayPal-blue?logo=PayPal&style=flat-square&label=Donate" alt="Donate"/></a>
-	<a href='https://ko-fi.com/ptprashanttripathi' target='_blank'><img height='23' width="100" src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' alt='Buy Coffee for ptprashanttripathi' /></a>
-	<a href="https://www.buymeacoffee.com/ptprashant09" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="23" width="100" style="border-radius:1px" /></a>
-	<a href="upi://pay?pa=pt1997@ybl&pn=Pt.+Prashant+Tripati&tn=Vedic_Transaction" target="_blank"><img src="https://raw.githubusercontent.com/ptprashanttripathi/linkpe/main/img/linkpebadge.svg" alt="Support Via UPI" height="23" style="border-radius:1px" /></a>
-</p>
 
-> Vedic is World first Programming launguage in Sanskrit
+## Vedic Programming Language
 
-## ⌨️ Sample Code
+> Introducing **Vedic** 🎉 - A Sanskrit programming language interpreter written in Rust! 🎉 Designed for simplicity and power, Vedic allows developers to write modern programs in the ancient language of Sanskrit.
 
-![sample vedic code](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yp0z1i5j08isr1fbc04h.png)
+## 👨‍💻 Installation
 
-**Output:**
-![output](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uzg8o7t1b6pmejaknbj0.png)
+Vedic works on macOS, Linux, and Windows. vedic is a single binary executable. It has no external dependencies.
+
+### Download and install
+
+Visit the [Download page](https://vedic-lang.github.io/download), which offers convenient scripts for downloading and installing the binary.
+
+### Using Shell (Linux and macOS):
+
+```bash
+curl -fsSL https://vedic-lang.github.io/install/install.sh | sh
+```
 
 ## 📖 Documentation
 
 Vedic Documentation are available at [vedic-lang.github.io](https://vedic-lang.github.io/)
 
-## 👨‍💻 How To Use
+## 🌐 Community
 
-Vedic Script is very easy to set up, just follow the [Install Instructions](https://vedic-lang.github.io/how-to-use) for your system
+**Join us on Discord**
 
-## 🌐 Join us on Discord
+<p><a href="https://discord.gg/sWCHauhNQ2"><img width="150" src="https://raw.githubusercontent.com/vedic-lang/vedic/main/assets/discord-logo.png"/></a></p>
 
-<p><a href="https://discord.gg/sWCHauhNQ2"><img width="60" src="https://raw.githubusercontent.com/vedic-lang/vedic/main/discord.png"/></a></p>
+## 👤 Author 
 
-## 👤 Author
-
-<p><a href="https://github.com/vedic"><img width="60" src="https://avatars2.githubusercontent.com/u/26687933?s=200&v=4"/></a></p>
+<p><a href="https://github.com/ptprashanttripathi"><img width="60" src="https://avatars2.githubusercontent.com/u/26687933?s=200&v=4"/></a></p>
 
 [**Pt. Prashant Tripathi**](https://github.com/ptprashanttripathi)
 
-- Twitter: [@ptprashant09](https://twitter.com/ptprashant09)
-- Github: [@ptprashanttripathi](https://github.com/ptprashanttripathi)
-- LinkedIn: [ptprashanttripathi](https://www.linkedin.com/in/ptprashanttripathi/)
-- Dev.to : [ptprashanttripathi](https://dev.to/ptprashanttripathi)
-
+[Github](https://github.com/ptprashanttripathi) · [Twitter](https://twitter.com/ptprashant09) · [LinkedIn](https://www.linkedin.com/in/ptprashanttripathi/)
+   
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [Contributing Guide](https://github.com/vedic-lang/vedic/blob/main/CONTRIBUTING.md).
@@ -51,8 +63,6 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 ## 👍 Show your support
 
 Give a ⭐️ if this project helped you!
-
-<a href="https://www.patreon.com/ptprashanttripathi"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"></a>
 
 ## 📝 License
 

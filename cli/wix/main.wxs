@@ -70,7 +70,7 @@
 
         <Package Id='*'
             Keywords='Installer'
-            Description='todo description'
+            Description='Vedic is A Sanskrit programming language interpreter written in Rust! Designed for simplicity and power, Vedic allows developers to write modern programs in the ancient language of Sanskrit.'
             Manufacturer='Pt. Prashant Tripathi'
             InstallerVersion='450'
             Languages='1033'
@@ -197,7 +197,7 @@
           Disabling the EULA dialog in the installer requires commenting out
           or removing the following `WixVariable` tag
         -->
-        <WixVariable Id='WixUILicenseRtf' Value='License.rtf'/>
+        <WixVariable Id='WixUILicenseRtf' Value='cli\wix\License.rtf'/>
         
         
         <!--
@@ -208,7 +208,7 @@
 
           The banner BMP dimensions are 493 x 58 pixels.
         -->
-        <WixVariable Id='WixUIBannerBmp' Value='assets\banner.bmp'/>
+        <WixVariable Id='WixUIBannerBmp' Value='cli\wix\banner.bmp'/>
 
         
         <!--
@@ -219,7 +219,7 @@
 
           The dialog BMP dimensions are 493 x 312 pixels.
         -->
-        <WixVariable Id='WixUIDialogBmp' Value='assets\dialog.bmp'/>
+        <WixVariable Id='WixUIDialogBmp' Value='cli\wix\dialog.bmp'/>
 
     </Product>
 
