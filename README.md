@@ -46,7 +46,7 @@ Vedic Documentation are available at [vedic-lang.github.io](https://vedic-lang.g
 
 **Join us on Discord**
 
-<p><a href="https://discord.gg/sWCHauhNQ2"><img width="150" src="https://raw.githubusercontent.com/vedic-lang/vedic/main/.github/discord.png"/></a></p>
+<p><a href="https://discord.gg/sWCHauhNQ2"><img width="150" src="https://raw.githubusercontent.com/vedic-lang/vedic/main/assets/discord-logo.png"/></a></p>
 
 ## 👤 Author 
 

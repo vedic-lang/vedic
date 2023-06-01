@@ -15,12 +15,12 @@ use web_sys::console;
 
 #[cfg(target_arch = "wasm32")]
 pub fn log(message: &str) {
-    let js_mulya: JsMulya = message.into();
-    console::log_1(&js_mulya)
+    let js_value: JsValue = message.into();
+    console::log_1(&js_value)
 }
 
 #[cfg(target_arch = "wasm32")]
 pub fn log_dosa(message: &str) {
-    let js_mulya: JsMulya = message.into();
-    console::dosa_1(&js_mulya)
+    let js_value: JsValue = message.into();
+    console::error_1(&js_value)
 }

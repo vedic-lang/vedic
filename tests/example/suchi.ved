@@ -1,18 +1,17 @@
-# # Creating an सूचि todo : list
-# मान क = [["आम",१ ],["संतरा",२],["सेब",३]]; # todo
-# वद क;
+# Creating an सूचि 
+मान क = [["आम",१ ],["संतरा",२],["सेब",३]];
+वद(क); # expect: [[आम, १], [संतरा, २], [सेब, ३]]
 
-# # Adding elements to a सूचि
-# मान सप्तर्षि = []; # रिक्त सूचि - Empty list
+# Adding elements to a सूचि
+मान सप्तर्षि = []; # रिक्त सूचि - Empty list
 
-# मान सप्तर्षि[]= "Kashyapa";
-# मान सप्तर्षि[]= "Atri";
-# मान सप्तर्षि[]= "Vasistha";
-# मान सप्तर्षि[]= "Vishwamitra";
-# मान सप्तर्षि[]= "Bharadvaja";
-# मान सप्तर्षि[]= "Gautama";
-# मान सप्तर्षि[]= "Jamadagni";
+सप्तर्षि.आगम("Kashyapa");
+सप्तर्षि.आगम("Atri");
+सप्तर्षि.आगम("Vasistha");
+सप्तर्षि.आगम("Vishwamitra");
+सप्तर्षि.आगम("Bharadvaja");
+सप्तर्षि.आगम("Gautama");
+सप्तर्षि.आगम("Jamadagni");
 
-# वद सप्तर्षि;
-# वद कुल(सप्तर्षि);
-
+वद(सप्तर्षि); # expect: [Kashyapa, Atri, Vasistha, Vishwamitra, Bharadvaja, Gautama, Jamadagni]
+वद("लंबाई =",कुल(सप्तर्षि)); # expect: लंबाई = ७
