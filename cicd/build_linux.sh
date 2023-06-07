@@ -1,7 +1,13 @@
 #!/bin/bash
 
+echo "::group::Set-up Build Dependencies"
 # Create release folder
 mkdir -p release_linux
+
+# Add Architectures
+dpkg --add-architecture i686
+dpkg --add-architecture aarch64
+dpkg --add-architecture armv7
 
 # Install Dependencies
 sudo apt update
@@ -14,6 +20,9 @@ sudo apt install -y musl-tools
 sudo apt install -y gcc-aarch64-linux-gnu
 sudo apt install -y binutils-aarch64-linux-gnu
 sudo apt install -y gcc-i686-linux-gnu
+sudo apt install -y libssl-dev:amd64
+sudo apt install -y libssl-dev:armv7
+sudo apt install -y libssl-dev:i686
 
 rustup target add x86_64-unknown-linux-gnu
 rustup target add aarch64-unknown-linux-gnu
@@ -28,14 +37,17 @@ rustup target add x86_64-linux-android
 
 cargo install cargo-deb
 cargo install cross --git https://github.com/cross-rs/cross
+echo "::endgroup::"
 
+echo "::group::Building Debian package"
 # Build the Debian package for (default : GNU x86_64)
 cargo deb -p vedic
 cp ./target/debian/vedic_*.deb ./release_linux/vedic-linux-x86_64.deb
+echo "::endgroup::"
 
 # Build the binary
 build_binary() {
-   echo -e "\nBuilding $2"
+   echo "::group::Building $2"
    rm -rf target
    if [ $1 == "cross" ]; then
       cross build --package vedic --release --target $2
@@ -48,14 +60,15 @@ build_binary() {
    else
       echo -e "Build failed $3\n"
    fi
+   echo "::endgroup::"
 }
 
-build_binary default x86_64-unknown-linux-gnu vedic-linux-gnu-x86_64.tar.xz
-build_binary default aarch64-unknown-linux-gnu vedic-linux-gnu-aarch64.tar.xz
-build_binary default armv7-unknown-linux-gnueabihf vedic-linux-gnueabihf-armv7.tar.xz
-build_binary default i686-unknown-linux-gnu vedic-linux-gnu-i686.tar.xz
-build_binary default x86_64-unknown-linux-musl vedic-linux-musl-x86_64.tar.xz
-build_binary cross aarch64-unknown-linux-musl vedic-linux-musl-aarch64.tar.xz
+#build_binary default x86_64-unknown-linux-gnu vedic-linux-gnu-x86_64.tar.xz
+#build_binary default aarch64-unknown-linux-gnu vedic-linux-gnu-aarch64.tar.xz
+#build_binary default armv7-unknown-linux-gnueabihf vedic-linux-gnueabihf-armv7.tar.xz
+#build_binary default i686-unknown-linux-gnu vedic-linux-gnu-i686.tar.xz
+#build_binary default x86_64-unknown-linux-musl vedic-linux-musl-x86_64.tar.xz
+#build_binary cross aarch64-unknown-linux-musl vedic-linux-musl-aarch64.tar.xz
 build_binary cross aarch64-linux-android vedic-android-aarch64.tar.xz
 build_binary cross armv7-linux-androideabi vedic-android-armv7.tar.xz
 build_binary cross i686-linux-android vedic-android-i686.tar.xz
