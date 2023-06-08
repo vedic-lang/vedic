@@ -5,9 +5,9 @@ echo "::group::Set-up Build Dependencies"
 mkdir -p release_linux
 
 # Add Architectures
-dpkg --add-architecture i686
-dpkg --add-architecture aarch64
-dpkg --add-architecture armv7
+# dpkg --add-architecture i686
+# dpkg --add-architecture aarch64
+# dpkg --add-architecture armv7
 
 # Install Dependencies
 sudo apt update
@@ -20,9 +20,9 @@ sudo apt install -y musl-tools
 sudo apt install -y gcc-aarch64-linux-gnu
 sudo apt install -y binutils-aarch64-linux-gnu
 sudo apt install -y gcc-i686-linux-gnu
-sudo apt install -y libssl-dev:amd64
-sudo apt install -y libssl-dev:armv7
-sudo apt install -y libssl-dev:i686
+# sudo apt install -y libssl-dev:amd64
+# sudo apt install -y libssl-dev:armv7
+# sudo apt install -y libssl-dev:i686
 
 rustup target add x86_64-unknown-linux-gnu
 rustup target add aarch64-unknown-linux-gnu
@@ -30,10 +30,10 @@ rustup target add armv7-unknown-linux-gnueabihf
 rustup target add i686-unknown-linux-gnu
 rustup target add x86_64-unknown-linux-musl
 rustup target add aarch64-unknown-linux-musl
-rustup target add aarch64-linux-android
-rustup target add armv7-linux-androideabi
-rustup target add i686-linux-android
-rustup target add x86_64-linux-android
+# rustup target add aarch64-linux-android
+# rustup target add armv7-linux-androideabi
+# rustup target add i686-linux-android
+# rustup target add x86_64-linux-android
 
 cargo install cargo-deb
 cargo install cross --git https://github.com/cross-rs/cross
@@ -63,13 +63,15 @@ build_binary() {
    echo "::endgroup::"
 }
 
-#build_binary default x86_64-unknown-linux-gnu vedic-linux-gnu-x86_64.tar.xz
-#build_binary default aarch64-unknown-linux-gnu vedic-linux-gnu-aarch64.tar.xz
-#build_binary default armv7-unknown-linux-gnueabihf vedic-linux-gnueabihf-armv7.tar.xz
-#build_binary default i686-unknown-linux-gnu vedic-linux-gnu-i686.tar.xz
-#build_binary default x86_64-unknown-linux-musl vedic-linux-musl-x86_64.tar.xz
-#build_binary cross aarch64-unknown-linux-musl vedic-linux-musl-aarch64.tar.xz
-build_binary cross aarch64-linux-android vedic-android-aarch64.tar.xz
-build_binary cross armv7-linux-androideabi vedic-android-armv7.tar.xz
-build_binary cross i686-linux-android vedic-android-i686.tar.xz
-build_binary cross x86_64-linux-android vedic-android-x86_64.tar.xz
+build_binary default x86_64-unknown-linux-gnu vedic-linux-gnu-x86_64.tar.xz
+build_binary default aarch64-unknown-linux-gnu vedic-linux-gnu-aarch64.tar.xz
+build_binary default armv7-unknown-linux-gnueabihf vedic-linux-gnueabihf-armv7.tar.xz
+build_binary default i686-unknown-linux-gnu vedic-linux-gnu-i686.tar.xz
+build_binary default x86_64-unknown-linux-musl vedic-linux-musl-x86_64.tar.xz
+build_binary cross aarch64-unknown-linux-musl vedic-linux-musl-aarch64.tar.xz
+
+# Android Builds
+# build_binary cross aarch64-linux-android vedic-android-aarch64.tar.xz
+# build_binary cross armv7-linux-androideabi vedic-android-armv7.tar.xz
+# build_binary cross i686-linux-android vedic-android-i686.tar.xz
+# build_binary cross x86_64-linux-android vedic-android-x86_64.tar.xz
