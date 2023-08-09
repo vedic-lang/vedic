@@ -42,6 +42,10 @@ curl -fsSL https://vedic-lang.github.io/install/install.sh | bash
 
 Vedic Documentation are available at [vedic-lang.github.io](https://vedic-lang.github.io/)
 
+## 📊 Benchmarks
+
+<p align="center"><a href="https://vedic-lang.github.io/benchmarks"><img alt="Vedic" src="https://github.com/vedic-lang/vedic/blob/main/benchmarks/benchmarks.png" width="600vw"></a></p>
+
 ## 🌐 Community
 
 **Join us on Discord**
