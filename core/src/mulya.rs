@@ -64,7 +64,7 @@ impl fmt::Display for Mulya {
                 write!(
                     f,
                     "{}",
-                    if *mulya.deref() {
+                    if *mulya {
                         "सत्य"
                     } else {
                         "असत्य"
