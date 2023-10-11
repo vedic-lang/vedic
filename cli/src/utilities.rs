@@ -13,20 +13,20 @@ pub fn help() {
     Vedic v{}
 
     Vedic is a programming language that is designed to be easy to learn and use.
-    
+
     Developed by: Pt. Prashant Tripathi
-    
+
     Usage: vedic [--option] [path/to/script.ved]
-    
+
     Options:
     -h, --help      Show this vedic cli help message
     -v, --version   Print version number
     -r, --repl      Run the vedic repl
-    
-    Examples: 
+
+    Examples:
     ➤ to run a vedic script
       vedic script.ved
-    
+
     ➤ to start the vedic repl
       vedic -r
 ",
@@ -60,7 +60,7 @@ pub fn run(args: Vec<String>) {
 }
 
 pub fn run_file(path: &str) {
-    if path.ends_with(".ved") {
+    if path.ends_with(".ved") || path.ends_with(".veda") || path.ends_with(".vedic") {
         let mut aadhaar = Aadhaar::new();
         aadhaar.prarambha();
         let sc = match Sourcecode::new(path) {
@@ -78,7 +78,7 @@ pub fn run_file(path: &str) {
             }
         }
     } else {
-        eprintln!("Invalid file extension. Only .ved files are allowed.");
+        eprintln!("Invalid file extension. Only .ved / .veda / .vedic extension are allowed.");
         process::exit(0);
     }
 }
