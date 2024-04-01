@@ -117,7 +117,7 @@ jobs:
                   sha256sum release_mac/* >> sha256sums.txt
 
             - name: Publish
-              uses: softprops/action-gh-release@v1
+              uses: softprops/action-gh-release@v2
               with:
                   name: Vedic ${{ github.event.inputs.vesion }}
                   tag_name: v${{ github.event.inputs.vesion }}
