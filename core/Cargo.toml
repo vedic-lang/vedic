@@ -1,6 +1,6 @@
 [package]
 name = "vedic-core"
-version = "2.0.4"
+version = "2.0.6"
 edition = "2021"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]

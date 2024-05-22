@@ -1,7 +1,7 @@
 class Vedic < Formula
   desc "vedic-lang is a Sanskrit programming language"
   homepage "https://github.com/vedic-lang/vedic"
-  version "2.0.4"
+  version "2.0.6"
 
   if OS.mac?
     if Hardware::CPU.arm?
