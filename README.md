@@ -38,6 +38,12 @@ Visit the [Download page](https://vedic-lang.github.io/download), which offers c
 curl -fsSL https://vedic-lang.github.io/install/install.sh | bash
 ```
 
+### Using Homebrew (Linux and macOS):
+
+```bash
+brew install vedic
+```
+
 ## 📖 Documentation
 
 Vedic Documentation are available at [vedic-lang.github.io](https://vedic-lang.github.io/)
