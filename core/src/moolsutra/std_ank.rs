@@ -6,7 +6,7 @@ use super::super::mulya::Mulya;
 /// this function converts a string to a number
 pub fn ank(aadhaar: &mut Aadhaar, from: usize) -> Result<Mulya, Dosa> {
     let args = &aadhaar.rashi[from..aadhaar.rashi_len()];
-    let arg = args.get(0);
+    let arg = args.first();
     if let Some(arg) = arg {
         let mut num = String::new();
         let digit_mapping = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];

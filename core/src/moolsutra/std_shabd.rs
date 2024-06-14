@@ -6,7 +6,7 @@ use super::super::mulya::Mulya;
 /// this function returns the given string
 pub fn shabd(aadhaar: &mut Aadhaar, from: usize) -> Result<Mulya, Dosa> {
     let args = &aadhaar.rashi[from..aadhaar.rashi_len()];
-    let arg = args.get(0);
+    let arg = args.first();
     if let Some(arg) = arg {
         Ok(Mulya::Vakya(aadhaar.gc.intern(arg.to_string())))
     } else {

@@ -6,7 +6,7 @@ use super::super::mulya::Mulya;
 /// this function throws an dosa with the given string
 pub fn truti(aadhaar: &mut Aadhaar, from: usize) -> Result<Mulya, Dosa> {
     let args = &aadhaar.rashi[from..aadhaar.rashi_len()];
-    if let Some(arg) = args.get(0) {
+    if let Some(arg) = args.first() {
         let dosa = format!("त्रुटि : {arg}");
         Err(aadhaar.throw_dosa(&dosa))
     } else {

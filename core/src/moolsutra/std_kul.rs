@@ -7,7 +7,7 @@ use super::super::mulya::Mulya;
 /// this function returns the length of the given string
 pub fn kul(aadhaar: &mut Aadhaar, from: usize) -> Result<Mulya, Dosa> {
     let args = &aadhaar.rashi[from..aadhaar.rashi_len()];
-    let arg = args.get(0);
+    let arg = args.first();
     if let Some(val) = arg {
         match val {
             Mulya::Vakya(string) => Ok(Mulya::Ank(string.s.len() as f64)),

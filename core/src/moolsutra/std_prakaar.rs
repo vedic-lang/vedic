@@ -7,7 +7,7 @@ use super::super::mulya::Mulya;
 pub fn prakaar(aadhaar: &mut Aadhaar, from: usize) -> Result<Mulya, Dosa> {
     let args = &aadhaar.rashi[from..aadhaar.rashi_len()];
 
-    if let Some(arg) = args.get(0) {
+    if let Some(arg) = args.first() {
         match arg {
             Mulya::Vakya(_v) => Ok(Mulya::Vakya(aadhaar.gc.intern("वाक्य".to_owned()))),
             Mulya::Ank(_v) => Ok(Mulya::Vakya(aadhaar.gc.intern("अंक".to_owned()))),
