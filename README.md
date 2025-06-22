@@ -15,6 +15,7 @@
 	<a href='https://ko-fi.com/ptprashanttripathi' target='_blank'>
         <img height='23' width="100" src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' alt='Buy Coffee for ptprashanttripathi' />
     </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fvedic-lang%2Fvedic?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvedic-lang%2Fvedic.svg?type=shield"/></a>
 	<a href="https://www.buymeacoffee.com/ptprashant09" target="_blank">
         <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="23" width="100" style="border-radius:1px" />
     </a>
@@ -82,3 +83,6 @@ This project is [MIT](https://github.com/vedic-lang/vedic/blob/main/LICENSE) lic
 ---
 
 _Developed with ❤️ in India 🇮🇳_
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvedic-lang%2Fvedic.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvedic-lang%2Fvedic?ref=badge_large)
