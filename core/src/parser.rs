@@ -680,7 +680,7 @@ impl<'p> Parser<'p> {
                 self.expression();
                 self.emit(Aadesh::SetItem);
             } else {
-                self.dosa("अमान्यं नियोजन\u{200B} लक्ष्यम्"); // Invalid niyojana target
+                self.dosa("अमान्यं नियोजन लक्ष्यम्"); // Invalid niyojana target
             }
         }
     }
