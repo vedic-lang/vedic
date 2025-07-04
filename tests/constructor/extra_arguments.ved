@@ -5,7 +5,7 @@
   }
 }
 
-मान foo = Foo(१, २, ३, ४); 
+मान foo = Foo(१, २, ३, ४);
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/constructor/extra_arguments.ved", line 8, column 26

@@ -1,4 +1,4 @@
-१२३.foo = "value"; 
+१२३.foo = "value";
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/field/set_on_num.ved", line 1, column 18

@@ -1,5 +1,5 @@
 मान a = "a";
-!a = "value"; 
+!a = "value";
 
 # CTE: सङ्कलन-काले-दोषः :
 # CTE: File "tests/niyojana/prefix_operator.ved", line 2, column 5

@@ -3,7 +3,7 @@
   वद(b);
 }
 
-f(१, २, ३, ४); 
+f(१, २, ३, ४);
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/sutra/extra_arguments.ved", line 6, column 14

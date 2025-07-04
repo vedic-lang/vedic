@@ -145,7 +145,7 @@ jobs:
                       -   **vedic-linux-gnu-i686.tar.xz** : standalone binary for Linux on i686 architecture using GNU C Library
                       -   **vedic-linux-musl-x86_64.tar.xz** : standalone binary for Linux on x86_64 architecture using musl C library (static binary, no libc dependency)
                       -   **vedic-linux-musl-aarch64.tar.xz** : standalone binary for Linux on aarch64 architecture using musl C library (static binary, no libc dependency)
-                      -   **vedic-linux-gnueabihf-armv7.tar.xz** : standalone binary for Raspberry PI Linux on armv7 architecture using GNU C Library 
+                      -   **vedic-linux-gnueabihf-armv7.tar.xz** : standalone binary for Raspberry PI Linux on armv7 architecture using GNU C Library
                       -   **vedic-android-aarch64.tar.xz** : standalone binary for Android on aarch64 architecture
                       -   **vedic-android-armv7.tar.xz** : standalone binary for Android on armv7 architecture
                       -   **vedic-android-i686.tar.xz** : standalone binary for Android on i686 architecture

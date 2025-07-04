@@ -1,4 +1,4 @@
-सत्य.foo = "value"; 
+सत्य.foo = "value";
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/field/set_on_bool.ved", line 1, column 19

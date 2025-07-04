@@ -1,7 +1,7 @@
 विधि Foo {}
 मान foo = Foo();
 
-foo.bar; 
+foo.bar;
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/field/undefined.ved", line 4, column 8

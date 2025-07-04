@@ -1,5 +1,5 @@
-मित्र.foo("bar"); 
-मित्र.foo; 
+मित्र.foo("bar");
+मित्र.foo;
 
 # CTE: सङ्कलन-काले-दोषः :
 # CTE: File "tests/mitra/mitra_at_murdhan_level.ved", line 1, column 6

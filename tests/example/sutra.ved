@@ -2,6 +2,6 @@
     फल अ+ब;
 }
 
-वद(योग(११,२२)); # it will print ३३ 
+वद(योग(११,२२)); # it will print ३३
 
 # expect: ३३

@@ -1,6 +1,6 @@
 विधि Foo {}
 
-मान foo = Foo(१, २, ३); 
+मान foo = Foo(१, २, ३);
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/constructor/default_arguments.ved", line 3, column 23

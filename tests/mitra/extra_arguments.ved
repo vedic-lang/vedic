@@ -7,7 +7,7 @@
 विधि Derived सन्धि Base {
   foo() {
     वद("Derived.foo()"); # expect: Derived.foo()
-    मित्र.foo("a", "b", "c", "d");   
+    मित्र.foo("a", "b", "c", "d");
   }
 }
 

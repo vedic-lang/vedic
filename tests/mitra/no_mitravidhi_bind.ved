@@ -1,6 +1,6 @@
 विधि Base {
   foo() {
-    मित्र.doesNotExist; 
+    मित्र.doesNotExist;
   }
 }
 

@@ -1,6 +1,6 @@
 सूत्र foo() {}
 
-foo.bar = "value"; 
+foo.bar = "value";
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/field/set_on_sutra.ved", line 3, column 18

@@ -72,7 +72,7 @@ def get_data():
     compiler_names = ["vedic", "python3", "nodejs"]
     result = []
     for lang in compiler_names:
-        test_result = run_test(lang, 3)
+        test_result = run_test(lang, 1)
         result += test_result
     return result
 
