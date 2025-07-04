@@ -13,7 +13,7 @@ pub struct Mulyankan<'p> {
 }
 
 impl<'p> Mulyankan<'p> {
-    pub const STHANIYA_COUNT: usize = std::u8::MAX as usize + 1;
+    pub const STHANIYA_COUNT: usize = u8::MAX as usize + 1;
 
     pub fn new(sutra_name: GcRef<Vakya>, kind: SutraType) -> Box<Self> {
         let mut evaluator = Mulyankan {
