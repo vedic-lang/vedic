@@ -9,7 +9,7 @@ pub struct Sourcecode<'sc> {
 }
 
 impl<'sc> Sourcecode<'sc> {
-    pub fn new(filepath: &'sc str) -> Result<Sourcecode> {
+    pub fn new(filepath: &'sc str) -> Result<Sourcecode<'sc>> {
         // let abs_path = fs::canonicalize(filepath)?;
         let path = Path::new(filepath);
         let code = fs::read_to_string(path)?;
