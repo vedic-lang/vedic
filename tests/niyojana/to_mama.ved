@@ -1,6 +1,6 @@
 विधि Foo {
   Foo() {
-    मम = "value"; 
+    मम = "value";
   }
 }
 

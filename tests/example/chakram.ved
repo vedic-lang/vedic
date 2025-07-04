@@ -2,7 +2,7 @@
 {
   # चक्रम् takes in 3 parameters प्रारंभial value, and condition, and a step size
   वद("अ =",अ);
-} 
+}
 
 # expect: अ = ०
 # expect: अ = १

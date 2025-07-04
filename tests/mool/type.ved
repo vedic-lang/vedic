@@ -3,7 +3,7 @@
 वद(प्रकार(१.०*१.०)); # expect: अंक
 वद(प्रकार(१) == "अंक"); # expect: सत्य
 वद(प्रकार("some random string")); # expect: वाक्य
-वद(प्रकार()); 
+वद(प्रकार());
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/mool/type.ved", line 6, column 12

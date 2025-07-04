@@ -1,5 +1,5 @@
 विधि Foo {}
-Foo.bar; 
+Foo.bar;
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/field/get_on_vidhi.ved", line 2, column 8

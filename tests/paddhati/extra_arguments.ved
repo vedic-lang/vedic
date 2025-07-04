@@ -5,7 +5,7 @@
   }
 }
 
-Foo().paddhati(१, २, ३, ४); 
+Foo().paddhati(१, २, ३, ४);
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/paddhati/extra_arguments.ved", line 8, column 27

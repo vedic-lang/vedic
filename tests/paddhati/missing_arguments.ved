@@ -2,7 +2,7 @@
   paddhati(a, b) {}
 }
 
-Foo().paddhati(१); 
+Foo().paddhati(१);
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/paddhati/missing_arguments.ved", line 5, column 18

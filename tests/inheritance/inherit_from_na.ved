@@ -1,5 +1,5 @@
 मान Null = न;
-विधि Foo सन्धि Null {} 
+विधि Foo सन्धि Null {}
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/inheritance/inherit_from_na.ved", line 2, column 20

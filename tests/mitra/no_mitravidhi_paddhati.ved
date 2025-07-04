@@ -2,7 +2,7 @@
 
 विधि Derived सन्धि Base {
   foo() {
-    मित्र.doesNotExist(१);   
+    मित्र.doesNotExist(१);
   }
 }
 

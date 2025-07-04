@@ -1,6 +1,6 @@
 सूत्र f(a, b) {}
 
-f(१); 
+f(१);
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/sutra/missing_arguments.ved", line 3, column 5

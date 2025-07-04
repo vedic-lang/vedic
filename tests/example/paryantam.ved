@@ -4,7 +4,7 @@
 {
   वद(अ);
   अ = अ+ १;
-} 
+}
 # expect: ०
 # expect: १
 # expect: २

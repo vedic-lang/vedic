@@ -3,7 +3,7 @@
 मान foo = Foo();
 foo.bar = "not fn";
 
-foo.bar(); 
+foo.bar();
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/field/call_nonsutra_field.ved", line 6, column 10

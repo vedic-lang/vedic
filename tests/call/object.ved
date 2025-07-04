@@ -1,7 +1,7 @@
 विधि Foo {}
 
 मान foo = Foo();
-foo(); 
+foo();
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/call/object.ved", line 4, column 6

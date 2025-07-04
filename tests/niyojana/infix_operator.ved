@@ -1,6 +1,6 @@
 मान a = "a";
 मान b = "b";
-a + b = "value"; 
+a + b = "value";
 
 # CTE: सङ्कलन-काले-दोषः :
 # CTE: File "tests/niyojana/infix_operator.ved", line 3, column 8

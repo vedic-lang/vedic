@@ -1,5 +1,5 @@
 मान Number = १२३;
-विधि Foo सन्धि Number {} 
+विधि Foo सन्धि Number {}
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/inheritance/inherit_from_number.ved", line 2, column 22

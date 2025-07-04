@@ -2,11 +2,11 @@
 वद(प्रकार(a)); # expect: वाक्य
 
 # convert to number
-a = अंक(a); 
+a = अंक(a);
 वद(प्रकार(a)); # expect: अंक
 
 # dosa if not a number
-a = अंक("a"); 
+a = अंक("a");
 
 # RTE: अनुष्ठान-काले-दोषः :
 # RTE: File "tests/mool/number.ved", line 9, column 13
