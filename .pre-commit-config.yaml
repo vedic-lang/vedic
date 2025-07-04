@@ -1,51 +1,60 @@
 ci:
-    autoupdate_schedule: monthly
-    autoupdate_commit_msg: "chore: update pre-commit hooks"
+  autoupdate_schedule: monthly
+  autoupdate_commit_msg: "chore: update pre-commit hooks"
 
 repos:
-    - repo: https://github.com/pre-commit/pre-commit-hooks
-      rev: v5.0.0
-      hooks:
-          - id: requirements-txt-fixer
-          - id: check-case-conflict
-          - id: check-ast
-          - id: check-docstring-first
-          - id: check-added-large-files
-          - id: check-case-conflict
-          - id: check-merge-conflict
-          - id: check-json
-          - id: check-yaml
-          - id: check-toml
-          - id: debug-statements
-          - id: end-of-file-fixer
-          - id: trailing-whitespace
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: requirements-txt-fixer
+      - id: check-case-conflict
+      - id: check-ast
+      - id: check-docstring-first
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-json
+      - id: check-yaml
+      - id: check-toml
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
 
-    - repo: https://github.com/python-jsonschema/check-jsonschema
-      rev: 0.31.2
-      hooks:
-          - id: check-github-workflows
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.33.2
+    hooks:
+      - id: check-github-workflows
 
-    # - repo: https://github.com/codespell-project/codespell
-    #   rev: "v2.3.0"
-    #   hooks:
-    #       - id: codespell
+  # - repo: https://github.com/codespell-project/codespell
+  #   rev: "v2.3.0"
+  #   hooks:
+  #       - id: codespell
 
-    - repo: https://github.com/psf/black
-      rev: 25.1.0
-      hooks:
-          - id: black
-            language_version: python3
-          - id: black-jupyter
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+        language_version: python3
+      - id: black-jupyter
 
-    - repo: https://github.com/pycqa/isort
-      rev: 6.0.0
-      hooks:
-          - id: isort
-            args: ["--order-by-type", "--length-sort", "black"]
-            name: isort (python)
+  - repo: https://github.com/pycqa/isort
+    rev: 6.0.1
+    hooks:
+      - id: isort
+        args: ["--order-by-type", "--length-sort", "black"]
+        name: isort (python)
 
-    - repo: https://github.com/asottile/pyupgrade
-      rev: v3.19.1
-      hooks:
-          - id: pyupgrade
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.20.0
+    hooks:
+      - id: pyupgrade
 
+  - repo: https://github.com/myint/autoflake
+    rev: v2.3.1
+    hooks:
+      - id: autoflake
+        args:
+          - --remove-all-unused-imports
+          - --remove-unused-variables
+          - --ignore-init-module-imports
+          - -r
