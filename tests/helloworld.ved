@@ -42,7 +42,7 @@
             # फल न;
         }
     }
-    
+
     foreach(f) {
         मान node = मम.tail;
         पर्यन्त (node) {
@@ -59,7 +59,7 @@
         मान node = मम.tail;
         चक्र (मान i = ०; i < index; i = i + १) {
             node = node.prev;
-        }        
+        }
         फल node.item;
     }
 }

@@ -1,7 +1,7 @@
-import argparse
 import os
-import pathlib
 import re
+import pathlib
+import argparse
 import subprocess
 from time import process_time
 
@@ -23,7 +23,7 @@ def get_test_cases_file():
 # Clear existing test cases
 def clear(file, clear_test=False):
     last = True
-    with open(file, "r") as f:
+    with open(file) as f:
         lines = f.readlines()
     with open(file, "w") as f:
         for line in lines:

@@ -59,14 +59,14 @@ Vedic Documentation are available at [vedic-lang.github.io](https://vedic-lang.g
 
 <p><a href="https://discord.gg/sWCHauhNQ2"><img width="150" src="https://raw.githubusercontent.com/vedic-lang/vedic/main/assets/discord-logo.png"/></a></p>
 
-## 👤 Author 
+## 👤 Author
 
 <p><a href="https://github.com/ptprashanttripathi"><img width="60" src="https://avatars2.githubusercontent.com/u/26687933?s=200&v=4"/></a></p>
 
 [**Pt. Prashant Tripathi**](https://github.com/ptprashanttripathi)
 
 [Github](https://github.com/ptprashanttripathi) · [Twitter](https://twitter.com/ptprashant09) · [LinkedIn](https://www.linkedin.com/in/ptprashanttripathi/)
-   
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [Contributing Guide](https://github.com/vedic-lang/vedic/blob/main/CONTRIBUTING.md).

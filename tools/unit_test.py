@@ -1,7 +1,7 @@
 import os
+import re
 import pathlib
 import subprocess
-import re
 from time import process_time
 
 # from rich import print
@@ -78,7 +78,7 @@ def parse_comments(path):
         "compiletime_err": [],
         "runtime_err": [],
     }
-    with open(path, "r") as content_file:
+    with open(path) as content_file:
         content = content_file.read()
         for line in content.splitlines():
             m = re.search(r"# input: ?(.*)", line)

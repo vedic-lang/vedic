@@ -9,7 +9,7 @@ cargo_path = cargo_path.resolve()
 
 # read Cargo.toml and return version
 def get_version():
-    with open(cargo_path, "r") as cargo_toml:
+    with open(cargo_path) as cargo_toml:
         cargo_toml = cargo_toml.read()
         version = re.search(r"version = \"(.+)\"", cargo_toml)
         if version:
@@ -20,7 +20,7 @@ def get_version():
 
 # update version in Cargo.toml
 def update_version(currunt, updated):
-    with open(cargo_path, "r") as cargo_toml:
+    with open(cargo_path) as cargo_toml:
         toml_data = cargo_toml.read()
         toml_data = toml_data.replace(currunt, updated)
     with open(cargo_path, "w") as cargo_toml:
