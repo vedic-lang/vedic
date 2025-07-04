@@ -3,7 +3,6 @@ use std::mem;
 use std::ops::Deref;
 use std::ops::DerefMut;
 use std::ptr::NonNull;
-use std::usize;
 
 use super::mulya::Mulya;
 use super::smrti::Smrti;
