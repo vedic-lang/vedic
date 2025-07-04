@@ -1,7 +1,6 @@
 use std::fmt::Display;
 use std::ops::Deref;
 use std::ptr;
-use std::u8::MAX;
 
 use super::aadesh::Aadesh;
 use super::dosa_nirupaka;
@@ -33,9 +32,15 @@ pub struct Aadhaar {
     prarambhkarta_string: GcRef<Vakya>,
 }
 
+impl Default for Aadhaar {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl Aadhaar {
     const ADHIKTAM_KOSHA: usize = 64;
-    const ADHIKTAM_RASHI: usize = Aadhaar::ADHIKTAM_KOSHA * (MAX as usize) + 1;
+    const ADHIKTAM_RASHI: usize = Aadhaar::ADHIKTAM_KOSHA * (u8::MAX as usize) + 1;
 
     pub fn new() -> Self {
         let mut gc = Gc::new();
@@ -614,7 +619,7 @@ impl Aadhaar {
                 }
                 paddhati_name => {
                     return self.anusthanakale_dosa(
-                        format!("{} सूचिस्य पद्धतिरन्यत् न भवति", paddhati_name).as_str(), //is not a paddhati of list
+                        format!("{paddhati_name} सूचिस्य पद्धतिरन्यत् न भवति").as_str(), //is not a paddhati of list
                     );
                 }
             }

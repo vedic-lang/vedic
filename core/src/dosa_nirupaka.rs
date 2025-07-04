@@ -10,30 +10,30 @@ pub struct Disassembler<'vm> {
 impl<'vm> Disassembler<'vm> {
     fn const_aadesh(&self, op: &str, achar_anukram: u8) {
         let mulya = self.vastu.achar[achar_anukram as usize];
-        println!("{:<16} {:4} ({})", op, achar_anukram, mulya);
+        println!("{op:<16} {achar_anukram:4} ({mulya})");
     }
 
     fn const_list_aadesh(&self, op: &str, achar_anukram: u16) {
         let mulya = self.vastu.achar[achar_anukram as usize];
-        println!("{:<16} {:4} ({})", op, achar_anukram, mulya);
+        println!("{op:<16} {achar_anukram:4} ({mulya})");
     }
 
     pub fn disassemble(&self, name: &str) {
-        println!("== BEGIN {} ==", name);
+        println!("== BEGIN {name} ==");
         for (offset, op) in self.vastu.code.iter().enumerate() {
             self.op(op, offset);
         }
-        println!("== END {} ==", name);
+        println!("== END {name} ==");
         println!();
     }
 
     fn invoke_aadesh(&self, op: &str, achar_anukram: u8, args: u8) {
         let mulya = self.vastu.achar[achar_anukram as usize];
-        println!("{:<16} {:4} ({}) {}", op, achar_anukram, mulya, args);
+        println!("{op:<16} {achar_anukram:4} ({mulya}) {args}");
     }
 
     fn jump_aadesh(&self, op: &str, offset: u16) {
-        println!("{:<16} {:4}", op, offset);
+        println!("{op:<16} {offset:4}");
     }
 
     pub fn new(vastu: &'vm Vastu, rashi: Option<&'vm [Mulya]>) -> Self {
@@ -42,12 +42,12 @@ impl<'vm> Disassembler<'vm> {
 
     pub fn op(&self, op: &Aadesh, offset: usize) {
         self.rashi();
-        print!("{:04} ", offset);
+        print!("{offset:04} ");
         let line = &self.vastu.sthaan[offset];
         if offset > 0 && line == &self.vastu.sthaan[offset - 1] {
             print!("   | ");
         } else {
-            print!("{:>4} ", line);
+            print!("{line:>4} ");
         }
         match op {
             Aadesh::Vidhi(c) => self.const_aadesh("Vidhi", *c),
@@ -98,14 +98,14 @@ impl<'vm> Disassembler<'vm> {
     }
 
     fn slot_aadesh(&self, op: &str, slot: u8) {
-        println!("{:<16} {:4}", op, slot);
+        println!("{op:<16} {slot:4}");
     }
 
     fn rashi(&self) {
         if let Some(rashi) = self.rashi {
             println!(" S: ");
             for &mulya in rashi.iter() {
-                println!("\t[{}]", mulya);
+                println!("\t[{mulya}]");
             }
             println!();
         }

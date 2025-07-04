@@ -259,7 +259,7 @@ impl Iterator for IterSmrti {
     type Item = (GcRef<Vakya>, Mulya);
 
     fn next(&mut self) -> Option<Self::Item> {
-        while self.ptr as *const Pravisti != self.end {
+        while !std::ptr::eq(self.ptr, self.end) {
             unsafe {
                 let pravisti = self.ptr;
                 self.ptr = self.ptr.offset(1);
