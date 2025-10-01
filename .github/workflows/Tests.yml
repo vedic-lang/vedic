@@ -14,7 +14,7 @@ jobs:
 
         steps:
             - name: check out branch
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
 
             - name: Build & Test
               run: python tools -bt
