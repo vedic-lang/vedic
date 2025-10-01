@@ -93,19 +93,19 @@ jobs:
 
         steps:
             - name: Download release windows
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v5
               with:
                   name: windows
                   path: release_windows
 
             - name: Download release mac
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v5
               with:
                   name: mac
                   path: release_mac
 
             - name: Download release linux
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v5
               with:
                   name: linux
                   path: release_linux
