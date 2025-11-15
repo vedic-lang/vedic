@@ -87,8 +87,32 @@ jobs:
                   name: linux
                   path: release_linux/*
 
+    Build-Android:
+        name: "Build release for Android"
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v5
+
+            - name: Install Rust
+              uses: actions-rs/toolchain@v1
+              with:
+                  profile: default
+                  toolchain: stable
+
+            - name: Build Android binaries
+              shell: bash
+              run: bash cicd/build_android.sh
+
+            - name: Upload release
+              uses: actions/upload-artifact@v4
+              with:
+                  name: android
+                  path: release_android/*              
+
     Release:
-        needs: [Build-Windows, Build-Mac, Build-Linux]
+        needs: [Build-Windows, Build-Mac, Build-Linux, Build-Android]
         runs-on: ubuntu-latest
 
         steps:
@@ -110,11 +134,18 @@ jobs:
                   name: linux
                   path: release_linux
 
+            - name: Download release android
+              uses: actions/download-artifact@v5
+              with:
+                  name: android
+                  path: release_android
+
             - name: Generate SHA256 checksums
               run: |
                   sha256sum release_windows/* >> sha256sums.txt
                   sha256sum release_linux/* >> sha256sums.txt
                   sha256sum release_mac/* >> sha256sums.txt
+                  sha256sum release_android/* >> sha256sums.txt
 
             - name: Publish
               uses: softprops/action-gh-release@v2
@@ -129,24 +160,5 @@ jobs:
                       release_windows/*
                       release_linux/*
                       release_mac/*
+                      release_android/*
                       sha256sums.txt
-                  body: |
-                      ## Installers and Binaries
-
-                      Standalone binaries and installer are built out for Windows, MacOS, and Linux for multipal architectures.
-
-                      -   **vedic-win-x86_64-installer.msi** : Windows installer for windows on x86_64 architecture
-                      -   **vedic-win-x86_64.zip** : standalone binary for Windows on x86-64 architecture
-                      -   **vedic-darwin-aarch64.tar.gz** : standalone binary for MacOS on aarch64 architecture
-                      -   **vedic-darwin-x86_64.tar.gz** : standalone binary for MacOS on x86_64 architecture
-                      -   **vedic-linux-x86_64.deb** : Debian installer for Linux on x86_64 architecture
-                      -   **vedic-linux-gnu-x86_64.tar.xz** : standalone binary for Linux on x86_64 architecture using GNU C Library
-                      -   **vedic-linux-gnu-aarch64.tar.xz** : standalone binary for Linux on aarch64 architecture using GNU C Library
-                      -   **vedic-linux-gnu-i686.tar.xz** : standalone binary for Linux on i686 architecture using GNU C Library
-                      -   **vedic-linux-musl-x86_64.tar.xz** : standalone binary for Linux on x86_64 architecture using musl C library (static binary, no libc dependency)
-                      -   **vedic-linux-musl-aarch64.tar.xz** : standalone binary for Linux on aarch64 architecture using musl C library (static binary, no libc dependency)
-                      -   **vedic-linux-gnueabihf-armv7.tar.xz** : standalone binary for Raspberry PI Linux on armv7 architecture using GNU C Library
-                      -   **vedic-android-aarch64.tar.xz** : standalone binary for Android on aarch64 architecture
-                      -   **vedic-android-armv7.tar.xz** : standalone binary for Android on armv7 architecture
-                      -   **vedic-android-i686.tar.xz** : standalone binary for Android on i686 architecture
-                      -   **vedic-android-x86_64.tar.xz** : standalone binary for Android on x86_64 architecture
