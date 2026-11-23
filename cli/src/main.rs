@@ -10,8 +10,8 @@ fn main() {
         match args[1].as_str() {
             "-h" | "--help" => utilities::help(),
             "-v" | "--version" => utilities::version(),
-            "format" => utilities::format(&args[2..]),
-            // "-i" | "--install" => utilities::install(args),
+            "-f" | "format" => utilities::format(&args[2..]),
+            // "-i" | "install" => utilities::install(args),
             "-r" | "--repl" => utilities::repl(),
             _ => utilities::run(args),
         }
