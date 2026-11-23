@@ -1,8 +1,10 @@
 name: Vedic Devlopment Testing
 
 on:
+    push:
+        branches: ["main"]
     pull_request:
-        branches: ["test"]
+        branches: ["main"]
     workflow_dispatch:
 
 env:
@@ -16,5 +18,25 @@ jobs:
             - name: check out branch
               uses: actions/checkout@v5
 
-            - name: Build & Test
+            - name: Install Rust
+              uses: actions-rs/toolchain@v1
+              with:
+                  profile: minimal
+                  toolchain: stable
+
+            - name: Install nightly formatter
+              uses: actions-rs/toolchain@v1
+              with:
+                  profile: minimal
+                  toolchain: nightly
+                  components: rustfmt
+                  override: false
+
+            - name: Check formatting
+              run: cargo +nightly fmt --all -- --check
+
+            - name: Run Rust tests
+              run: cargo test --workspace
+
+            - name: Build and run language tests
               run: python tools -bt
