@@ -1,5 +1,6 @@
 use std::fs;
-use std::path::{Path, PathBuf};
+use std::path::Path;
+use std::path::PathBuf;
 
 #[derive(Debug, PartialEq)]
 enum TokenKind {
@@ -413,10 +414,13 @@ pub fn format_target(target: &Path) -> Result<Vec<PathBuf>, String> {
 
 #[cfg(test)]
 mod tests {
-    use super::{format_source, format_target};
     use std::fs;
     use std::path::PathBuf;
-    use std::time::{SystemTime, UNIX_EPOCH};
+    use std::time::SystemTime;
+    use std::time::UNIX_EPOCH;
+
+    use super::format_source;
+    use super::format_target;
 
     #[test]
     fn formats_blocks_and_operators() {

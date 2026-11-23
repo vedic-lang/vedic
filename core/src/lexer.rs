@@ -225,7 +225,8 @@ impl<'s> Lexer<'s> {
 
 #[cfg(test)]
 mod tests {
-    use super::{Lexer, PadaPrakara};
+    use super::Lexer;
+    use super::PadaPrakara;
     use crate::fetchsource::Sourcecode;
 
     #[test]
