@@ -32,7 +32,7 @@ jobs:
               run: cicd/build_windows.ps1
 
             - name: Upload release
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v6
               with:
                   name: windows
                   path: release_windows/*
@@ -57,7 +57,7 @@ jobs:
               run: bash cicd/build_mac.sh
 
             - name: Upload release
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v6
               with:
                   name: mac
                   path: release_mac/*
@@ -82,7 +82,7 @@ jobs:
               run: bash cicd/build_linux.sh
 
             - name: Upload release
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v6
               with:
                   name: linux
                   path: release_linux/*
