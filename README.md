@@ -49,6 +49,13 @@ brew install vedic
 
 Read the [Vedic language reference](https://vedic-lang.github.io/language-reference) for syntax and semantics, or browse the full [documentation](https://vedic-lang.github.io/).
 
+Format a source file, or recursively format Vedic files in a directory, with the CLI:
+
+```bash
+vedic format path/to/file.ved
+vedic format path/to/examples
+```
+
 ## 📊 Benchmarks
 
 <p align="center"><a href="https://vedic-lang.github.io/benchmarks"><img alt="Vedic" src="https://github.com/vedic-lang/vedic/blob/main/benchmarks/benchmarks.png" width="600vw"></a></p>

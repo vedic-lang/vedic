@@ -1,5 +1,6 @@
 use std::io;
 use std::io::Write;
+use std::path::Path;
 use std::process;
 
 use vedic_core::aadhaar::Aadhaar;
@@ -22,6 +23,7 @@ pub fn help() {
     -h, --help      Show this vedic cli help message
     -v, --version   Print version number
     -r, --repl      Run the vedic repl
+    format <path>   Format a Vedic source file or every Vedic file in a directory
 
     Examples:
     ➤ to run a vedic script
@@ -29,6 +31,10 @@ pub fn help() {
 
     ➤ to start the vedic repl
       vedic -r
+
+    ➤ to format a source file or directory recursively
+      vedic format script.ved
+      vedic format ./examples
 ",
         env!("CARGO_PKG_VERSION")
     );
@@ -37,10 +43,25 @@ pub fn help() {
 // ❯ this command will install the panchang.ved vedic script from given url
 // vedic -i https://git.com/panchang.ved
 
-// pub fn format(_args: Vec<String>) {
-//     println!("Format Feature is not available yet.");
-//     process::exit(0);
-// }
+pub fn format(args: &[String]) {
+    if args.len() != 1 {
+        eprintln!("Usage: vedic format <file-or-directory>");
+        process::exit(64);
+    }
+
+    match crate::formatter::format_target(Path::new(&args[0])) {
+        Ok(paths) => {
+            for path in &paths {
+                println!("Formatted {}", path.display());
+            }
+            println!("Formatted {} Vedic file(s).", paths.len());
+        }
+        Err(error) => {
+            eprintln!("Formatting failed: {error}");
+            process::exit(1);
+        }
+    }
+}
 
 // pub fn install(_args: Vec<String>) {
 //     println!("Install Feature is not available yet.");
@@ -60,7 +81,11 @@ pub fn run(args: Vec<String>) {
 }
 
 pub fn run_file(path: &str) {
-    if path.ends_with(".ved") || path.ends_with(".veda") || path.ends_with(".vedic") {
+    if path.ends_with(".v")
+        || path.ends_with(".ved")
+        || path.ends_with(".veda")
+        || path.ends_with(".vedic")
+    {
         let mut aadhaar = Aadhaar::new();
         aadhaar.prarambha();
         let sc = match Sourcecode::new(path) {
@@ -78,7 +103,9 @@ pub fn run_file(path: &str) {
             }
         }
     } else {
-        eprintln!("Invalid file extension. Only .ved / .veda / .vedic extension are allowed.");
+        eprintln!(
+            "Invalid file extension. Only .v / .ved / .veda / .vedic extensions are allowed."
+        );
         process::exit(0);
     }
 }
