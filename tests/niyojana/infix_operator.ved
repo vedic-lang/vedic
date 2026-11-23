@@ -5,4 +5,4 @@ a + b = "value";
 # CTE: सङ्कलन-काले-दोषः :
 # CTE: File "tests/niyojana/infix_operator.ved", line 3, column 8
 # CTE: दोषः अत् :'='
-# CTE: अमान्यं नियोजन​ लक्ष्यम्
+# CTE: अमान्यं नियोजन लक्ष्यम्

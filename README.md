@@ -47,7 +47,7 @@ brew install vedic
 
 ## 📖 Documentation
 
-Vedic Documentation are available at [vedic-lang.github.io](https://vedic-lang.github.io/)
+Read the [Vedic language reference](https://vedic-lang.github.io/language-reference) for syntax and semantics, or browse the full [documentation](https://vedic-lang.github.io/).
 
 ## 📊 Benchmarks
 

@@ -1,0 +1,31 @@
+# Beginner conformance path: output, variables, expressions, branches, loops, functions, and lists.
+
+वद("नमस्ते, Vedic!"); # expect: नमस्ते, Vedic!
+
+मान आयु = २४;
+आयु = आयु + १;
+वद(आयु); # expect: २५
+
+यदि (आयु == २५) {
+  वद("समान");
+} अथ {
+  वद("अलग");
+}
+# expect: समान
+
+मान गिनती = ०;
+पर्यन्त (गिनती < ३) {
+  वद(गिनती);
+  गिनती = गिनती + १;
+}
+# expect: ०
+# expect: १
+# expect: २
+
+सूत्र योग(पहला, दूसरा) {
+  फल पहला + दूसरा;
+}
+वद(योग(२, ३)); # expect: ५
+
+मान रंग = ["लाल", "नीला"];
+वद(रंग[०]); # expect: लाल
