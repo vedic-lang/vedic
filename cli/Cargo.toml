@@ -3,7 +3,7 @@ name = "vedic"
 version = "2.0.6"
 authors = ["Pt. Prashant Tripathi <ptprashanttripathi@outlook.com>"]
 edition = "2021"
-description = "Vedic is World first Programming launguage in Sanskrit"
+description = "A Sanskrit programming language interpreter written in Rust"
 license = "MIT"
 
 [dependencies]
@@ -21,7 +21,7 @@ maintainer = "Pt. Prashant Tripathi <ptprashanttripathi@outlook.com>"
 copyright = "Copyright (c) Pt. Prashant Tripathi 2022. All rights reserved."
 license-file = ["../LICENSE", "0"]
 extended-description = """
-Vedic is World first Programming launguage in Sanskrit
+A Sanskrit programming language interpreter written in Rust.
 building Debian packages from Rust projects."""
 depends = "$auto"
 section = "utility"
@@ -38,7 +38,7 @@ icon = ["32x32.png", "128x128.png", "128x128@2x.png"]
 resources = ["../assets/*.png"]
 copyright = "Copyright (c) Pt. Prashant Tripathi 2022. All rights reserved."
 category = "Developer Tool"
-short_description = "Vedic is World first Programming launguage in Sanskrit"
+short_description = "A Sanskrit programming language interpreter written in Rust"
 long_description = """
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut

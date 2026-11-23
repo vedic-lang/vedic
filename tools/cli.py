@@ -17,8 +17,8 @@ def clear():
     return output.returncode
 
 
-def check_and_prompt_rust_tools():
-    required_tools = {
+def check_and_prompt_rust_tools(required_tools):
+    tool_hints = {
         "cargo": (
             "Install Rust (includes `cargo` and `rustc`):\n"
             "  Website: https://www.rust-lang.org/tools/install\n"
@@ -41,7 +41,8 @@ def check_and_prompt_rust_tools():
 
     missing = []
 
-    for tool, install_hint in required_tools.items():
+    for tool in required_tools:
+        install_hint = tool_hints[tool]
         if shutil.which(tool) is None:
             print(f"'{tool}' is not installed.\n{install_hint}\n")
             missing.append(tool)
@@ -59,6 +60,21 @@ def check_and_prompt_rust_tools():
         sys.exit(1)
     else:
         print("All required Rust tools are installed.\n")
+
+
+def check_nightly_toolchain():
+    install_hint = "Install it with: rustup toolchain install nightly"
+    try:
+        toolchains = subprocess.check_output(
+            ["rustup", "toolchain", "list"], text=True
+        ).splitlines()
+    except (OSError, subprocess.CalledProcessError):
+        print(f"Unable to check Rust toolchains. {install_hint}")
+        sys.exit(1)
+
+    if not any(toolchain.startswith("nightly") for toolchain in toolchains):
+        print(f"The nightly Rust toolchain is required for formatting. {install_hint}")
+        sys.exit(1)
 
 
 def build_vedic_cli():
@@ -95,9 +111,6 @@ def start_server(port):
 
 
 def run():
-    # Check rust tools at start
-    check_and_prompt_rust_tools()
-
     # Get arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("-c", "--clear", action="store_true", help="clear screen")
@@ -113,6 +126,18 @@ def run():
     )
     parser.add_argument("--v", "--verbose", action="store_true", help="verbose mode")
     args = parser.parse_args()
+
+    required_tools = []
+    if args.build or args.test or args.bench or args.format:
+        required_tools.append("cargo")
+    if args.wasm:
+        required_tools.extend(["cargo", "wasm-pack"])
+    if args.format:
+        required_tools.append("pre-commit")
+    if required_tools:
+        check_and_prompt_rust_tools(dict.fromkeys(required_tools))
+    if args.format:
+        check_nightly_toolchain()
 
     global ENV_VERBOSE
     if args.v:

@@ -91,11 +91,10 @@ impl<'s> Lexer<'s> {
     }
 
     fn peek_next(&self) -> char {
-        if self.at > self.sourcecode.code.len() - 2 {
-            '\0'
-        } else {
-            self.code_vec[self.at + 1]
-        }
+        self.code_vec
+            .get(self.at.saturating_add(1))
+            .copied()
+            .unwrap_or('\0')
     }
 
     fn dosa_pada(&self, message: &'static str) -> Pada<'s> {
@@ -221,5 +220,38 @@ impl<'s> Lexer<'s> {
 
     fn is_devanagari_digit(&self, c: char) -> bool {
         ('\u{0966}'..='\u{096F}').contains(&c) || c.is_ascii_digit()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{Lexer, PadaPrakara};
+    use crate::fetchsource::Sourcecode;
+
+    #[test]
+    fn trailing_decimal_point_is_scanned_without_panicking() {
+        let sourcecode = Sourcecode {
+            code: "१.".to_owned(),
+            path: "test",
+        };
+        let mut lexer = Lexer::new(&sourcecode);
+
+        assert_eq!(lexer.scan_pada().kind, PadaPrakara::Ank);
+        assert_eq!(lexer.scan_pada().kind, PadaPrakara::Bindu);
+        assert_eq!(lexer.scan_pada().kind, PadaPrakara::Eof);
+    }
+
+    #[test]
+    fn devanagari_decimal_scans_as_one_number() {
+        let sourcecode = Sourcecode {
+            code: "१२.३".to_owned(),
+            path: "test",
+        };
+        let mut lexer = Lexer::new(&sourcecode);
+
+        let number = lexer.scan_pada();
+        assert_eq!(number.kind, PadaPrakara::Ank);
+        assert_eq!(number.mulya, "१२.३");
+        assert_eq!(lexer.scan_pada().kind, PadaPrakara::Eof);
     }
 }
