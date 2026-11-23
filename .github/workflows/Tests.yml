@@ -16,7 +16,7 @@ jobs:
 
         steps:
             - name: check out branch
-              uses: actions/checkout@v5
+              uses: actions/checkout@v6
 
             - name: Install Rust
               uses: actions-rs/toolchain@v1
