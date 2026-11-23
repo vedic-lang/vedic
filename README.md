@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://vedic-lang.github.io">
-        <img alt="Vedic"src="https://raw.githubusercontent.com/vedic-lang/vedic/main/assets/vedic-lang.png" width="300vw"/>
+        <img alt="Vedic" src="./assets/vedic-lang.png" width="300"/>
     </a>
     <br>
     <a href="https://vedic-lang.github.io/download">Download</a> ·
