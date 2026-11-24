@@ -59,6 +59,12 @@ vedic --version
 
 [APT repository and signing information](https://vedic-lang.github.io/apt/)
 
+### Install a Vedic library (development CLI)
+
+With Git installed, run `vedic install ganita` from your project to add the indexed Ganita release to `vedic.toml`. Import it with `आवाहन "pkg:ganita";`. Running `vedic install` restores the exact versions recorded by a project.
+
+Packages are installed once per user. New packages and releases are submitted by pull request to the [Vedic package index](https://github.com/vedic-lang/package-index). See the [import guide](https://vedic-lang.github.io/import) for a two-line example.
+
 ## 📖 Documentation
 
 Read the [Vedic language reference](https://vedic-lang.github.io/language-reference) for syntax and semantics, or browse the full [documentation](https://vedic-lang.github.io/).

@@ -9,6 +9,8 @@ pub mod logger;
 pub mod moolsutra;
 pub mod mulya;
 pub mod mulyankan;
+#[cfg(not(target_arch = "wasm32"))]
+pub mod packages;
 pub mod pada;
 pub mod parser;
 pub mod rules;

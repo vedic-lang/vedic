@@ -1,0 +1,5 @@
+आवाहन "pkg:owner/repo";
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/import/unregistered_source.ved", line 1, column 23
+# CTE: दोषः अत् :'"pkg:owner/repo"'
+# CTE: Invalid package name 'owner/repo'. Use a name from the Vedic package index.

@@ -1,10 +1,10 @@
 use std::convert::TryFrom;
 use std::mem;
-use std::path::Path;
 
 use super::aadesh::Aadesh;
 use super::anupurva::AnupUrva;
 use super::dosasucana::Dosa;
+use super::fetchsource::import_path;
 use super::fetchsource::Sourcecode;
 use super::lexer::Lexer;
 use super::logger;
@@ -278,12 +278,19 @@ impl<'p> Parser<'p> {
         }
         let mulya = self.previous.mulya;
         let relative_filepath = &mulya[1..(mulya.len() - 1)];
-        let import_path = Path::new(&self.previous.path)
-            .parent()
-            .unwrap()
-            .join(relative_filepath);
+        let path = match import_path(self.previous.path, relative_filepath) {
+            Ok(path) => path,
+            Err(error) => {
+                self.dosa(&error);
+                return;
+            }
+        };
+        let Some(filepath) = path.to_str() else {
+            self.dosa("Import path is not valid UTF-8");
+            return;
+        };
 
-        match Sourcecode::new(import_path.to_str().unwrap()) {
+        match Sourcecode::new(filepath) {
             Ok(import_sc) => match Parser::parse(import_sc, self.gc) {
                 Ok(import_sutra_id) => {
                     let anukram = self.make_achar(Mulya::Sutra(import_sutra_id));

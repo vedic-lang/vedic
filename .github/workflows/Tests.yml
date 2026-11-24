@@ -32,3 +32,6 @@ jobs:
 
             - name: Build and run language tests
               run: python tools -bt
+
+            - name: Test installs and package imports with local Git repositories
+              run: python cli/tests/packages.py target/release/vedic

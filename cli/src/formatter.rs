@@ -2,6 +2,8 @@ use std::fs;
 use std::path::Path;
 use std::path::PathBuf;
 
+use crate::utilities::is_vedic_file;
+
 #[derive(Debug, PartialEq)]
 enum TokenKind {
     Atom,
@@ -343,13 +345,6 @@ pub fn format_source(source: &str) -> String {
         flush_line(&mut line, &mut output);
     }
     output
-}
-
-fn is_vedic_file(path: &Path) -> bool {
-    matches!(
-        path.extension().and_then(|extension| extension.to_str()),
-        Some("v" | "ved" | "veda" | "vedic")
-    )
 }
 
 fn collect_vedic_files(directory: &Path, files: &mut Vec<PathBuf>) -> Result<(), String> {
