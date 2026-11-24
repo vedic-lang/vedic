@@ -7,6 +7,10 @@ description = "A Sanskrit programming language interpreter written in Rust"
 license = "MIT"
 
 [dependencies]
+tempfile = "3"
+fs2 = "0.4"
+semver = "1"
+toml_edit = "0.22"
 vedic-core = { path = "../core" }
 
 [target.'cfg(windows)'.build-dependencies]

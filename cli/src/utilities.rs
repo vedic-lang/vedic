@@ -23,6 +23,7 @@ pub fn help() {
     -h, --help      Show this vedic cli help message
     -v, --version   Print version number
     -r, --repl      Run the vedic repl
+    install [name]  Install an indexed library, or restore project dependencies
     format <path>   Format a Vedic source file or every Vedic file in a directory
 
     Examples:
@@ -40,8 +41,12 @@ pub fn help() {
     );
 }
 
-// ❯ this command will install the panchang.ved vedic script from given url
-// vedic -i https://git.com/panchang.ved
+pub(crate) fn is_vedic_file(path: &Path) -> bool {
+    matches!(
+        path.extension().and_then(|extension| extension.to_str()),
+        Some("v" | "ved" | "veda" | "vedic")
+    )
+}
 
 pub fn format(args: &[String]) {
     if args.len() != 1 {
@@ -62,11 +67,6 @@ pub fn format(args: &[String]) {
         }
     }
 }
-
-// pub fn install(_args: Vec<String>) {
-//     println!("Install Feature is not available yet.");
-//     process::exit(0);
-// }
 
 pub fn version() {
     println!("Vedic v{}", env!("CARGO_PKG_VERSION"));

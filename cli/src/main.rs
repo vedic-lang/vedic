@@ -1,5 +1,6 @@
 use std::env;
 mod formatter;
+mod install;
 mod utilities;
 
 /// Discription : Command Line Tool Functionlity.
@@ -11,7 +12,7 @@ fn main() {
             "-h" | "--help" => utilities::help(),
             "-v" | "--version" => utilities::version(),
             "-f" | "format" => utilities::format(&args[2..]),
-            // "-i" | "install" => utilities::install(args),
+            "install" => install::run(&args[2..]),
             "-r" | "--repl" => utilities::repl(),
             argument if argument.starts_with('-') => {
                 eprintln!("Unknown option '{argument}'. Run `vedic --help` for usage.");

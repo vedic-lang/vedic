@@ -7,6 +7,8 @@ edition = "2021"
 unicode-width = "0.2"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+semver = "1"
+toml_edit = "0.22"
 mimalloc = { version = "0.1.39", default-features = false }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
