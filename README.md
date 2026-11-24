@@ -27,11 +27,25 @@
 
 ## 👨‍💻 Installation
 
-Vedic works on macOS, Linux, and Windows. vedic is a single binary executable. It has no external dependencies.
+The Vedic CLI is available for macOS, Linux, and Windows.
 
 ### Download and install
 
 Visit the [Download page](https://vedic-lang.github.io/download), which offers convenient scripts for downloading and installing the binary.
+
+### Install with APT on Debian and Ubuntu
+
+On Debian 13 or Ubuntu 24.04 for amd64 (64-bit Intel or AMD), add the Vedic repository and install the CLI. The source file includes the key APT uses to verify updates.
+
+```sh
+curl -fsSLo vedic.sources https://vedic-lang.github.io/apt/vedic.sources
+sudo install -m 0644 vedic.sources /etc/apt/sources.list.d/vedic.sources
+sudo apt update
+sudo apt install vedic
+vedic --version
+```
+
+[APT repository and signing information](https://vedic-lang.github.io/apt/)
 
 ### Using Shell (Linux and macOS):
 
