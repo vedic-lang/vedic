@@ -72,30 +72,22 @@ pub fn version() {
     println!("Vedic v{}", env!("CARGO_PKG_VERSION"));
 }
 
-pub fn run(args: Vec<String>) {
-    if args[1].starts_with('-') {
-        eprintln!("Invalid argument.");
-    } else {
-        run_file(&args[1]);
-    }
-}
-
 pub fn run_file(path: &str) {
     if path.ends_with(".v")
         || path.ends_with(".ved")
         || path.ends_with(".veda")
         || path.ends_with(".vedic")
     {
-        let mut aadhaar = Aadhaar::new();
-        aadhaar.prarambha();
         let sc = match Sourcecode::new(path) {
             Ok(content) => content,
-            Err(dosa) => {
-                eprintln!("Unable to read file : {dosa}");
-                process::exit(0);
+            Err(error) => {
+                eprintln!("Cannot read '{path}': {error}");
+                process::exit(66);
             }
         };
 
+        let mut aadhaar = Aadhaar::new();
+        aadhaar.prarambha();
         if let Err(dosa) = aadhaar.vyakhyati(sc) {
             match dosa {
                 Dosa::SagkalanaKaleDosa => process::exit(65),
@@ -103,10 +95,8 @@ pub fn run_file(path: &str) {
             }
         }
     } else {
-        eprintln!(
-            "Invalid file extension. Only .v / .ved / .veda / .vedic extensions are allowed."
-        );
-        process::exit(0);
+        eprintln!("Unsupported file extension for '{path}'. Use .v, .ved, .veda, or .vedic.");
+        process::exit(64);
     }
 }
 
