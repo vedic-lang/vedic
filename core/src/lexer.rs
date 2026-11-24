@@ -72,6 +72,19 @@ impl<'s> Lexer<'s> {
         &self.sourcecode.code[self.start..self.current]
     }
 
+    pub(crate) fn byte_offset(&self) -> usize {
+        self.current
+    }
+
+    // A token's end is a UTF-8 boundary, including the closing quote of a multiline string.
+    pub(crate) fn insertion_line(&self, end: usize) -> (&str, &str) {
+        let code = &self.sourcecode.code;
+        let start = code[..end].rfind('\n').map_or(0, |newline| newline + 1);
+        let line_end = code[end..].find('\n').map_or(code.len(), |rest| end + rest);
+        let line = &code[start..line_end];
+        (line.strip_suffix('\r').unwrap_or(line), &code[start..end])
+    }
+
     fn make_pada(&self, kind: PadaPrakara) -> Pada<'s> {
         Pada {
             kind,
