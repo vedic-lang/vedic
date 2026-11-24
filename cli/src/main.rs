@@ -13,7 +13,11 @@ fn main() {
             "-f" | "format" => utilities::format(&args[2..]),
             // "-i" | "install" => utilities::install(args),
             "-r" | "--repl" => utilities::repl(),
-            _ => utilities::run(args),
+            argument if argument.starts_with('-') => {
+                eprintln!("Unknown option '{argument}'. Run `vedic --help` for usage.");
+                std::process::exit(64);
+            }
+            path => utilities::run_file(path),
         }
     } else {
         utilities::help();

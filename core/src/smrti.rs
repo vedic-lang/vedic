@@ -228,10 +228,12 @@ impl Smrti {
                 continue;
             }
         }
-        dealloc(
-            self.pravisti.cast(),
-            Layout::array::<Pravisti>(self.dharanasakti).unwrap(),
-        );
+        if !self.pravisti.is_null() {
+            dealloc(
+                self.pravisti.cast(),
+                Layout::array::<Pravisti>(self.dharanasakti).unwrap(),
+            );
+        }
         self.pravisti = mukya_pravisthi;
         self.dharanasakti = capacity;
     }
