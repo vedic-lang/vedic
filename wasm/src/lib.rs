@@ -3,12 +3,17 @@ use vedic_core::fetchsource::Sourcecode;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn vedic(str: &str) {
+pub fn vedic(source: &str) {
+    vedic_with_path(source, "script");
+}
+
+#[wasm_bindgen]
+pub fn vedic_with_path(source: &str, path: &str) {
     let mut aadhaar = Aadhaar::new();
     aadhaar.prarambha();
     let sc = Sourcecode {
-        code: str.to_owned(),
-        path: "script",
+        code: source.to_owned(),
+        path,
     };
 
     let _ = aadhaar.vyakhyati(sc);

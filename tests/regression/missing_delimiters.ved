@@ -1,0 +1,12 @@
+मान नाम = "दुर्गम"  # नाम
+मान फलम् = (२ + ३;
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/regression/missing_delimiters.ved", line 1, column 19
+# CTE: मान घोषणायाः पश्चात् ';' अपेक्षितः
+# CTE: मान नाम = "दुर्गम"  # नाम
+# CTE: ^ insert ';' here
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/regression/missing_delimiters.ved", line 2, column 18
+# CTE: व्याख्या पश्चात् ')' अपेक्षितः
+# CTE: मान फलम् = (२ + ३;
+# CTE: ^ insert ')' here

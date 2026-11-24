@@ -27,6 +27,7 @@ pub struct Parser<'p> {
     gc: &'p mut Gc,
     current: Pada<'p>,
     previous: Pada<'p>,
+    previous_end: usize,
     had_dosa: bool,
     panic_mode: bool,
     resolver_dosas: Vec<&'static str>,
@@ -42,6 +43,7 @@ impl<'p> Parser<'p> {
             gc,
             current: Pada::default(""),
             previous: Pada::default(""),
+            previous_end: 0,
             had_dosa: false,
             panic_mode: false,
             resolver_dosas: Vec::new(),
@@ -171,7 +173,10 @@ impl<'p> Parser<'p> {
             PadaPrakara::VamLaghuKoshthak,
             "सूत्रनामन्तरे '(' अपेक्षितः", // Expect '(' after sutra name
         );
-        if !self.check(PadaPrakara::DaksinaLaghuKoshthak) {
+        if !matches!(
+            self.current.kind,
+            PadaPrakara::DaksinaLaghuKoshthak | PadaPrakara::VamMadhyamKoshthak | PadaPrakara::Eof
+        ) {
             loop {
                 self.evaluator.sutra.arity += 1;
                 if self.evaluator.sutra.arity > 255 {
@@ -180,6 +185,9 @@ impl<'p> Parser<'p> {
                 let param = self.parse_maan("परिमितिनाम् अपेक्षितः"); // Expect parameter name
                 self.define_maan(param);
                 if !self.matches(PadaPrakara::AlpViram) {
+                    if self.check(PadaPrakara::Identifier) {
+                        self.dosa_at_current("परिमितिनाम् मध्ये ',' अपेक्षितः");
+                    }
                     break;
                 }
             }
@@ -297,7 +305,11 @@ impl<'p> Parser<'p> {
         if let SutraType::MoolLekha = self.evaluator.sutra.kind {
             self.dosa("मूर्धन्स्थला फलः प्रतिगच्छामि न शक्नोमि"); // Can't phala from topmurdhan-level code //todo
         }
-        if self.matches(PadaPrakara::ArdhaViram) {
+        if matches!(
+            self.current.kind,
+            PadaPrakara::ArdhaViram | PadaPrakara::DaksinaMadhyamKoshthak | PadaPrakara::Eof
+        ) {
+            self.consume(PadaPrakara::ArdhaViram, "'फल' पश्चात् ';' अपेक्षितः");
             self.emit_phala();
         } else {
             if let SutraType::Mool = self.evaluator.sutra.kind {
@@ -345,7 +357,7 @@ impl<'p> Parser<'p> {
     }
 
     fn viram_statement(&mut self) {
-        self.consume(PadaPrakara::ArdhaViram, "'विराम' पश्चात् ')' अपेक्षितः"); // Expect ';' after 'विराम'
+        self.consume(PadaPrakara::ArdhaViram, "'विराम' पश्चात् ';' अपेक्षितः"); // Expect ';' after 'विराम'
         self.emit(Aadesh::Viraam);
     }
 
@@ -372,7 +384,7 @@ impl<'p> Parser<'p> {
         let mut exit_jump = Option::None;
         if !self.matches(PadaPrakara::ArdhaViram) {
             self.expression();
-            self.consume(PadaPrakara::ArdhaViram, "चक्र नियम पश्चात् '(' अपेक्षितः"); // Expect ';' after loop condition
+            self.consume(PadaPrakara::ArdhaViram, "चक्र नियम पश्चात् ';' अपेक्षितः"); // Expect ';' after loop condition
             let jump = self.emit(Aadesh::AgresitYadiAsatya(0xFFFF));
             exit_jump = Option::from(jump);
             self.emit(Aadesh::Pop);
@@ -592,7 +604,14 @@ impl<'p> Parser<'p> {
 
     fn argument_list(&mut self) -> u8 {
         let mut count: usize = 0;
-        if !self.check(PadaPrakara::DaksinaLaghuKoshthak) {
+        if !matches!(
+            self.current.kind,
+            PadaPrakara::DaksinaLaghuKoshthak
+                | PadaPrakara::ArdhaViram
+                | PadaPrakara::DaksinaMadhyamKoshthak
+                | PadaPrakara::DaksinaDirghKoshthak
+                | PadaPrakara::Eof
+        ) {
             loop {
                 self.expression();
 
@@ -734,11 +753,17 @@ impl<'p> Parser<'p> {
             return;
         }
 
-        self.dosa_at_current(msg);
+        let delimiter = match expected {
+            PadaPrakara::ArdhaViram => ';',
+            PadaPrakara::DaksinaLaghuKoshthak => ')',
+            _ => return self.dosa_at_current(msg),
+        };
+        self.dosa_at(self.previous, msg, Some(delimiter));
     }
 
     fn read_next(&mut self) {
         self.previous = self.current;
+        self.previous_end = self.lexer.byte_offset();
 
         loop {
             self.current = self.lexer.scan_pada();
@@ -770,26 +795,34 @@ impl<'p> Parser<'p> {
     }
 
     fn dosa_at_current(&mut self, msg: &str) {
-        self.dosa_at(self.current, msg)
+        self.dosa_at(self.current, msg, None)
     }
 
     fn dosa(&mut self, msg: &str) {
-        self.dosa_at(self.previous, msg)
+        self.dosa_at(self.previous, msg, None)
     }
 
-    fn dosa_at(&mut self, pada: Pada, msg: &str) {
+    fn dosa_at(&mut self, pada: Pada, msg: &str, insertion: Option<char>) {
         if self.panic_mode {
             return;
         }
 
         self.had_dosa = true;
         self.panic_mode = true;
-        let mut dosa = String::new();
-        dosa.push_str("सङ्कलन-काले-दोषः :\n"); // SagkalanaKaleDosa :
-        dosa.push_str(&format!(
-            "  File \"{}\", line {}, column {}\n", // File LOCATION
+        let mut dosa = format!(
+            "सङ्कलन-काले-दोषः :\n  File \"{}\", line {}, column {}\n",
             pada.path, pada.line, pada.column
-        ));
+        );
+        if let Some(delimiter) = insertion {
+            // A missing statement terminator must not make recovery discard the block's brace.
+            if delimiter == ';' && self.check(PadaPrakara::DaksinaMadhyamKoshthak) {
+                self.panic_mode = false;
+            }
+            let (line, prefix) = self.lexer.insertion_line(self.previous_end);
+            dosa.push_str("    ");
+            dosa.push_str(msg);
+            return logger::log_insertion(&dosa, line, prefix, delimiter);
+        }
         match pada.kind {
             PadaPrakara::Eof => dosa.push_str("    दोषः अन्ते : "), // DoSa at end
             PadaPrakara::Dosa => dosa.push_str("    दोषः : "),    // DoSa
