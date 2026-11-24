@@ -33,6 +33,18 @@ The Vedic CLI is available for macOS, Linux, and Windows.
 
 Visit the [Download page](https://vedic-lang.github.io/download), which offers convenient scripts for downloading and installing the binary.
 
+### Using Homebrew (Linux and macOS):
+
+```bash
+brew install vedic
+```
+
+### Using Shell (Linux and macOS):
+
+```bash
+curl -fsSL https://vedic-lang.github.io/install/install.sh | bash
+```
+
 ### Install with APT on Debian and Ubuntu
 
 On Debian 13 or Ubuntu 24.04 for amd64 (64-bit Intel or AMD), add the Vedic repository and install the CLI. The source file includes the key APT uses to verify updates.
@@ -46,18 +58,6 @@ vedic --version
 ```
 
 [APT repository and signing information](https://vedic-lang.github.io/apt/)
-
-### Using Shell (Linux and macOS):
-
-```bash
-curl -fsSL https://vedic-lang.github.io/install/install.sh | bash
-```
-
-### Using Homebrew (Linux and macOS):
-
-```bash
-brew install vedic
-```
 
 ## 📖 Documentation
 
