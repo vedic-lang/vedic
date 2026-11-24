@@ -1,3 +1,6 @@
-अवहन "../std.ved"; # import
+आवाहन "../std.ved"; # import
 print२("Hello ","World"); # expect: Hello World
 print१("Hello World"); # expect: Hello World
+
+मान अवहन = १;
+वद(अवहन); # expect: १

@@ -145,7 +145,7 @@ checksum = "ca718471876992059f251e33aafc334346ada08042b7661dd1fe313a9bced557"
 
 [[package]]
 name = "vedic"
-version = "2.1.0"
+version = "3.0.0"
 dependencies = [
  "vedic-core",
  "winres",
@@ -153,7 +153,7 @@ dependencies = [
 
 [[package]]
 name = "vedic-core"
-version = "2.1.0"
+version = "3.0.0"
 dependencies = [
  "js-sys",
  "mimalloc",
@@ -165,7 +165,7 @@ dependencies = [
 
 [[package]]
 name = "vedic-wasm"
-version = "2.1.0"
+version = "3.0.0"
 dependencies = [
  "vedic-core",
  "wasm-bindgen",

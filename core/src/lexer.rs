@@ -219,7 +219,7 @@ impl<'s> Lexer<'s> {
             "विराम" => PadaPrakara::Viram,
             "अग्रिम" => PadaPrakara::Agrim,
             "निर्देश" => PadaPrakara::Nirdesh,
-            "अवहन" => PadaPrakara::Import,
+            "आवाहन" => PadaPrakara::Import,
             _ => PadaPrakara::Identifier,
         }
     }

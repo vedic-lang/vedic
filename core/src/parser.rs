@@ -272,7 +272,10 @@ impl<'p> Parser<'p> {
     }
 
     fn import_statement(&mut self) {
-        self.consume(PadaPrakara::String, "अवहन पश्चात् नाम् अपेक्षितः"); // Expect string after import
+        if !self.matches(PadaPrakara::String) {
+            self.dosa_at_current("आवाहन पश्चात् नाम् अपेक्षितः");
+            return;
+        }
         let mulya = self.previous.mulya;
         let relative_filepath = &mulya[1..(mulya.len() - 1)];
         let import_path = Path::new(&self.previous.path)
@@ -298,7 +301,7 @@ impl<'p> Parser<'p> {
                 self.dosa(&msg);
             }
         }
-        self.consume(PadaPrakara::ArdhaViram, "अवहन पश्चात् ';' अपेक्षितः"); // Expect ';' after import
+        self.consume(PadaPrakara::ArdhaViram, "आवाहन पश्चात् ';' अपेक्षितः"); // Expect ';' after import
     }
 
     fn phala_statement(&mut self) {

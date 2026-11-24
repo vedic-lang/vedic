@@ -1,0 +1,6 @@
+अवहन "../std.ved";
+# CTE: सङ्कलन-काले-दोषः :
+# CTE: File "tests/import/old_spelling.ved", line 1, column 5
+# CTE: व्याख्या पश्चात् ';' अपेक्षितः
+# CTE: अवहन "../std.ved";
+# CTE: ^ insert ';' here
